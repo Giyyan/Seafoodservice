@@ -1,0 +1,40 @@
+# coding: utf-8
+from django.db import models
+from django.utils.translation import ugettext_lazy as _
+from mptt.models import MPTTModel, TreeForeignKey
+from tinymce.models import HTMLField
+
+class News(MPTTModel):
+    parent = TreeForeignKey('self', null=True, blank=True, related_name="related")
+    title_image = models.ImageField(upload_to="image/news_title", null=True)
+    title = models.CharField(max_length=255, verbose_name=_("Title"))
+    body = HTMLField(verbose_name=_("Body"))
+    date = models.DateField(verbose_name=_("Date"))
+
+    def __unicode__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = _(u"News Item")
+        verbose_name_plural = _(u"News")
+
+    class MPTTMeta:
+        order_insertion_by = ['title']
+        parent_attr = 'parent'
+
+class UsefullInformation(MPTTModel):
+    parent = TreeForeignKey('self', null=True, blank=True, related_name="related")
+    title = models.CharField(max_length=255, verbose_name=_("Title"))
+    body = HTMLField(verbose_name=_("Body"))
+    date = models.DateField(verbose_name=_("Date"))
+
+    def __unicode__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = _(u"Usefull Information Item")
+        verbose_name_plural = _(u"Usefull Information")
+
+    class MPTTMeta:
+        parent_attr = 'parent'
+        order_insertion_by = ['title']

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="925449837">
+    <data-source source="LOCAL" name="Django default" uuid="aa84e660-10fa-4cdf-8f18-0e08c9125cf1">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:seafoodservice</jdbc-url>
+      <user-name>postgres</user-name>
+      <user-password>df9b</user-password>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

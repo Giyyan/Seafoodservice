@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load i18n admin_tools_menu_tags %}
+
+	{% block content %}
+		{{ block.super }}
+		{% block breadcrumbs %}
+			<ul class="breadcrumbs">
+				<li><a href="../../">{% trans "Home" %}</a></li>
+				<li><a href="../">{% trans "Usefull information" %}</a></li>
+				<li>{{ news.title }}</li>
+			</ul>
+		{% endblock %}
+		
+		<h3 class="useful_information">{{ news.title }}</h3>
+         <div class="main_block_information1">
+			{{ news.body }}
+		</div>
+	{% endblock %}

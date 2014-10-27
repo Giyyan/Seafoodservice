@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load i18n admin_tools_menu_tags %}
+	{% block head %}
+		{{ block.super }}
+		<script src="{{MEDIA_URL}}js/popup.js"></script>
+	{% endblock %}
+
+	{% block last_news %}
+	{% endblock %}
+	
+		
+	{% block content %}
+		{{ block.super }}
+		{% block breadcrumbs %}
+			<ul class="breadcrumbs">
+				<li><a href="../">{% trans "Home" %}</a></li>
+				<li>{% trans "Usefull information" %}</li>
+			</ul>
+		{% endblock %}
+		
+		<h3 class="useful_information">{% trans "Usefull information" %}</h3>
+		{% for news_item in news %}
+			<div class="main_block_information">
+			<div class="information_title">{{ news_item.title }}</div>
+				<a href="{{ news_item.id }}">
+					<p class="news_text_main">
+					{{ news_item.body }}
+					</p>
+				</a>
+			</div>
+		{% endfor %}
+	{% endblock %}

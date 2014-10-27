@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load i18n admin_tools_menu_tags %}
+	{% block head %}
+		{{ block.super }}
+		<script src="{{MEDIA_URL}}js/popup.js"></script>
+	{% endblock %}
+
+	{% block content %}
+		{{ block.super }}
+		{% block breadcrumbs %}
+			<ul class="breadcrumbs">
+				<li><a href="../">{% trans "Home" %}</a></li>
+				<li>{% trans "Certificates" %}</li>
+			</ul>
+		{% endblock %}
+		<div>
+			<h3 class="useful_information">{% trans "Certificates" %}</h3>
+			<div class="sertif_portfolio">
+				{% for certificate in certificates %}
+					<div class="sertif" id="sertif_right">
+						<img src="{{ MEDIA_URL }}{{ certificate.image }}" style="margin-right:3" alt="{{ certificate.description }}">
+						<div class="sertif_descr" style="display:none">
+							<p>{{ certificate.title }}</p>
+							<p>{{ certificate.description }}</p>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	{% endblock %}

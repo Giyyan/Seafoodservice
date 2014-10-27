@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+{% load i18n admin_tools_menu_tags %}
+<html lang="{{ LANGUAGE_CODE|default:"en-us" }}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	{% block head %}
+	    <title>Sea food</title>
+	    <link rel="stylesheet" href="{{ MEDIA_URL }}css/style.css">		  
+		<script src="{{ MEDIA_URL }}js/jquery-2.1.0.min.js"></script>
+		<script src="{{ MEDIA_URL }}js/video.js"></script>
+		<script src="{{ MEDIA_URL }}js/script.js"></script>
+		<link rel="shortcut icon" type="image/x-icon" href="{{ MEDIA_URL }}css/images/logo.png" />
+	{% endblock %}
+</head>
+<body>
+
+    <header>
+	{% block header %}
+	       <a href="main">
+			<img src="{{ MEDIA_URL }}css/images/logo.png" alt="" class="logo">
+		</a>
+	       <div class="slogan">
+	           <h3>{% trans "In partnership with success" %}</h3>
+				<div class="ru">
+					<form name="setLangRussian" action="/i18n/setlang/" method="POST">{% csrf_token %}
+						<input name="next" type="hidden" value="/" />
+						<input type="hidden" name="language" value="ru" />
+						<a href="#" onclick="document.setLangRussian.submit();return false;">Ru</a>
+					</form>                
+				</div>
+				<div class="en">
+					<form name="setLangEnglish" action="/i18n/setlang/" method="POST">{% csrf_token %}
+						<input name="next" type="hidden" value="/" />
+						<input type="hidden" name="language" value="en" />
+						<a href="#" onclick="document.setLangEnglish.submit();return false;">En</a>
+					</form>
+				</div>
+	       </div>
+	       <div class="header_contacts">
+	           <p>+375 17 <span>288-97-75</span></p>
+	           <a href=""><img src="{{ MEDIA_URL }}css/images/vk.png" alt=""></a>
+	           <a href=""><img src="{{ MEDIA_URL }}css/images/facebook.png" alt=""></a>
+	           <a href=""><img src="{{ MEDIA_URL }}css/images/twitter.png" alt=""></a>
+	       </div>
+	       <nav>
+		    <ul class="top_nav">
+		        <a href="/"><li class="active" id="main">{% trans "Home" %}</li></a>
+		        <a href="/services"><li id="services">{% trans "Services" %}</li></a>
+		        <a href="/usefull-information"><li id="usefull">{% trans "Usefull Information" %}</li></a>
+		        <a href="/contacts"><li id="contacts">{% trans "Contacts" %}</li></a>
+		    </ul>
+	       	</nav>
+	{% endblock %}
+	{% block extrahead %}{% endblock %}
+    </header> 
+
+
+    <div class="container">
+		<aside>
+		{% if last_news %}
+			{% block last_news %}
+				   <div class="last_news">
+					   <a href="news" class="title_link"><div class="aside_title">{% trans "News" %}</div></a>
+						{% for news_item in last_news %}
+						<div class="news">
+							<p class="date">{{ news_item.date }}</p>
+							<a href="news/news_id{{ news_item.id }}"><p class="text_news">{{ news_item.title }}</p></a>
+						</div>
+				{% endfor %}
+				   </div>
+			{% endblock %}
+		{% endif %}
+
+		{% block gallery %}
+			   <div class="galery">
+				   <a href="/gallery" class="galery_link">{% trans "Gallery" %}</a>
+				   <a href="/gallery"><img src="{{ MEDIA_URL }}css/images/photo.png" alt="" class="photo"></a>
+				   <a href="/gallery"><img src="{{ MEDIA_URL }}css/images/video.png" alt="" class="video"></a>
+			   </div>
+		{% endblock %}
+		<a href="/certificates" class="title_link"><div class="aside_title">{% trans "Certficates" %}</div></a>
+		{% for banner in banners %}
+			   <div class="banner">
+				   <p>{{ banner.title }}</p>
+			   </div>
+		{% endfor %}
+		</aside>
+	<div class="main_content">
+		{% block content %}
+		{% endblock %}
+    </div>
+    <footer>
+	{% block footer %}   
+           <div class="left_footer_block">
+               <p>{% trans "RB, Minsk, 220053" %}</p>
+               <p>{% trans "str. Novovilenskaya, 8, 24" %}</p>
+               <p>{% trans "Numb." %}.: +375 17 <span>233-19-16</span></p>
+               <p>+375 17 <span>233-19-16</span></p>
+               <p>{% trans "Fax" %}: +375 17 <span>233-19-16</span></p>
+               <a href="https://www.google.com/maps/preview?ll=53.924397,27.542754&z=13&t=m&hl=ru-RU&gl=US&mapclient=embed&q=%D0%9D%D0%BE%D0%B2%D0%BE%D0%B2%D0%B8%D0%BB%D0%B5%D0%BD%D1%81%D0%BA%D0%B0%D1%8F+%D1%83%D0%BB.+8+%D0%9C%D0%B8%D0%BD%D1%81%D0%BA+%D0%91%D0%B5%D0%BB%D0%B0%D1%80%D1%83%D1%81%D1%8C&google_abuse=GOOGLE_ABUSE_EXEMPTION%3DID%3Dcc83db44fca3e98e:TM%3D1412677903:C%3Dc:IP%3D178.124.104.205-:S%3DAPGng0u00mgs3xJy0jZ1QDcae-tphVgjng%3B+path%3D/%3B+domain%3Dgoogle.com%3B+expires%3DTue,+07-Oct-2014+13:31:43+GMT" class="map" target="_blank">{% trans "Go to map" %}</a>
+           </div>
+           <nav>
+               <ul class="footer_menu">
+                   <a href="/"><li>{% trans "Home" %}</li></a>
+		    <a href="/services"><li>{% trans "Services" %}</li></a>
+		    <a href="/usefull-information"><li>{% trans "Usefull Information" %}</li></a>
+		    <a href="/contacts"><li>{% trans "Contacts" %}</li></a>
+               </ul>
+           </nav>
+          
+           <p class="copyright">© 2010-2014</p>
+            <div id="copyright">
+                <img src="{{ MEDIA_URL }}css/images/zod4ie.jpg" alt="">
+                <p>{% trans "Site is developed " %}<a href="http://zod4ie.com/" target="_blank">{% trans "by studio Zod4ie" %}</a></p>
+            </div>
+	{% endblock %}
+       </footer>
+
+       <a href=""><div class="online"><img src="{{ MEDIA_URL }}css/images/online_full.png" alt=""></div></a>
+       <script src="{{ MEDIA_URL }}js/jquery-2.1.0.min.js"></script>
+       <script src="{{ MEDIA_URL }}js/script.js"></script><br/> <br/> <!-- ADSTART --> <!--6a9fc--> <!--3a9f6b4e--> <!--3a9f6b4e--> <!--s_links--><!--check code--><!--00000--><!--/s_links--> <ml_code></ml_code><center><a href='http://www.radyx.ru/' target='_blank' title='&#x0411;&#x0435;&#x0441;&#x043F;&#x043B;&#x0430;&#x0442;&#x043D;&#x044B;&#x0439; &#x0445;&#x043E;&#x0441;&#x0442;&#x0438;&#x043D;&#x0433;'><img id='ayolaid' src='http://s.ayola.net/rh.gif' border='0'></a></center> <script language='javascript' type='text/javascript'>if (document.getElementById('links')) { document.getElementById('links').style.top=document.getElementById('ayolaid').offsetHeight+15+document.getElementById('ayolaid').offsetTop+'px';} </script>
+</body>
+</html>

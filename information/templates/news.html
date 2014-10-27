@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load i18n admin_tools_menu_tags %}
+
+	{% block last_news %}
+	{% endblock %}
+	
+	{% if usefull_informaton %}
+		{% block usefull_informaton %}
+			   <div class="usefull_informaton">
+				   <a href="news" class="title_link"><div class="aside_title">{% trans "Usefull information" %}</div></a>
+					{% for info in usefull_informaton %}
+					<div class="info">
+					<a href="usefull_informaton/{{info.id}}"><p class="text_news">{{ info.title }}</p></a>
+				</div>
+			{% endfor %}
+			   </div>
+		{% endblock %}
+	{% endif %}
+		
+	{% block content %}
+		{{ block.super }}
+		{% block breadcrumbs %}
+			<ul class="breadcrumbs">
+				<li><a href="../">{% trans "Home" %}</a></li>
+				<li>{% trans "News" %}</li>
+			</ul>
+		{% endblock %}
+		
+		<h3 class="useful_information">{% trans "News" %}</h3>
+		{% for news_item in news %}
+			<div class="main_block_information">
+				<p class="news_date">{{ news_item.date }}</p>
+			<div class="information_title">{{ news_item.title }}</div>
+			<span style="width:10px;height:10px;">
+				<img src="{{ MEDIA_URL }}{{ news_item.title_image }}" alt="">
+			</span>
+				<a href="{{ news_item.id }}">
+					<p class="news_text_main">
+					{{ news_item.body }}
+					</p>
+				</a>
+			</div>
+		{% endfor %}
+	{% endblock %}

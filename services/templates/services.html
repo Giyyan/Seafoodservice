@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load i18n admin_tools_menu_tags %}
+	{% block head %}
+	{{ block.super }}
+	{% endblock %}
+
+	{% block content %}
+		{{ block.super }}
+		{% block breadcrumbs %}
+			<ul class="breadcrumbs">
+				<li><a href="../">{% trans "Home" %}</a></l>
+				<li>{% trans "Services" %}</li>
+			</ul>
+		{% endblock %}
+        <h3>{% trans "Services" %}</h3>
+        <p> <b>{% trans 'УП "Сифуд-Сервис"' %}</b>{% trans " оказывает комплекс транспортно-экспедиционных услуг по доставке грузов железнодорожным транспортом повагонными и контейнерными отправками:" %}</p>
+        <div class="main_services">
+		{% for service in main_services %}
+	            <div>
+	                <img src="{{MEDIA_URL}}{{service.image}}" alt="">
+					{% if service.decription %}
+						<p>{{ service.decription }}</p>
+					{% endif %}
+	            </div>
+		{% endfor %}
+        </div>
+        <h3>Дополнительные услуи</h3>
+        <div class="extra_services">
+		{% for service in extra_services %}
+	            <div class="extra_service">
+	                <img src="{{MEDIA_URL}}{{service.image}}" alt="">
+	                <p>{{ service.decrption }}</p>
+	            </div>
+		{% endfor %}
+        </div>
+        <h3 class="geography">География перевозок</h3>
+	{% block geography_of_transport %}
+	{% endblock %}
+{% endblock %}
