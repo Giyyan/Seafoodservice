@@ -192,7 +192,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     )
 
 try:
-    from seafoodservice.local_settings import *
+    from local_settings import *
 except ImportError:
     pass
 
