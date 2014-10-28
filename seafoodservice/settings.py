@@ -191,4 +191,8 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.request',
     )
 
+try:
+    from seafoodservice.local_settings import *
+except ImportError:
+    pass
 

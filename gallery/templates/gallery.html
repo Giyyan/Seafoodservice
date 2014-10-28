@@ -16,6 +16,7 @@
 			</ul>
 		{% endblock %}
 		<div>
+			{% if videos %}
 			<h3 class="useful_information">видео</h3>
 			<div class="sertif_portfolio">
 				{% for video in videos %}
@@ -25,12 +26,13 @@
 				   </video>
 				{% endfor %}
 			</div>
+			{% endif %}
 			<h3 class="useful_information">фото</h3>
               <div id="photo_gallery">
                <ul class="portfolio">
 			   
 				{% for photo in photos %}
-				<li class="photo_img" rel="1"><img src="{{ MEDIA_URL }}{{ photo }}" alt="">
+				<li class="photo_img"><img src="{{ MEDIA_URL }}{{ photo }}" alt="">
 					<div class="photo_descr" style="display:none">
 					<p>{{ photo.photo }}</p>
 					<p>{{ photo.description_ru }}{{ photo.description_en }}</p>
