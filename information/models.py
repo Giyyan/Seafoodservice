@@ -18,9 +18,6 @@ class News(MPTTModel):
         verbose_name = _(u"News Item")
         verbose_name_plural = _(u"News")
 
-    class MPTTMeta:
-        order_insertion_by = ['title']
-        parent_attr = 'parent'
 
 class UsefullInformation(MPTTModel):
     parent = TreeForeignKey('self', null=True, blank=True, related_name="related")
@@ -35,6 +32,14 @@ class UsefullInformation(MPTTModel):
         verbose_name = _(u"Usefull Information Item")
         verbose_name_plural = _(u"Usefull Information")
 
-    class MPTTMeta:
-        parent_attr = 'parent'
-        order_insertion_by = ['title']
+
+class MainPage(MPTTModel):
+    parent = TreeForeignKey('self', null=True, blank=True, related_name="related")
+    body = HTMLField(verbose_name=_("Body"))
+
+    def __unicode__(self):
+        return self.body
+
+    class Meta:
+        verbose_name = _(u"Main Page")
+        verbose_name_plural = _(u"Main Page")
