@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-27 15:02+0300\n"
+"POT-Creation-Date: 2014-10-27 16:36+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -62,7 +62,7 @@ msgid "Certificate image"
 msgstr "Изображение сертификата"
 
 #: .\certificates\models.py:10 .\gallery\models.py:11 .\gallery\models.py:27
-#: .\services\models.py:9
+#: .\services\models.py:9 .\transporation\models.py:7
 msgid "Description"
 msgstr "Описание"
 
@@ -170,6 +170,7 @@ msgid "Information"
 msgstr "Информация"
 
 #: .\information\models.py:10 .\information\models.py:27
+#: .\transporation\models.py:6
 msgid "Title"
 msgstr "Заголовок"
 
@@ -337,6 +338,11 @@ msgstr "Изменить"
 #: .\templates\admin_tools\menu\menu.html.py:32
 msgid "Please enter a name for the bookmark"
 msgstr "Пожалуйста, введите имя для записи"
+
+#: .\transporation\models.py:8
+#, fuzzy
+msgid "Point"
+msgstr "Должность"
 
 #~ msgid "Title in Russian"
 #~ msgstr "Заголовок"
