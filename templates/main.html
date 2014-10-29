@@ -1,13 +1,18 @@
 {% extends 'base.html' %}
 {% load i18n admin_tools_menu_tags %}
+	{% block head %}
+		{{ block.super }}
+		<script src="{{ MEDIA_URL }}js/slider.js"></script>
+	{% endblock %}
+	
 	{% block content %}
 	{{ block.super }}
 		{% if slides %}
-		<div class="slider">
+		<div id="slider" class="slider">
 			<img src="{{ MEDIA_URL }}{{ slides|first }}" alt="" id="img" style="display: inline;">
 				<div class="arrows">
-				<div class="left"><img src="./Sea food_files/arrow_left.png" alt=""></div>
-				<div class="right"><img src="./Sea food_files/arrow_right.png" alt=""></div>
+				<div class="left"><img src="{{ MEDIA_URL }}css/images/arrow_left.png" alt=""></div>
+				<div class="right"><img src="{{ MEDIA_URL }}css/images/arrow_right.png" alt=""></div>
 			</div>
 			<div class="controls">
 				{% for i, slide in slides.items %}
