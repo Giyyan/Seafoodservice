@@ -3,6 +3,7 @@ from django.contrib import admin
 from mptt.admin import MPTTModelAdmin
 from modeltranslation.admin import TranslationAdmin
 from mptt.forms import forms
+import os
 
 from models import PhotoGallery, VideoGallery
 from seafoodservice import settings
@@ -70,6 +71,15 @@ class VideoGalleryAdmin(MPTTModelAdmin, TranslationAdmin):
             ]
         }),
     ]
+
+    def save_model(self, request, obj, form, change):
+        """
+        Given a model instance save it to the database.
+        """
+        filename = obj.video.path
+        ext = os.path.splitext(filename)[1]
+        obj.type = ext.lower()
+        obj.save()
 
 admin.site.register(PhotoGallery, PhotoGalleryAdmin)
 admin.site.register(VideoGallery, VideoGalleryAdmin)

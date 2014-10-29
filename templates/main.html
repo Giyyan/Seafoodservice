@@ -2,6 +2,24 @@
 {% load i18n admin_tools_menu_tags %}
 	{% block content %}
 	{{ block.super }}
+		{% if slides %}
+		<div class="slider">
+			<img src="{{ MEDIA_URL }}{{ slides|first }}" alt="" id="img" style="display: inline;">
+				<div class="arrows">
+				<div class="left"><img src="./Sea food_files/arrow_left.png" alt=""></div>
+				<div class="right"><img src="./Sea food_files/arrow_right.png" alt=""></div>
+			</div>
+			<div class="controls">
+				{% for i, slide in slides.items %}
+					{% if i == 0 %}
+						<div id="{{ i }}_control" class="active_control"></div>
+					{% else %}
+						<div id="{{ i }}_control" class=""></div>
+					{% endif %}
+				{% endfor %}
+			</div>
+		</div>
+		{% endif %}
 		<h3>УП “СИФУД-СЕРВИС”</h3>
 		<p>Наша цель - наиболее полное и качественное удовлетворение запросов наших клиентов и на основе этого стабильная работа и процветание нашего бизнеса. Ради этого мы, при необходимости, работаем, не считаясь со временем, ранним утром и поздним вечером, в выходные и праздничные дни.</p> <br>
 		<p><b>УП “Сифуд-сервис”</b> имеет выработанную стратегию развития и необходимые ресурсы для её реализации. Мы используем в своей работе самые передовые технологии и стандарты клиентского обслуживания. Крупнейшие отраслевые предприятия в промышленном, торговом и других секторах страны уже доверили нам свои грузы:</p> <br>

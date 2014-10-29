@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -55,3 +56,9 @@ target/
 .idea/
 .DS_Store/
 local_settings.py
+=======
+media/photos/
+media/videos/
+*.pyc
+.idea/workspace.xml
+>>>>>>> be078c9df2b917f2836ac48240873ec57f6e961b

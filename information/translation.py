@@ -1,5 +1,5 @@
 from modeltranslation.translator import translator, TranslationOptions
-from information.models import News, UsefullInformation
+from information.models import News, UsefullInformation, MainPage
 
 
 class InformationTranslationOptions(TranslationOptions):
@@ -7,3 +7,8 @@ class InformationTranslationOptions(TranslationOptions):
 
 translator.register(News, InformationTranslationOptions)
 translator.register(UsefullInformation, InformationTranslationOptions)
+
+class MainPageTranslationOptions(TranslationOptions):
+    fields = ( 'body',)
+
+translator.register(MainPage, MainPageTranslationOptions)
