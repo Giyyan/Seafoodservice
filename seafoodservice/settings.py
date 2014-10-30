@@ -141,7 +141,6 @@ INSTALLED_APPS = (
     'information',
     'employees',
     'services',
-    'tinymce',
     'transporation',
     'django_summernote',
 )
