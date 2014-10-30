@@ -7,12 +7,13 @@ admin.autodiscover()
 
 
 urlpatterns = patterns('',
+    url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
+    url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
     url(r'^admin_tools/', include('admin_tools.urls')),
     url(r'^tinymce/', include('tinymce.urls')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^i18n/', include('django.conf.urls.i18n')),
-    url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
-    url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
     url(r'^$', 'seafoodservice.views.main', name='main'),
     url(r'^contacts$', 'employees.views.contacts', name='contacts'),
     url(r'^tinymce/', include('tinymce.urls')),
