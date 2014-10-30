@@ -1,10 +1,8 @@
 import os
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
-
-PROJECT_ROOT = os.path.normpath(os.path.join(os.path.dirname(__file__), os.pardir))
-
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
@@ -76,7 +74,7 @@ MEDIA_URL = '/media/'
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
-STATIC_ROOT = os.path.abspath('./assets/')
+STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
@@ -84,7 +82,7 @@ STATIC_URL = '/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-    os.path.join(PROJECT_ROOT, 'static'),
+    os.path.join(BASE_DIR, 'static'),
 )
 
 
@@ -171,9 +169,6 @@ LOGGING = {
     }
 }
 
-import os
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-
 TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 ADMIN_TOOLS_MENU = 'menu.CustomMenu'
 ADMIN_TOOLS_INDEX_DASHBOARD = 'dashboard.CustomIndexDashboard'
@@ -189,12 +184,8 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.contrib.messages.context_processors.messages",
     'django.core.context_processors.request',
     )
-ADMIN_MEDIA_PREFIX = '/static/admin/'
+
 try:
     from local_settings import *
 except ImportError:
     pass
-
-ADMIN_MEDIA_PREFIX = '/static/admin/'
-STATIC_ROOT = 'static'
-STATIC_URL = '/static/'
