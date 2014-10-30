@@ -14,40 +14,46 @@
 
     <header>
 	{% block header %}
-	       <a href="main">
+	    <a href="main">
 			<img src="{{ MEDIA_URL }}css/images/logo.png" alt="" class="logo">
 		</a>
-	       <div class="slogan">
-	           <h3>{% trans "In partnership with success" %}</h3>
-				<div class="ru">
+		
+		<div class="padding_from_logo">
+			<div class="header_layer_1">
+				<h3 class="slogan">{% trans "In partnership with success" %}</h3>
+				<div class="number">
+					<p>+375 17 <span>288-97-75</span></p>
+				</div>
+			</div>
+			<div class="header_layer_2">
+				<div class="languages">
 					<form name="setLangRussian" action="/i18n/setlang/" method="POST">{% csrf_token %}
 						<input name="next" type="hidden" value="/" />
 						<input type="hidden" name="language" value="ru" />
-						<a href="#" onclick="document.setLangRussian.submit();return false;">Ru</a>
 					</form>                
-				</div>
-				<div class="en">
 					<form name="setLangEnglish" action="/i18n/setlang/" method="POST">{% csrf_token %}
 						<input name="next" type="hidden" value="/" />
 						<input type="hidden" name="language" value="en" />
-						<a href="#" onclick="document.setLangEnglish.submit();return false;">En</a>
 					</form>
+					<a href="#" class="{% if LANGUAGE_CODE == 'ru-ru' %}active_language{% else %}language{% endif %}" onclick="document.setLangRussian.submit();return false;">Ru</a>
+					<a href="#" class="{% if LANGUAGE_CODE == 'en-us' %}active_language{% else %}language{% endif %}" onclick="document.setLangEnglish.submit();return false;">En</a>
 				</div>
-	       </div>
-	       <div class="header_contacts">
-	           <p>+375 17 <span>288-97-75</span></p>
-	           <a href=""><img src="{{ MEDIA_URL }}css/images/vk.png" alt=""></a>
-	           <a href=""><img src="{{ MEDIA_URL }}css/images/facebook.png" alt=""></a>
-	           <a href=""><img src="{{ MEDIA_URL }}css/images/twitter.png" alt=""></a>
-	       </div>
-	       <nav>
-		    <ul class="top_nav">
-		        <a href="/"><li class="active" id="main">{% trans "Home" %}</li></a>
-		        <a href="/services"><li id="services">{% trans "Services" %}</li></a>
-		        <a href="/usefull-information"><li id="usefull">{% trans "Usefull Information" %}</li></a>
-		        <a href="/contacts"><li id="contacts">{% trans "Contacts" %}</li></a>
-		    </ul>
+				<div class="header_contacts">
+					<a href=""><img src="{{ MEDIA_URL }}css/images/vk.png" alt=""></a>
+					<a href=""><img src="{{ MEDIA_URL }}css/images/facebook.png" alt=""></a>
+					<a href=""><img src="{{ MEDIA_URL }}css/images/twitter.png" alt=""></a>
+				</div>
+			</div>
+	       <nav class="top_menu">
+				<ul class="top_nav">
+					<a href="/"><li class="active" id="main">{% trans "Home" %}</li></a>
+					<a href="/services"><li id="services">{% trans "Services" %}</li></a>
+					<a href="/usefull-information"><li id="usefull">{% trans "Usefull Information" %}</li></a>
+					<a href="/contacts"><li id="contacts">{% trans "Contacts" %}</li></a>
+				</ul>
 	       	</nav>
+		</div>
+
 	{% endblock %}
 	{% block extrahead %}{% endblock %}
     </header> 
@@ -64,7 +70,7 @@
 							<p class="date">{{ news_item.date }}</p>
 							<a href="news/news_id{{ news_item.id }}"><p class="text_news">{{ news_item.title }}</p></a>
 						</div>
-				{% endfor %}
+						{% endfor %}
 				   </div>
 			{% endblock %}
 		{% endif %}
@@ -83,6 +89,7 @@
 			   </div>
 		{% endfor %}
 		</aside>
+	</div>
 	<div class="main_content">
 		{% block content %}
 		{% endblock %}

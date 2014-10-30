@@ -73,12 +73,23 @@ class InformationAdmin(SummernoteModelAdmin):
 
 class MainPageAdmin(SummernoteModelAdmin):
     search_fields = ['body_ru', 'body_en' ]
-    list_display = ['body_as_html']
+    list_display = ['body_as_html_ru', 'body_as_html_en']
 
-    def body_as_html(self, obj):
-        return obj.body[100]
-    body_as_html.allow_tags = True
+    def body_as_html_ru(self, obj):
+        return obj.body_ru
+    body_as_html_ru.allow_tags = True
 
+    def body_as_html_en(self, obj):
+        return obj.body_en
+    body_as_html_en.allow_tags = True
+
+    def has_add_permission(self, request):
+        if(MainPage.objects.all().count()<1):
+            return True
+        return False
+
+    def has_delete_permission(self, request, obj=None):
+        return None
 
 
     class Media:
