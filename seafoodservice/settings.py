@@ -195,3 +195,6 @@ try:
 except ImportError:
     pass
 
+ADMIN_MEDIA_PREFIX = '/static/admin/'
+STATIC_ROOT = os.path.join(os.path.abspath(os.path.join(os.path.abspath('.'), '..', MEDIA_ROOT, 'static')), '')
+STATIC_URL = '/static/'
