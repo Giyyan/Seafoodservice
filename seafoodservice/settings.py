@@ -63,6 +63,7 @@ USE_TZ = True
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/var/www/example.com/media/"
 MEDIA_ROOT = os.path.abspath('./media/')
+MEDIA_PATH = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'media/'))
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -189,7 +190,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.contrib.messages.context_processors.messages",
     'django.core.context_processors.request',
     )
-
+ADMIN_MEDIA_PREFIX = '/media/admin/'
 try:
     from local_settings import *
 except ImportError:

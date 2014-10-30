@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-27 16:36+0300\n"
+"POT-Creation-Date: 2014-10-30 11:14+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,11 +26,11 @@ msgstr "Быстрая ссылка"
 msgid "Return to site"
 msgstr "Вернуться на сайт"
 
-#: .\dashboard.py:35 .\templates\admin\base.html.py:37
+#: .\dashboard.py:35 .\templates\admin\base.html.py:36
 msgid "Change password"
 msgstr "Изменить пароль"
 
-#: .\dashboard.py:37 .\templates\admin\base.html.py:39
+#: .\dashboard.py:37 .\templates\admin\base.html.py:38
 msgid "Log out"
 msgstr "Выйти"
 
@@ -61,7 +61,7 @@ msgstr "Сертификаты"
 msgid "Certificate image"
 msgstr "Изображение сертификата"
 
-#: .\certificates\models.py:10 .\gallery\models.py:11 .\gallery\models.py:27
+#: .\certificates\models.py:10 .\gallery\models.py:12 .\gallery\models.py:30
 #: .\services\models.py:9 .\transporation\models.py:7
 msgid "Description"
 msgstr "Описание"
@@ -69,10 +69,11 @@ msgstr "Описание"
 #: .\certificates\templates\certificates.html.py:12
 #: .\information\templates\news.html.py:24
 #: .\information\templates\news_item.html.py:24
-#: .\information\templates\usefull-information.html.py:16
+#: .\information\templates\usefull_information.html.py:16
 #: .\information\templates\usefull_information_item.html.py:8
-#: .\services\templates\services.html.py:11 .\templates\base.html.py:47
-#: .\templates\base.html.py:104 .\templates\admin\base.html.py:48
+#: .\services\templates\services.html.py:11 .\templates\base.html.py:49
+#: .\templates\base.html.py:109 .\templates\admin\app_index.html.py:9
+#: .\templates\admin\base.html.py:47
 msgid "Home"
 msgstr "Главная"
 
@@ -128,39 +129,39 @@ msgstr "Skype"
 msgid "Skype records"
 msgstr "Skype записи"
 
-#: .\gallery\__init__.py:2 .\templates\base.html.py:76
+#: .\gallery\__init__.py:2 .\templates\base.html.py:80
 msgid "Gallery"
 msgstr "Галерея"
 
-#: .\gallery\models.py:9
+#: .\gallery\models.py:10 .\gallery\models.py:28
 msgid "Image"
 msgstr "Изображение"
 
-#: .\gallery\models.py:12
+#: .\gallery\models.py:13
 msgid "Add this photo to slide"
 msgstr "Добавить ли данное фото в слайд-шоу?"
 
-#: .\gallery\models.py:13 .\gallery\models.py:28
+#: .\gallery\models.py:14 .\gallery\models.py:31
 msgid "Add this photo to gallery"
 msgstr "Добавить ли данное фото в галерею?"
 
-#: .\gallery\models.py:19
+#: .\gallery\models.py:20
 msgid "Photo"
 msgstr "Фото"
 
-#: .\gallery\models.py:20
+#: .\gallery\models.py:21
 msgid "Photos"
 msgstr "Фотографии"
 
-#: .\gallery\models.py:25
+#: .\gallery\models.py:26
 msgid "video"
 msgstr "Видео"
 
-#: .\gallery\models.py:34
+#: .\gallery\models.py:37
 msgid "Video"
 msgstr "Видео"
 
-#: .\gallery\models.py:35
+#: .\gallery\models.py:38
 msgid "Videos"
 msgstr "Видео файлы"
 
@@ -169,16 +170,17 @@ msgstr "Видео файлы"
 msgid "Information"
 msgstr "Информация"
 
-#: .\information\models.py:10 .\information\models.py:27
+#: .\information\models.py:10 .\information\models.py:24
 #: .\transporation\models.py:6
 msgid "Title"
 msgstr "Заголовок"
 
-#: .\information\models.py:11 .\information\models.py:28
+#: .\information\models.py:11 .\information\models.py:25
+#: .\information\models.py:38
 msgid "Body"
 msgstr "Оснавная часть"
 
-#: .\information\models.py:12 .\information\models.py:29
+#: .\information\models.py:12 .\information\models.py:26
 msgid "Date"
 msgstr "Дата"
 
@@ -189,24 +191,28 @@ msgstr "Новости"
 #: .\information\models.py:19 .\information\views.py:31
 #: .\information\views.py:41 .\information\templates\news.html.py:25
 #: .\information\templates\news.html.py:29
-#: .\information\templates\news_item.html.py:25 .\templates\base.html.py:63
+#: .\information\templates\news_item.html.py:25 .\templates\base.html.py:67
 msgid "News"
 msgstr "Новость"
 
-#: .\information\models.py:35
+#: .\information\models.py:32
 msgid "Usefull Information Item"
 msgstr "Статья с полезной информацией"
 
-#: .\information\models.py:36 .\templates\base.html.py:49
-#: .\templates\base.html.py:106
+#: .\information\models.py:33 .\templates\base.html.py:51
+#: .\templates\base.html.py:111
 msgid "Usefull Information"
 msgstr "Полезная информация"
+
+#: .\information\models.py:44 .\information\models.py:45
+msgid "Main Page"
+msgstr "Главная  страница"
 
 #: .\information\views.py:11 .\information\views.py:21
 #: .\information\templates\news.html.py:10
 #: .\information\templates\news_item.html.py:10
-#: .\information\templates\usefull-information.html.py:17
-#: .\information\templates\usefull-information.html.py:21
+#: .\information\templates\usefull_information.html.py:17
+#: .\information\templates\usefull_information.html.py:21
 #: .\information\templates\usefull_information_item.html.py:9
 #, fuzzy
 msgid "Usefull information"
@@ -238,8 +244,8 @@ msgstr "Английский"
 
 #: .\services\__init__.py:2 .\services\models.py:17
 #: .\services\templates\services.html.py:12
-#: .\services\templates\services.html.py:15 .\templates\base.html.py:48
-#: .\templates\base.html.py:105
+#: .\services\templates\services.html.py:15 .\templates\base.html.py:50
+#: .\templates\base.html.py:110
 msgid "Services"
 msgstr "Услуги"
 
@@ -265,73 +271,83 @@ msgstr ""
 msgid "In partnership with success"
 msgstr "В партнёрстве с успехом!"
 
-#: .\templates\base.html.py:50 .\templates\base.html.py:107
+#: .\templates\base.html.py:52 .\templates\base.html.py:112
 msgid "Contacts"
 msgstr "Контакты"
 
-#: .\templates\base.html.py:81
+#: .\templates\base.html.py:85
 #, fuzzy
 msgid "Certficates"
 msgstr "Сертификаты"
 
-#: .\templates\base.html.py:95
+#: .\templates\base.html.py:100
 msgid "RB, Minsk, 220053"
 msgstr "РБ, Минск, 220053"
 
-#: .\templates\base.html.py:96
+#: .\templates\base.html.py:101
 msgid "str. Novovilenskaya, 8, 24"
 msgstr "ул. Нововиленская, 8, 24"
 
-#: .\templates\base.html.py:97
+#: .\templates\base.html.py:102
 #, fuzzy
 msgid "Numb."
 msgstr "Ном."
 
-#: .\templates\base.html.py:99
+#: .\templates\base.html.py:104
 msgid "Fax"
 msgstr "Факс"
 
-#: .\templates\base.html.py:100
+#: .\templates\base.html.py:105
 msgid "Go to map"
 msgstr "Посмотреть на карте"
 
-#: .\templates\base.html.py:114
+#: .\templates\base.html.py:119
 msgid "Site is developed "
 msgstr "Сайт разаработан "
 
-#: .\templates\base.html.py:114
+#: .\templates\base.html.py:119
 msgid "by studio Zod4ie"
 msgstr "студией Zod4ie"
 
-#: .\templates\main.html.py:17
+#: .\templates\main.html.py:28
+msgid "UE \"SEAFOOD SERVICE\""
+msgstr "УП 'SEAFOOD SERVICE'"
+
+#: .\templates\main.html.py:31
 #, fuzzy
 msgid "Our partners"
 msgstr "Наши партнёры"
 
-#: .\templates\admin\base.html.py:29
+#: .\templates\admin\base.html.py:28
 msgid "Welcome,"
 msgstr "Добро пожаловать,"
 
-#: .\templates\admin\base.html.py:34
+#: .\templates\admin\base.html.py:33
 #, fuzzy
 msgid "Documentation"
 msgstr "Django документация"
 
 #: .\templates\admin\base_site.html.py:4
 #, fuzzy
-msgid "Django site admin"
+msgid "SeaFoodService site admin"
 msgstr "Django IRC-канал"
 
 #: .\templates\admin\base_site.html.py:16
 #, fuzzy
-msgid "Django administration"
+msgid "SeaFoodService administration"
 msgstr "Django документация"
 
-#: .\templates\admin-tools\dashboard\modules\app_list.html.py:13
+#: .\templates\admin_tools\dashboard\dashboard.html.py:62
+msgid "Modules"
+msgstr "Модули"
+
+#: .\templates\admin_tools\dashboard\modules\app_list.html.py:13
+#: .\templates\admin_tools\dashboard\modules\model_list.html.py:11
 msgid "Add"
 msgstr "Добавить"
 
-#: .\templates\admin-tools\dashboard\modules\app_list.html.py:14
+#: .\templates\admin_tools\dashboard\modules\app_list.html.py:14
+#: .\templates\admin_tools\dashboard\modules\model_list.html.py:12
 msgid "Change"
 msgstr "Изменить"
 
@@ -339,10 +355,9 @@ msgstr "Изменить"
 msgid "Please enter a name for the bookmark"
 msgstr "Пожалуйста, введите имя для записи"
 
-#: .\transporation\models.py:8
 #, fuzzy
-msgid "Point"
-msgstr "Должность"
+#~ msgid "Point"
+#~ msgstr "Должность"
 
 #~ msgid "Title in Russian"
 #~ msgstr "Заголовок"
