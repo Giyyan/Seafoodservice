@@ -27,7 +27,7 @@ def news_item(request, news_id):
 def usefull_information(request):
     context = {
         "news": UsefullInformation.objects.all().order_by("-date"),
-        "block_informaton": News.objects.all().order_by("-date")[:4],
+        "last_news": News.objects.all().order_by("-date")[:4],
         "title_of_infoblock": _(u"News"),
         }
     return render_to_response('usefull_information.html',
@@ -37,7 +37,7 @@ def usefull_information(request):
 def usefull_information_item(request, information_id):
     context = {
         "news": UsefullInformation.objects.get(id=information_id),
-        "block_informaton": News.objects.all().order_by("-date")[:4],
+        "last_news": News.objects.all().order_by("-date")[:4],
         "title_of_infoblock": _(u"News"),
     }
     return render_to_response('usefull_information_item.html',

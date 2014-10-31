@@ -20,12 +20,12 @@
         <p> <b>{% trans 'UE "Seafood-Service"' %}</b>{% trans " provides a range of freight forwarding delivery services by wagonloads and containers train shipment:" %}</p>
         <div class="main_services">
 		{% for service in main_services %}
-	            <div>
-	                <img src="{{MEDIA_URL}}{{service.image}}" alt="">
-					{% if service.decription %}
-						<p>{{ service.decription }}</p>
-					{% endif %}
-	            </div>
+			<div>
+				<img src="{{MEDIA_URL}}{{service.image}}" alt="">
+				{% if service.decription %}
+					<p>{{ service.decription }}</p>
+				{% endif %}
+			</div>
 		{% endfor %}
         </div>
 		{% if extra_services %}
@@ -70,22 +70,26 @@
 			var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 			
 			var points = $('#transporation_points').children().toArray();
-			
+			var infowindow = new google.maps.InfoWindow;
 			for(var i=0; i<points.length; i++){
 				index = 'index_'+i;
 				var marker = new google.maps.Marker({
-					position: new google.maps.LatLng($('#latitude_'+i).text(), $('#longitude_'+i).text()),
+					position: new google.maps.LatLng(parseFloat($('#latitude_'+i).text()), parseFloat($('#longitude_'+i).text())),
 					map: map,
-					title: $('#title_'+i).text(),
+					icon: '{{ MEDIA_URL }}css/images/google_map_point.png',
+					title:  $('#title_'+i).text(),
 				});
 				
-				marker.info = new google.maps.InfoWindow({
-					content: '<a style="width:40px; height: 30px;">'+
-							'<p style="color: red;">'+$('#title_'+i).text()+'</p>'+$('#description_'+i).text()+'</a>',
-				}),
 
-				google.maps.event.addListener(marker, 'click', function() {
-					marker.info.open(map, marker);
+				google.maps.event.addListener(marker, 'click', function(marker, i) {
+					(function(marker, i) {
+						 return function() {
+							 infowindow.setContent( '<a style="width:40px; height: 30px;">'+
+							'<p style="color: red;">'+$('#title_'+i).text()+'</p>'+$('#description_'+i).text()+'</a>'
+							);
+							 infowindow.open(map, marker);
+						 }
+					})(marker, i);
 				});
 				
 			}
