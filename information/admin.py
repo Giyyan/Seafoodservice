@@ -8,7 +8,7 @@ from seafoodservice import settings
 
 class NewsAdmin(SummernoteModelAdmin):
     search_fields = ['title_ru', 'title_en', 'body_ru', 'body_en' ]
-    list_display = ('image', 'title', 'body_as_html')
+    list_display = ('id', 'image', 'title', 'body_as_html')
 
     def body_as_html(self, obj):
         return obj.body

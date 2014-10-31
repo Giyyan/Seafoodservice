@@ -35,7 +35,7 @@ class UsefullInformation(MPTTModel):
 
 class MainPage(MPTTModel):
     parent = TreeForeignKey('self', null=True, blank=True, related_name="related")
-    body = HTMLField(verbose_name=_("Body"))
+    body = HTMLField(verbose_name=_("Body"), max_length=3000)
 
     def __unicode__(self):
         return self.body
