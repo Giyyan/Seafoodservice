@@ -68,30 +68,21 @@
 				center: myLatlng
 			}
 			var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-			
 			var points = $('#transporation_points').children().toArray();
-			var infowindow = new google.maps.InfoWindow;
+			var marker = new Array();
 			for(var i=0; i<points.length; i++){
-				index = 'index_'+i;
-				var marker = new google.maps.Marker({
+				marker[i] = new google.maps.Marker({
 					position: new google.maps.LatLng(parseFloat($('#latitude_'+i).text()), parseFloat($('#longitude_'+i).text())),
 					map: map,
 					icon: '{{ MEDIA_URL }}css/images/google_map_point.png',
-					title:  $('#title_'+i).text(),
+					title: $('#title_'+i).text(),
+				});		
+				marker[i].info = new google.maps.InfoWindow({ 
+					content: '<a style="width:40px; height: 30px;"><p style="color: red;">'+$('#title_'+i).text()+'</p>'+$('#description_'+i).text()+'</a>',
 				});
-				
-
-				google.maps.event.addListener(marker, 'click', function(marker, i) {
-					(function(marker, i) {
-						 return function() {
-							 infowindow.setContent( '<a style="width:40px; height: 30px;">'+
-							'<p style="color: red;">'+$('#title_'+i).text()+'</p>'+$('#description_'+i).text()+'</a>'
-							);
-							 infowindow.open(map, marker);
-						 }
-					})(marker, i);
+				google.maps.event.addListener( marker[i], 'click', function() {
+						marker[i].info.open(map, marker[i]);
 				});
-				
 			}
 		}
 		google.maps.event.addDomListener(window, 'load', initialize);
