@@ -39,5 +39,4 @@ urlpatterns += patterns('gallery.views',
 #certificates
 urlpatterns += patterns('certificates.views',
     url(r'^certificates/$', 'certificates', name='certificates'),
-    url(r'^certificates/(?P<certificate_id>\d+)/$', 'certificate_item', name='certificate_item'),
                         )
