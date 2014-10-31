@@ -2,6 +2,10 @@
 {% load i18n admin_tools_menu_tags %}
 	{% block head %}
 	{{ block.super }}
+	<script type="text/javascript"
+      src="http://maps.googleapis.com/maps/api/js?key={{ key }}&sensor=TRUE">
+    </script>
+
 	{% endblock %}
 
 	{% block content %}
@@ -33,7 +37,58 @@
 	            </div>
 		{% endfor %}
         </div>
-        <h3 class="geography">География перевозок</h3>
+		{% if transporation_points %}
+			<h3 class="geography">География перевозок</h3>
+			<div id="transporation_points" style="display:none">
+				{% for i, point in transporation_points %}
+				{{ point }}
+					<div id="point_{{ i }}">
+						<a id="longitude_{{ i }}">{{ point.longitude }}</a>
+						<a id="latitude_{{ i }}">{{ point.latitude }}</a>
+						<a id="title_{{ i }}">{{ point.title }}</a>
+						<a id="description_{{ i }}">{{ point.description }}</a>
+					</div>
+				{% endfor %}
+			</div>
+			<div id="map-canvas" ></div>
+	<style type="text/css">
+      #map_canvas { 
+		height: 600px;
+		width:800px;
+		}
+    </style>
+    <script type="text/javascript">
+	function initialize() {
+		var myLatlng = new google.maps.LatLng({{ center_latitude }}, {{ center_longitude }});
+			var mapOptions = {
+			zoom: 3,
+			center: myLatlng
+		}
+		var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+		
+		var points = $('#transporation_points').children().toArray();
+		var markers = [];
+		var marker;
+		for(var i=0; i<points.length; i++){
+			marker = new google.maps.Marker({
+				position: new google.maps.LatLng($('#latitude_'+i).text(), $('#longitude_'+i).text()),
+				map: map,
+				title: $('#title_'+i).text(),
+				info : new google.maps.InfoWindow({
+					content: '<a style="width:40px; height: 30px;">'+
+							'<p style="color: red;">'+$('#title_'+i).text()+'</p>'+$('#description_'+i).text()+'</a>',
+				}),
+			});
+			markers.push(marker);
+			google.maps.event.addListener(markers.get(i), 'click', function() {
+				marker.info.open(map, markers.get(i));
+			});
+			
+		}
+	}
+	google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+		{% endif %}
 	{% block geography_of_transport %}
 	{% endblock %}
 {% endblock %}

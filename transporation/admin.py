@@ -3,18 +3,21 @@ from django.contrib import admin
 from mptt.admin import MPTTModelAdmin
 from modeltranslation.admin import TranslationAdmin
 from mptt.forms import forms
-from models import GeograohyTransporation
+from models import TransportationsGeography
 
 class MPTTAdminForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super(MPTTAdminForm, self).__init__(*args, **kwargs)
+        self.fields['longitude'].initial = 27.5666700
+        self.fields['latitude'].initial = 53.9000000
 
-class GeograohyTransporationAdmin(MPTTModelAdmin, TranslationAdmin):
-    list_display = ['title', 'description']
-    # , 'point']
+
+
+class TransportationsGeographyAdmin(MPTTModelAdmin, TranslationAdmin):
+    list_display = ['id', 'title', 'description', 'longitude', 'latitude']
     form = MPTTAdminForm
-
+    change_form_template = 'admin/transporation/transportationsgeography/change_form.html'
     class Media:
         js = (
             '/static/modeltranslation/js/force_jquery.js',
@@ -30,9 +33,10 @@ class GeograohyTransporationAdmin(MPTTModelAdmin, TranslationAdmin):
             'fields': [
                 'title',
                 'description',
-                # 'point'
+                'longitude',
+                'latitude'
             ]
         }),
     ]
 
-admin.site.register(GeograohyTransporation, GeograohyTransporationAdmin)
+admin.site.register(TransportationsGeography, TransportationsGeographyAdmin)

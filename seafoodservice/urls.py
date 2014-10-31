@@ -7,9 +7,8 @@ admin.autodiscover()
 
 
 urlpatterns = patterns('',
-
-    url(r'^admin_tools/', include('admin_tools.urls')),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin_tools/', include('admin_tools.urls')),
     url(r'^i18n/', include('django.conf.urls.i18n')),
     url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
     url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
@@ -21,8 +20,7 @@ urlpatterns = patterns('',
 #services
 urlpatterns += patterns('services.views',
     url(r'^services/$', 'services', name='services'),
-    url(r'^services/(?P<service_id>\d+)/$', 'service_item', name='servce_item'),
-                        )
+    )
 
 #news
 urlpatterns += patterns('information.views',

@@ -1,8 +1,8 @@
 from modeltranslation.translator import translator, TranslationOptions
-from models import GeograohyTransporation
+from models import TransportationsGeography
 
 
-class GeograohyTransporationTranslationOptions(TranslationOptions):
+class TransportationsTranslationOptions(TranslationOptions):
     fields = ('description', 'title')
 
-translator.register(GeograohyTransporation, GeograohyTransporationTranslationOptions)
+translator.register(TransportationsGeography, TransportationsTranslationOptions)

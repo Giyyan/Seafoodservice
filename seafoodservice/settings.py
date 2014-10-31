@@ -10,6 +10,12 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
+GOOGLE_MAPS_SETTINGS = {
+    'key': 'AIzaSyA2KQqiBT_QH9-Bqg4dNKaU1cJa3wsHSS0',
+    'center_longitude': 27.90,
+    'center_latitude': 53.90,
+}
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -100,9 +106,9 @@ SECRET_KEY = 'i!pp-9*^*460o+t-!1z7tpl=t5c9l@7$9u@3e0)h-da@mgip@$'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
-
-    'django.template.loaders.app_directories.Loader',
     'django.template.loaders.filesystem.Loader',
+    'django.template.loaders.app_directories.Loader',
+
 )
 
 MIDDLEWARE_CLASSES = (
