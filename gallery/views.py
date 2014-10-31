@@ -4,6 +4,8 @@ from django.http import HttpResponse
 import json
 
 from models import PhotoGallery, VideoGallery
+from seafoodservice.views import set_required_data
+
 
 def gallery(request):
     # if request.LANGUAGE_CODE=="ru-ru":
@@ -25,4 +27,5 @@ def get_slide_images(request):
     context = {
         "slides": [settings.MEDIA_URL+i.photo.name for i in PhotoGallery.objects.filter(add_this_photo_to_slide=True)],
     }
+    context.update(set_required_data(request))
     return HttpResponse(json.dumps(context), mimetype = 'application/json')
