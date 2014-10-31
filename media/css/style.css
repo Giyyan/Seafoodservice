@@ -54,7 +54,6 @@ header {
 	text-transform: uppercase;
 	font-family: Ubuntu-B;
 	color: #e1080e;
-	margin-bottom: 4%;
 	font-size: 17.5px;
 }
 
@@ -77,6 +76,8 @@ header {
 
 .languages {
 	float: left;
+	position: absolute;
+	margin-left: -8%; 
 }
 .active_laguage a {
 	color:  #e1080e;
@@ -104,9 +105,11 @@ header {
 }
 
 header nav {
+	margin: 3px;
 	clear: both;
 }
 .top_nav {
+	
 	width: 100%;
 	position: relative;
 }
@@ -246,15 +249,12 @@ footer {
 .slider {
 	position: relative;
 	z-index: 9997;
-	margin-bottom: 35px;
+	margin-bottom: 3%;
 	margin-left: -3px;
-	margin-top: 0px;
 }
 .arrows {
 	position: absolute;
-	z-index: 9998;
-	margin-top: -175px;
-	padding-left: 10px;
+	margin-top: -200px;
 }
 .slider .arrows div {
 	display: inline-block;

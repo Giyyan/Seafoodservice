@@ -1,5 +1,5 @@
 import os
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -49,10 +49,6 @@ MODELTRANSLATION_TRANSLATION_FILES = (
     'information.translation',
 )
 
-# LOCALE_PATHS = (
-#     '/conf/locale'
-# )
-
 SITE_ID = 1
 
 # If you set this to False, Django will make some optimizations so as not
@@ -75,12 +71,12 @@ MEDIA_PATH = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__fil
 # trailing slash.
 # Examples: "http://example.com/media/", "http://media.example.com/"
 MEDIA_URL = '/media/'
-
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
-STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"

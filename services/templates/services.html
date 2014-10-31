@@ -60,28 +60,29 @@
     <script type="text/javascript">
 	function initialize() {
 		var myLatlng = new google.maps.LatLng({{ center_latitude }}, {{ center_longitude }});
-			var mapOptions = {
+		var mapOptions = {
 			zoom: 3,
 			center: myLatlng
 		}
 		var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 		
 		var points = $('#transporation_points').children().toArray();
-		var markers = [];
-		var marker;
+		
 		for(var i=0; i<points.length; i++){
-			marker = new google.maps.Marker({
+			index = 'index_'+i;
+			var marker = new google.maps.Marker({
 				position: new google.maps.LatLng($('#latitude_'+i).text(), $('#longitude_'+i).text()),
 				map: map,
 				title: $('#title_'+i).text(),
-				info : new google.maps.InfoWindow({
-					content: '<a style="width:40px; height: 30px;">'+
-							'<p style="color: red;">'+$('#title_'+i).text()+'</p>'+$('#description_'+i).text()+'</a>',
-				}),
 			});
-			markers.push(marker);
-			google.maps.event.addListener(markers.get(i), 'click', function() {
-				marker.info.open(map, markers.get(i));
+			
+			marker.info = new google.maps.InfoWindow({
+				content: '<a style="width:40px; height: 30px;">'+
+						'<p style="color: red;">'+$('#title_'+i).text()+'</p>'+$('#description_'+i).text()+'</a>',
+			}),
+
+			google.maps.event.addListener(marker, 'click', function() {
+				marker.info.open(map, marker);
 			});
 			
 		}

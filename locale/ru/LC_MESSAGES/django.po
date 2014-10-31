@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-30 11:14+0300\n"
+"POT-Creation-Date: 2014-10-31 11:04+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -62,7 +62,7 @@ msgid "Certificate image"
 msgstr "Изображение сертификата"
 
 #: .\certificates\models.py:10 .\gallery\models.py:12 .\gallery\models.py:30
-#: .\services\models.py:9 .\transporation\models.py:7
+#: .\services\models.py:9 .\transporation\models.py:37
 msgid "Description"
 msgstr "Описание"
 
@@ -71,9 +71,13 @@ msgstr "Описание"
 #: .\information\templates\news_item.html.py:24
 #: .\information\templates\usefull_information.html.py:16
 #: .\information\templates\usefull_information_item.html.py:8
-#: .\services\templates\services.html.py:11 .\templates\base.html.py:49
+#: .\services\templates\services.html.py:15 .\templates\base.html.py:49
 #: .\templates\base.html.py:109 .\templates\admin\app_index.html.py:9
 #: .\templates\admin\base.html.py:47
+#: .\transporation\templates\change_form.html.py:19
+#: .\transporation\templates\admin\change_form.html.py:19
+#: .\transporation\templates\admin\transporation\change_form.html.py:19
+#: .\transporation\templates\admin\transporation\transportationsgeography\change_form.html.py:23
 msgid "Home"
 msgstr "Главная"
 
@@ -171,7 +175,7 @@ msgid "Information"
 msgstr "Информация"
 
 #: .\information\models.py:10 .\information\models.py:24
-#: .\transporation\models.py:6
+#: .\transporation\models.py:36
 msgid "Title"
 msgstr "Заголовок"
 
@@ -234,17 +238,17 @@ msgstr "Логотип"
 msgid "Partner"
 msgstr "Партнёр"
 
-#: .\seafoodservice\settings.py:33
+#: .\seafoodservice\settings.py:39
 msgid "Russian"
 msgstr "Русский"
 
-#: .\seafoodservice\settings.py:34
+#: .\seafoodservice\settings.py:40
 msgid "English"
 msgstr "Английский"
 
 #: .\services\__init__.py:2 .\services\models.py:17
-#: .\services\templates\services.html.py:12
-#: .\services\templates\services.html.py:15 .\templates\base.html.py:50
+#: .\services\templates\services.html.py:16
+#: .\services\templates\services.html.py:19 .\templates\base.html.py:50
 #: .\templates\base.html.py:110
 msgid "Services"
 msgstr "Услуги"
@@ -257,11 +261,11 @@ msgstr "Это ли основная услуга"
 msgid "Service"
 msgstr "Услуга"
 
-#: .\services\templates\services.html.py:16
+#: .\services\templates\services.html.py:20
 msgid "УП \"Сифуд-Сервис\""
 msgstr ""
 
-#: .\services\templates\services.html.py:16
+#: .\services\templates\services.html.py:20
 msgid ""
 " оказывает комплекс транспортно-экспедиционных услуг по доставке грузов "
 "железнодорожным транспортом повагонными и контейнерными отправками:"
@@ -343,6 +347,10 @@ msgstr "Модули"
 
 #: .\templates\admin_tools\dashboard\modules\app_list.html.py:13
 #: .\templates\admin_tools\dashboard\modules\model_list.html.py:11
+#: .\transporation\templates\change_form.html.py:22
+#: .\transporation\templates\admin\change_form.html.py:22
+#: .\transporation\templates\admin\transporation\change_form.html.py:22
+#: .\transporation\templates\admin\transporation\transportationsgeography\change_form.html.py:26
 msgid "Add"
 msgstr "Добавить"
 
@@ -354,6 +362,55 @@ msgstr "Изменить"
 #: .\templates\admin_tools\menu\menu.html.py:32
 msgid "Please enter a name for the bookmark"
 msgstr "Пожалуйста, введите имя для записи"
+
+#: .\transporation\models.py:9
+msgid "Enter longitude value from diapason [-90, 90]"
+msgstr ""
+
+#: .\transporation\models.py:22
+msgid "Enter latitude value from diapason [-180, 180]"
+msgstr ""
+
+#: .\transporation\models.py:38
+msgid "Longitude"
+msgstr ""
+
+#: .\transporation\models.py:39
+msgid "Latitude"
+msgstr ""
+
+#: .\transporation\models.py:42
+msgid "Transportation Geography"
+msgstr ""
+
+#: .\transporation\models.py:43
+msgid "Transportations Geography"
+msgstr ""
+
+#: .\transporation\templates\change_form.html.py:32
+#: .\transporation\templates\admin\change_form.html.py:32
+#: .\transporation\templates\admin\transporation\change_form.html.py:32
+#: .\transporation\templates\admin\transporation\transportationsgeography\change_form.html.py:36
+msgid "History"
+msgstr ""
+
+#: .\transporation\templates\change_form.html.py:33
+#: .\transporation\templates\admin\change_form.html.py:33
+#: .\transporation\templates\admin\transporation\change_form.html.py:33
+#: .\transporation\templates\admin\transporation\transportationsgeography\change_form.html.py:37
+#, fuzzy
+msgid "View on site"
+msgstr "Вернуться на сайт"
+
+#: .\transporation\templates\change_form.html.py:44
+#: .\transporation\templates\admin\change_form.html.py:44
+#: .\transporation\templates\admin\transporation\change_form.html.py:44
+#: .\transporation\templates\admin\transporation\transportationsgeography\change_form.html.py:49
+msgid "Please correct the error below."
+msgid_plural "Please correct the errors below."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
 
 #, fuzzy
 #~ msgid "Point"
