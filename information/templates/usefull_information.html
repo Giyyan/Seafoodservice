@@ -24,7 +24,7 @@
 			<div class="information_title">{{ news_item.title }}</div>
 				<a href="{{ news_item.id }}">
 					<span class="news_text_main">
-					{{ news_item.body }}
+					{{ news_item.body|safe }}
 					</span>
 				</a>
 			</div>

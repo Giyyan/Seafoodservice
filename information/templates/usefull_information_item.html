@@ -13,6 +13,6 @@
 		
 		<h3 class="useful_information">{{ news.title }}</h3>
          <div class="main_block_information1">
-			{{ news.body }}
+			{{ news.body|safe }}
 		</div>
 	{% endblock %}

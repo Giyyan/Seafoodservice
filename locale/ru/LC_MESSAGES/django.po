@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-31 11:04+0300\n"
+"POT-Creation-Date: 2014-10-31 13:33+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -262,14 +262,14 @@ msgid "Service"
 msgstr "Услуга"
 
 #: .\services\templates\services.html.py:20
-msgid "УП \"Сифуд-Сервис\""
-msgstr ""
+msgid "UE \"Seafood-Service\""
+msgstr "УП \"Сифуд-Сервис\""
 
 #: .\services\templates\services.html.py:20
 msgid ""
-" оказывает комплекс транспортно-экспедиционных услуг по доставке грузов "
-"железнодорожным транспортом повагонными и контейнерными отправками:"
-msgstr ""
+" provides a range of freight forwarding delivery services by wagonloads and "
+"containers train shipment:"
+msgstr " оказывает комплекс транспортно-экспедиционных услуг по доставке грузов железнодорожным транспортом повагонными и контейнерными отправками:"
 
 #: .\templates\base.html.py:23
 msgid "In partnership with success"
@@ -315,7 +315,7 @@ msgstr "студией Zod4ie"
 
 #: .\templates\main.html.py:28
 msgid "UE \"SEAFOOD SERVICE\""
-msgstr "УП 'SEAFOOD SERVICE'"
+msgstr "УП \"Сифуд-Сервис\""
 
 #: .\templates\main.html.py:31
 #, fuzzy
@@ -365,34 +365,34 @@ msgstr "Пожалуйста, введите имя для записи"
 
 #: .\transporation\models.py:9
 msgid "Enter longitude value from diapason [-90, 90]"
-msgstr ""
+msgstr "Введите, пожалуйста, долготу в диапазоне [-90,90]"
 
 #: .\transporation\models.py:22
 msgid "Enter latitude value from diapason [-180, 180]"
-msgstr ""
+msgstr "Введите, пожалуйста, долготу в диапазоне [-180,180]"
 
 #: .\transporation\models.py:38
 msgid "Longitude"
-msgstr ""
+msgstr "Долгота"
 
 #: .\transporation\models.py:39
 msgid "Latitude"
-msgstr ""
+msgstr "Широта"
 
 #: .\transporation\models.py:42
 msgid "Transportation Geography"
-msgstr ""
+msgstr "Точка"
 
 #: .\transporation\models.py:43
 msgid "Transportations Geography"
-msgstr ""
+msgstr "География перевозок"
 
 #: .\transporation\templates\change_form.html.py:32
 #: .\transporation\templates\admin\change_form.html.py:32
 #: .\transporation\templates\admin\transporation\change_form.html.py:32
 #: .\transporation\templates\admin\transporation\transportationsgeography\change_form.html.py:36
 msgid "History"
-msgstr ""
+msgstr "История"
 
 #: .\transporation\templates\change_form.html.py:33
 #: .\transporation\templates\admin\change_form.html.py:33
@@ -408,8 +408,8 @@ msgstr "Вернуться на сайт"
 #: .\transporation\templates\admin\transporation\transportationsgeography\change_form.html.py:49
 msgid "Please correct the error below."
 msgid_plural "Please correct the errors below."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Пожалуйста, исправьте ошибку ниже"
+msgstr[1] "Пожалуйста, исправьте ошибки ниже."
 msgstr[2] ""
 
 #, fuzzy

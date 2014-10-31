@@ -41,7 +41,7 @@ LANGUAGES = [
 ]
 
 MODELTRANSLATION_DEFAULT_LANGUAGE = 'ru'
-MODELTRANSLATION_FALLBACK_LANGUAGES = ('en', 'ru')
+MODELTRANSLATION_FALLBACK_LANGUAGES = ('ru', 'en')
 MODELTRANSLATION_LANGUAGES = ('en', 'ru')
 MODELTRANSLATION_TRANSLATION_REGISTRY = 'translation'
 
@@ -108,12 +108,12 @@ TEMPLATE_LOADERS = (
 )
 
 MIDDLEWARE_CLASSES = (
-    'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.locale.LocaleMiddleware',
 )
 
 ROOT_URLCONF = 'seafoodservice.urls'
@@ -135,7 +135,6 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'mptt',
     'partners',
-    'south',
     'gallery',
     'certificates',
     'information',
@@ -143,6 +142,7 @@ INSTALLED_APPS = (
     'services',
     'transporation',
     'django_summernote',
+    'south',
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
@@ -191,3 +191,7 @@ try:
     from local_settings import *
 except ImportError:
     pass
+
+LOCALE_PATHS = (
+    '/locale',
+)
