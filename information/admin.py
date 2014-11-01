@@ -1,7 +1,7 @@
 # coding: utf-8
 from django.contrib import admin
 from django_summernote.admin import SummernoteModelAdmin
-
+from django.db import models
 from models import News, UsefullInformation, MainPage
 from seafoodservice import settings
 import datetime
@@ -9,6 +9,11 @@ import datetime
 class NewsAdmin(SummernoteModelAdmin):
     search_fields = ['title_ru', 'title_en', 'body_ru', 'body_en' ]
     list_display = ('id', 'image', 'title', 'body_as_html', 'date')
+    formfield_overrides = {
+        models.ImageField: {'required': False}
+    }
+
+
 
     def body_as_html(self, obj):
         return obj.body
@@ -77,7 +82,7 @@ class InformationAdmin(SummernoteModelAdmin):
 
 class MainPageAdmin(SummernoteModelAdmin):
     search_fields = ['body_ru', 'body_en' ]
-    list_display = ['body_as_html_ru', 'body_as_html_en']
+    list_display = ['id', 'body_as_html_ru', 'body_as_html_en']
 
     def body_as_html_ru(self, obj):
         return obj.body_ru
