@@ -4,17 +4,17 @@ from django.db import models
 from mptt.models import MPTTModel
 
 class Contact(MPTTModel):
-    parent = models.ForeignKey('Contact', null=True)
+    parent = models.ForeignKey('self', null=True, blank=True, related_name="related")
 
-class OfficeContact(MPTTModel):
+class OfficeContact(Contact):
     address = models.CharField(max_length=255, verbose_name=_("Address"))
 
     def __unicode__(self):
-        return u'%s - %s %s %s' % (self.first_name, self.second_name, self.last_name, self.post)
+        return u'%s' % (self.address)
 
     class Meta:
-        verbose_name = _(u"Employee")
-        verbose_name_plural = _(u"Employees")
+        verbose_name = _(u"Office Contact")
+        verbose_name_plural = _(u"Office Contacts")
 
 
 

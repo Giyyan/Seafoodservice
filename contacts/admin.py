@@ -63,11 +63,11 @@ class EmployeeAdmin(admin.ModelAdmin):
 
 
 class OfficeContactAdmin(admin.ModelAdmin):
-    list_display = ['address', 'faxs','skypes', 'numbers', 'emails', ]
-    search_fields = ['address', 'address_ru', 'address_en']
+    list_display = ['address', 'faxs', 'skypes', 'numbers', 'emails', ]
+    search_fields = ['address_ru', 'address_en']
     inlines = [TelephoneNumberInline, EmailInline, SkypeInline, FaxNumberInline ]
     form = OfficeContactForm
-    exclude = ['parent', 'first_name','second_name','last_name', 'post']
+    exclude = ['parent', 'address',]
 
     @staticmethod
     def skypes(obj):
