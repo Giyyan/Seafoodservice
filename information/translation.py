@@ -11,4 +11,4 @@ translator.register(UsefullInformation, InformationTranslationOptions)
 class MainPageTranslationOptions(TranslationOptions):
     fields = ( 'body',)
 
-# translator.register(MainPage, MainPageTranslationOptions)
+translator.register(MainPage, MainPageTranslationOptions)
