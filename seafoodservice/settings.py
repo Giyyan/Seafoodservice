@@ -138,7 +138,7 @@ INSTALLED_APPS = (
     'gallery',
     'certificates',
     'information',
-    'employees',
+    'contacts',
     'services',
     'transporation',
     'django_summernote',
