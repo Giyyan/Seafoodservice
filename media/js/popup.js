@@ -167,25 +167,25 @@ $("#overlay, #wrap_frame2, .description2").fadeOut(300);
     background-image: url(../../../css/images/ui-icons_375ee6_256x240.png);
 }
 
-.b-popup.ui-dialog .ui-dialog-content {
+.b-popup .ui-dialog .ui-dialog-content {
     padding: 0px 9px 80px 9px;
     text-align: center;
 }
 
-.b-popup.ui-dialog .ui-dialog-content .title {
+.b-popup .ui-dialog .ui-dialog-content .title {
     font-family: Arial;
     font-size: 22px;
     font-weight: bold;
     color: #003e88;
 }
 
-.b-popup.ui-dialog .ui-dialog-content .popup-content {
+.b-popup .ui-dialog .ui-dialog-content .popup-content {
     margin: 15px 20px 25px;
     border: solid 2px #777;
     border-radius: 15px;
 }
 
-.b-popup.ui-dialog .ui-dialog-content p {
+.b-popup .ui-dialog .ui-dialog-content p {
     text-align: left;
     font-family: Arial;
     margin: 15px;
@@ -193,7 +193,7 @@ $("#overlay, #wrap_frame2, .description2").fadeOut(300);
     color: #777;
 }
 
-.b-popup.ui-dialog .ui-dialog-content .ok {
+.b-popup .ui-dialog .ui-dialog-content .ok {
     height: 41px;
     width: 118px;
     background: url("../img/pop_ok.png") no-repeat 0 0;
