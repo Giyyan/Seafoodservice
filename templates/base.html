@@ -68,7 +68,7 @@
 						{% for news_item in last_news %}
 						<div class="news">
 							<p class="date">{{ news_item.date|date:"d.m.Y" }}</p>
-							<a href="news/news_id{{ news_item.id }}"><p class="text_news">{{ news_item.title }}</p></a>
+							<a href="news/{{ news_item.id }}"><p class="text_news">{{ news_item.title }}</p></a>
 						</div>
 						{% endfor %}
 				   </div>
