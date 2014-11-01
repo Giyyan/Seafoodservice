@@ -30,7 +30,9 @@
 		{% for news_item in news %}
 			<div class="main_block_information">
 				<p class="news_date">{{ news_item.date }}</p>
-			<div class="information_title">{{ news_item.title }}</div>
+			{% if news.title_image  %}
+				<div class="information_title">{{ news_item.title }}</div>
+			{% endif %}
 			<span style="width:10px;height:10px;">
 				<img src="{{ MEDIA_URL }}{{ news_item.title_image }}" alt="">
 			</span>

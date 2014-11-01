@@ -1,19 +1,25 @@
 # coding: utf-8
 from django.contrib import admin
-from django_summernote.admin import SummernoteModelAdmin
+from django_summernote.admin import SummernoteModelAdmin, SummernoteWidget, SummernoteInplaceWidget
+from django_summernote.settings import summernote_config
 from django.db import models
+
+
 from models import News, UsefullInformation, MainPage
 from seafoodservice import settings
 import datetime
 
+__widget__ = SummernoteWidget if summernote_config['iframe'] \
+    else SummernoteInplaceWidget
+
 class NewsAdmin(SummernoteModelAdmin):
     search_fields = ['title_ru', 'title_en', 'body_ru', 'body_en' ]
     list_display = ('id', 'image', 'title', 'body_as_html', 'date')
+
     formfield_overrides = {
-        models.ImageField: {'required': False}
+        models.ImageField: {'required': False},
+        models.TextField: {'widget': __widget__}
     }
-
-
 
     def body_as_html(self, obj):
         return obj.body

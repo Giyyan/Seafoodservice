@@ -30,7 +30,9 @@
 		<h3 class="useful_information">{{ news.title }}</h3>
          <div class="main_block_information1">
             <p class="news_date1">{{ news.date }}</p>
-            <img class="main_block_information-img" src="{{ MEDIA_URL }}{{ news.title_image }}" alt="">
+			{% if news.title_image  %}
+				<img class="main_block_information-img" src="{{ MEDIA_URL }}{{ news.title_image }}" alt="">
+			{% endif %}
 			{{ news.body }}
 		</div>
 	{% endblock %}
