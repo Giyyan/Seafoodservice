@@ -33,12 +33,14 @@
 			{% if news.title_image  %}
 				<div class="information_title">{{ news_item.title }}</div>
 			{% endif %}
+			{% if news_item.title_image %}
 			<span style="width:10px;height:10px;">
 				<img src="{{ MEDIA_URL }}{{ news_item.title_image }}" alt="">
 			</span>
+			{% endif %}
 				<a href="{{ news_item.id }}">
 					<p class="news_text_main">
-					{{ news_item.body }}
+					{{ news_item.body|removetags:"img"|safe|truncatechars:30 }}
 					</p>
 				</a>
 			</div>

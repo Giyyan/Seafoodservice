@@ -33,6 +33,6 @@
 			{% if news.title_image  %}
 				<img class="main_block_information-img" src="{{ MEDIA_URL }}{{ news.title_image }}" alt="">
 			{% endif %}
-			{{ news.body }}
+			{{ news.body|safe }}
 		</div>
 	{% endblock %}
