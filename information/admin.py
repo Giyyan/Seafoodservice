@@ -58,6 +58,10 @@ class InformationAdmin(SummernoteModelAdmin):
         return obj.body
     body_as_html.allow_tags = True
 
+    def save_model(self, request, obj, form, change):
+        obj.date = datetime.datetime.now().date()
+        return super(NewsAdmin, self).save_model(request, obj, form, change)
+
     class Media:
         js = (
             '/static/modeltranslation/js/force_jquery.js',
