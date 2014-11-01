@@ -4,7 +4,13 @@
 		{{ block.super }}
 		<script src="{{MEDIA_URL}}js/popup.js"></script>
 	{% endblock %}
-
+        <ul class="sertif_portfolio">
+                  <li class="sertif" rel="1"><img src="images/sertif_full.jpg" alt="">
+		           <div class="sertif_descr" style="display:none">
+			<p>Сертификат 1</p>
+			<p>Здесь может быть небольшой пояснительный текст</p>
+		    </div>
+                  </li>
 	{% block content %}
 		{{ block.super }}
 		{% block breadcrumbs %}
@@ -15,16 +21,26 @@
 		{% endblock %}
 		<div>
 			<h3 class="useful_information">{% trans "Certificates" %}</h3>
-			<div class="sertif_portfolio">
-				{% for certificate in certificates %}
-					<div class="sertif" id="sertif_right">
+			<ul class="sertif_portfolio">
+				{% for i, certificate in certificates %}
+					<li class="sertif" rel="{{ i|add:"1" }}" id="sertif_right">
 						<img src="{{ MEDIA_URL }}{{ certificate.image }}" style="margin-right:3" alt="{{ certificate.description }}">
 						<div class="sertif_descr" style="display:none">
 							<p>{{ certificate.title }}</p>
 							<p>{{ certificate.description }}</p>
 						</div>
-					</div>
+					</li>
 				{% endfor %}
-			</div>
+			</ul>
 		</div>
+     <div id="wrap_frame2">
+     <div id="frame2">
+     <img src="{{ MEDIA_URL }}css/images/arrow_left_photo.png" alt="" id="left_arrow_sertif">
+      <img src="{{ MEDIA_URL }}css/images/arrow_right_photo.png" alt="" id="right_arrow_sertif">
+          <img src="" id="big_photo_img">
+     </div> 
+     <div class="description2">
+     </div>
+     <img src="{{ MEDIA_URL }}css/images/close.png" alt="" id="close">
+     </div>
 	{% endblock %}
