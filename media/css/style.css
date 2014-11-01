@@ -186,6 +186,7 @@ aside {
 .text_news {
 	padding-top: 4px;
 	margin-left: 13px;
+	margin-right: 1px;
 	text-align: left;
 	font-family: Ubuntu-R;
 	width: 180px;
@@ -660,11 +661,13 @@ list-style: none;
 margin-right: 22px;
 margin-bottom: 12px;
 margin-left: -5px;
+
 cursor: pointer;
 }
 .sertif img {
 width: 226px;
 height: 336px;
+padding: 3px;
 }
 #sertif_right, #sertif_right2 {
 margin-right: 0;
