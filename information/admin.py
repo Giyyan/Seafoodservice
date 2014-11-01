@@ -60,7 +60,7 @@ class InformationAdmin(SummernoteModelAdmin):
 
     def save_model(self, request, obj, form, change):
         obj.date = datetime.datetime.now().date()
-        return super(NewsAdmin, self).save_model(request, obj, form, change)
+        return super(InformationAdmin, self).save_model(request, obj, form, change)
 
     class Media:
         js = (
