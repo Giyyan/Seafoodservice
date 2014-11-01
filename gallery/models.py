@@ -14,7 +14,7 @@ class PhotoGallery(MPTTModel):
     add_this_photo_to_gallery = models.BooleanField(null=False, verbose_name=_(u"Add this photo to gallery"))
 
     def __unicode__(self):
-        return self.photo.name
+        return ("%s - %s")%(self.photo, self.description)
 
     class Meta:
         verbose_name = _(u"Photo")
@@ -31,7 +31,7 @@ class VideoGallery(MPTTModel):
     add_this_photo_to_gallery = models.BooleanField(null=False, verbose_name=_(u"Add this photo to gallery"))
 
     def __unicode__(self):
-        return self.video.name
+        return ("%s - %s")%(self.video, self.description)
 
     class Meta:
         verbose_name = _(u"Video")

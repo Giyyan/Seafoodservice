@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load i18n admin_tools_menu_tags %}
 	{% block head %}
 		{{ block.super }}
 		<script src="{{MEDIA_URL}}js/script.js"></script>
@@ -11,38 +11,39 @@
 		{{ block.super }}
 		{% block breadcrumbs %}
 			<ul class="breadcrumbs">
-				<li><a href="../">Главная</a></li>
-				<li>Галерея</li>
+				<li><a href="../">{% trans "Home" %}</a></li>
+				<li>{% trans "Gallery" %}</li>
 			</ul>
 		{% endblock %}
 		<div>
 			{% if videos %}
-			<h3 class="useful_information">видео</h3>
+			<h3 class="useful_information">{% trans "video" %}</h3>
 			<div class="video_gallery">
 				{% for video in videos %}
 				   <video width="225" height="173" controls poster="{{ MEDIA_URL }}{{ video.video_image }}" id="myVideo{{ video.id }}" class="right_video">
 						<source src="{{ MEDIA_URL }}{{ video.video }}" type="{{ video.type }}">
 						Your browser does not support HTML5 video.
-						<br><a>{{ video.description_ru }}{{ video.description_en }}</a>
+						<br><a>{{ video.description }}</a>
 				   </video>
 				   
 				{% endfor %}
 				<br>
 			</div>
 			{% endif %}
-			<h3 class="photo_title">фото</h3>
+			<h3 class="photo_title">{% trans "photos" %}</h3>
+			{% if photos %}
               <div id="photo_gallery">
                <ul class="portfolio">
-			   
-				{% for photo in photos %}
-				<li class="photo_img"><img src="{{ MEDIA_URL }}{{ photo }}" alt="">
-					<div class="photo_descr" style="display:none">
-					<p>{{ photo.photo }}</p>
-					<p>{{ photo.description_ru }}{{ photo.description_en }}</p>
+				{% for i, photo in photos %}
+				<li class="photo_img"  rel="{{ i }}">
+					<img src="{{ MEDIA_URL }}{{ photo.photo }}"  alt="">
+					<div class="photo_descr"  style="display:none">
+					<p>{{ photo.description }}</p>
 					</div>
 				</li>
 				{% endfor %}
 			</div>
+			{% endif %}
 		</div>
 	<div id="overlay"></div>
 		<div id="wrap_frame">
