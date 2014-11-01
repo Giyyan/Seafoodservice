@@ -722,10 +722,10 @@ margin-bottom: -8px;
 
 .main_block_information:nth-child(odd) {
 background: #f2f2f2;
-height: 100px;
+height: 120px;
 }
 .main_block_information:nth-child(even) {
-height:100px;
+height:120px;
 }
 .news_date {
 color: #26448c;
@@ -733,8 +733,8 @@ font-size: 16px;
 padding-bottom: 10px;
 }
 .main_block_information img {
-width: 80px;
-height: 80px;
+width: 70px;
+height: 70px;
 float: left;
 }
 .news_text_main {
