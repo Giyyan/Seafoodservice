@@ -16,24 +16,29 @@
 			<h3 class="useful_information">наши сотрудники</h3>
 				{% for contact in contacts %}
 				<div class="contacts_block">
-					<p class="post">{{ contact.post }}</p>
-					<p class="name">{{ contact.full_name }}</p>
+					<p class="post">{{ contact.contact.post }}</p>
+					<p class="name">{{ contact.contact.full_name }}</p>
 					<div class="contact_info">
-					
+						{% if contact.numbers  %}
 						<img src="{{MEDIA_URL}}css/images/phone.png" alt="">
-						{% for number in numbers %}
+						{% for number in contact.numbers %}
 						<p>{{ number }}</p>
 						{% endfor %}
+						{% endif %}
 						
-						<img src="images/mail.png" alt="">
-						{% for mail in mails %}
-						<a href="mailto:{{ mail }}"><p>{{ mail }}</p></a>
+						{% if contact.mails  %}
+						<img src="{{MEDIA_URL}}css/images/mail.png" alt="">
+						{% for mail in contact.mails %}
+							<a href="mailto:{{ mail }}"><p>{{ mail }}</p></a>
 						{% endfor %}
+						{% endif %}
 						
-						<img src="images/skype.png" alt="">
-						{% for skype in skypes %}
-						<a href="skype:skype"><p>skype</p></a>
+						{% if contact.skypes  %}
+						<img src="{{MEDIA_URL}}css/images/skype.png" alt="">
+						{% for skype in contact.skypes %}
+							<a href="skype:skype"><p>skype</p></a>
 						{% endfor %}
+						{% endif %}
 					</div>
 				</div>
 				{% endfor %}
