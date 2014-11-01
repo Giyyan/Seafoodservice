@@ -4,11 +4,11 @@ from django_summernote.admin import SummernoteModelAdmin
 
 from models import News, UsefullInformation, MainPage
 from seafoodservice import settings
-
+import datetime
 
 class NewsAdmin(SummernoteModelAdmin):
     search_fields = ['title_ru', 'title_en', 'body_ru', 'body_en' ]
-    list_display = ('id', 'image', 'title', 'body_as_html')
+    list_display = ('id', 'image', 'title', 'body_as_html', 'date')
 
     def body_as_html(self, obj):
         return obj.body
@@ -17,6 +17,10 @@ class NewsAdmin(SummernoteModelAdmin):
     def image(self, obj):
         return '<span style="width:20px;height:20px;"><img style="width:80px;height:80px;" src="%s" /></span>' % (settings.MEDIA_URL+obj.title_image.name)
     image.allow_tags = True
+
+    def save_model(self, request, obj, form, change):
+        obj.date = datetime.datetime.now().date()
+        return super(NewsAdmin, self).save_model(request, obj, form, change)
 
     class Media:
         js = (
