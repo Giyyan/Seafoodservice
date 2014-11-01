@@ -23,13 +23,14 @@
 				   <video width="225" height="173" controls poster="{{ MEDIA_URL }}{{ video.video_image }}" id="myVideo{{ video.id }}" class="right_video">
 						<source src="{{ MEDIA_URL }}{{ video.video }}" type="{{ video.type }}">
 						Your browser does not support HTML5 video.
+						<br><a>{{ video.description_ru }}{{ video.description_en }}</a>
 				   </video>
-				   <a>{{ video.description_ru }}{{ video.description_en }}</a>
+				   
 				{% endfor %}
 				<br>
 			</div>
 			{% endif %}
-			<h3 class="useful_information">фото</h3>
+			<h3 class="photo_title">фото</h3>
               <div id="photo_gallery">
                <ul class="portfolio">
 			   
@@ -42,7 +43,18 @@
 				</li>
 				{% endfor %}
 			</div>
-
 		</div>
+	<div id="overlay"></div>
+		<div id="wrap_frame">
+		<div id="frame">
+		<img src="{{ MEDIA_URL }}css/images/arrow_left_photo.png" alt="" id="left_arrow">
+		<img src="{{ MEDIA_URL }}css/images/arrow_right_photo.png" alt="" id="right_arrow">
+
+		<img src="" id="big_photo_img">
+		</div> 
+		<div class="description">
+		</div>
+		<img src="{{ MEDIA_URL }}css/images/close.png" alt="" id="close2">
+	</div>
 	{% endblock %}
 	
