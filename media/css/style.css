@@ -118,27 +118,29 @@ list-style: none;
 background: url(/media/css/images/bg_grad_main.png) repeat-x;
 text-align: center;
 padding: 7px 16px;
+
 }
 
 .top_nav a {
 font-size: 20px;
 color: #fff;
+    padding-right: 2%;
 }
 
-#main{
-    width:15%;
+#home{
+    width:10%;
 }
 
 #services{
-    width:18%;
+    width:15%;
 }
 
 #usefull{
-    width:25%;
+    width:27%;
 }
 
 #contacts{
-    width:18%;
+    width:15%;
 }
 .top_nav li:hover {
 background: url(images/bg_grad.png) repeat-x;
