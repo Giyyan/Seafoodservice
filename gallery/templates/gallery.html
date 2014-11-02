@@ -36,7 +36,7 @@
                <ul class="portfolio">
 				{% for i, photo in photos %}
 				<li class="photo_img"  rel="{{ i }}">
-					<img src="{{ MEDIA_URL }}{{ photo.photo }}"  alt="">
+					<img src="{{ MEDIA_URL }}{{ photo.photo }}" style="margin-right:3" alt="">
 					<div class="photo_descr"  style="display:none">
 					<p>{{ photo.description }}</p>
 					</div>
