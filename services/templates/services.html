@@ -9,7 +9,7 @@
 		{{ block.super }}
 		{% block breadcrumbs %}
 			<ul class="breadcrumbs">
-				<li><a href="../">{% trans "Home" %}</a></l>
+				<li><a href="../">{% trans "Home" %}</a></li>
 				<li>{% trans "Services" %}</li>
 			</ul>
 		{% endblock %}
@@ -26,7 +26,7 @@
 		{% endfor %}
         </div>
 		{% if extra_services %}
-			<h3>Дополнительные услуи</h3>
+			<h3>{% trans "Additional services" %}</h3>
 			<div class="extra_services">
 			{% for service in extra_services %}
 					<div class="extra_service">
@@ -38,7 +38,7 @@
 		{% endif %}
 	{% block geography_of_transport %}
 		{% if transporation_points %}
-			<h3 class="geography">География перевозок</h3>
+			<h3 class="geography">{% trans "Transporation points" %}</h3>
 			<div id="transporation_points" style="display:none">
 				{% for i, point in transporation_points %}
 				{{ point }}

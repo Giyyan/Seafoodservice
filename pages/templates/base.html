@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 {% load i18n admin_tools_menu_tags %}
+{% load active_url %}
 <html lang="{{ LANGUAGE_CODE|default:"en-us" }}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
 <head>
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
@@ -45,10 +46,10 @@
 			</div>
 	       <nav class="top_menu">
 				<ul class="top_nav">
-					<a href="{% url 'home' %}"><li id="home" class="active">{% trans "Home" %}</li></a>
-					<a href="{% url 'services' %}"><li id="services">{% trans "Services" %}</li></a>
-					<a href="{% url 'usefull_information' %}"><li id="usefull">{% trans "Usefull Information" %}</li></a>
-					<a href="{% url 'contacts' %}"><li id="contacts">{% trans "Contacts" %}</li></a>
+					<a href="{% url 'home' %}"><li id="home" class="{% active request "^/$" %}">{% trans "Home" %}</li></a>
+					<a href="{% url 'services' %}"><li id="services" class="{% active request "^/services/" %}">{% trans "Services" %}</li></a>
+					<a href="{% url 'usefull_information' %}"><li id="usefull" class="{% active request "^/usefull-information/" %}">{% trans "Usefull Information" %}</li></a>
+					<a href="{% url 'contacts' %}"><li id="contacts" class="{% active request "^/contacts/" %}">{% trans "Contacts" %}</li></a>
 				</ul>
 	       	</nav>
 		</div>
