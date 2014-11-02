@@ -1,6 +1,7 @@
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import get_language
 
 from models import News, UsefullInformation
 
@@ -47,5 +48,6 @@ def usefull_information_item(request, information_id):
 def set_required_data(request=None):
     context = {
         "last_news": News.objects.all().order_by("-date")[:4],
+        "language": get_language(),
     }
     return context

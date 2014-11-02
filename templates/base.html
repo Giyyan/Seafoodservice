@@ -11,7 +11,6 @@
 	{% endblock %}
 </head>
 <body>
-
     <header>
 	{% block header %}
 	    <a href="main">
@@ -35,8 +34,8 @@
 						<input name="next" type="hidden" value="/" />
 						<input type="hidden" name="language" value="en" />
 					</form>
-					<a href="#" class="{% if LANGUAGE_CODE == 'ru-ru' %}active_language{% else %}language{% endif %}" onclick="document.setLangRussian.submit();return false;">Ru</a>
-					<a href="#" class="{% if LANGUAGE_CODE == 'en-us' %}active_language{% else %}language{% endif %}" onclick="document.setLangEnglish.submit();return false;">En</a>
+					<a href="#" class="{% if language == 'ru' %}active_language{% else %}language{% endif %}" onclick="document.setLangRussian.submit();return false;">Ru</a>
+					<a href="#" class="{% if language == 'en' %}active_language{% else %}language{% endif %}" onclick="document.setLangEnglish.submit();return false;">En</a>
 				</div>
 				<div class="header_contacts">
 					<a href=""><img src="{{ MEDIA_URL }}css/images/vk.png" alt=""></a>
