@@ -134,6 +134,7 @@ INSTALLED_APPS = (
     'modeltranslation',
     'django.contrib.admin',
     'mptt',
+    'captcha',
     'partners',
     'gallery',
     'certificates',
@@ -195,3 +196,8 @@ except ImportError:
 LOCALE_PATHS = (
     '/locale',
 )
+
+SOUTH_MIGRATION_MODULES = {
+    'captcha': 'captcha.south_migrations',
+}
+
