@@ -1,5 +1,8 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
+from django.conf.urls.i18n import i18n_patterns
+from django.utils.translation import ugettext_lazy as _
+
 
 import settings
 
@@ -11,10 +14,14 @@ urlpatterns = patterns('',
     url(r'^admin_tools/', include('admin_tools.urls')),
     url(r'^i18n/', include('django.conf.urls.i18n')),
     url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
-    url(r'^$', 'seafoodservice.views.main', name='home'),
     url(r'^summernote/', include('django_summernote.urls')),
     url(r'^captcha/', include('captcha.urls')),
 )
+
+#pages
+urlpatterns += patterns('pages.views',
+    url(r'^$', 'main', name='home'),
+    )
 
 #services
 urlpatterns += patterns('services.views',

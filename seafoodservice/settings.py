@@ -121,6 +121,7 @@ ROOT_URLCONF = 'seafoodservice.urls'
 WSGI_APPLICATION = 'seafoodservice.wsgi.application'
 
 INSTALLED_APPS = (
+    'pages',
     'admin_tools',
     'admin_tools.theming',
     'admin_tools.menu',
@@ -131,14 +132,14 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'partners',
     'modeltranslation',
     'django.contrib.admin',
     'mptt',
-    'captcha',
-    'partners',
     'gallery',
     'certificates',
     'information',
+    'captcha',
     'contacts',
     'services',
     'transporation',
@@ -172,20 +173,22 @@ LOGGING = {
     }
 }
 
-TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
+TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'pages/templates')]
 ADMIN_TOOLS_MENU = 'menu.CustomMenu'
 ADMIN_TOOLS_INDEX_DASHBOARD = 'dashboard.CustomIndexDashboard'
 ADMIN_TOOLS_APP_INDEX_DASHBOARD = 'dashboard.CustomAppIndexDashboard'
 
 TEMPLATE_CONTEXT_PROCESSORS = (
+
     "django.contrib.auth.context_processors.auth",
+
     "django.core.context_processors.debug",
-    "django.core.context_processors.i18n",
     "django.core.context_processors.media",
     "django.core.context_processors.static",
     "django.core.context_processors.tz",
     "django.contrib.messages.context_processors.messages",
     'django.core.context_processors.request',
+    'django.core.context_processors.i18n'
     )
 
 try:
@@ -194,7 +197,9 @@ except ImportError:
     pass
 
 LOCALE_PATHS = (
-    '/locale',
+    'locale',
+    'certificates/locale',
+    'pages/locale',
 )
 
 SOUTH_MIGRATION_MODULES = {
