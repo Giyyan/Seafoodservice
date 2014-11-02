@@ -23,7 +23,7 @@ urlpatterns += patterns('services.views',
 
 #contacts
 urlpatterns += patterns('contacts.views',
-    url(r'^send_message/$', 'send_message', name='send_message'),
+    url(r'^contacts/$', 'contacts', name='contacts'),
     )
 
 #news
