@@ -126,8 +126,6 @@
             <p class="required">{% trans "Fields marked as * are required" %}</p>
 			<input type="submit" value="{% trans "Submit" %}" class="input_button"/>
             <p class="cancel">{% trans "Cancel" %}</p>
-            <input type="hidden" name="path" value="{% url "send_message" %}" class="path">
-			<button class='js-captcha-refresh'></button>
 		</form>
 
 	{% endblock %}
