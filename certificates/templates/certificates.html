@@ -4,13 +4,7 @@
 		{{ block.super }}
 		<script src="{{MEDIA_URL}}js/popup.js"></script>
 	{% endblock %}
-        <ul class="sertif_portfolio">
-                  <li class="sertif" rel="1"><img src="images/sertif_full.jpg" alt="">
-		           <div class="sertif_descr" style="display:none">
-			<p>Сертификат 1</p>
-			<p>Здесь может быть небольшой пояснительный текст</p>
-		    </div>
-                  </li>
+
 	{% block content %}
 		{{ block.super }}
 		{% block breadcrumbs %}
