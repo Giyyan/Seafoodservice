@@ -90,5 +90,13 @@ class OfficeContactAdmin(admin.ModelAdmin):
         return "" if not(faxs) else ", ".join(str(o) for o in faxs)
 
 
+class MessageAdmin(admin.ModelAdmin):
+    list_display = ['name', 'number', 'email', 'user_message']
+    search_fields = ['name', 'number', 'email', 'message']
+
+    def user_message(self, obj):
+        return obj.message[0:30]
+
 admin.site.register(Employee, EmployeeAdmin)
 admin.site.register(OfficeContact, OfficeContactAdmin)
+admin.site.register(Message, MessageAdmin)

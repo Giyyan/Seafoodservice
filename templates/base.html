@@ -46,7 +46,7 @@
 			</div>
 	       <nav class="top_menu">
 				<ul class="top_nav">
-					<a href="{% url 'home' %}"><li class="active" id="main">{% trans "Home" %}</li></a>
+					<a href="{% url 'home' %}"><li class="active">{% trans "Home" %}</li></a>
 					<a href="{% url 'services' %}"><li id="services">{% trans "Services" %}</li></a>
 					<a href="{% url 'usefull_information' %}"><li id="usefull">{% trans "Usefull Information" %}</li></a>
 					<a href="{% url 'contacts' %}"><li id="contacts">{% trans "Contacts" %}</li></a>
@@ -64,7 +64,7 @@
 		{% if last_news %}
 			{% block last_news %}
 				   <div class="{% url 'news' %}>
-					   <a href="/news" class="title_link"><div class="aside_title">{% trans "News" %}</div></a>
+					   <a href={% url 'news' %}" class="title_link"><div class="aside_title">{% trans "News" %}</div></a>
 						{% for news_item in last_news %}
 						<div class="news">
 							<p class="date">{{ news_item.date|date:"d.m.Y" }}</p>
@@ -92,6 +92,10 @@
 	</div>
 	<div class="main_content">
 		{% block content %}
+            {% for message in notifications_messages %}
+            <p class="notification_error"> {{ message }}</p>
+            {% endfor %}
+
 		{% endblock %}
     </div>
     <footer>

@@ -117,15 +117,29 @@ display: inline-block;
 list-style: none;
 background: url(/media/css/images/bg_grad_main.png) repeat-x;
 text-align: center;
-/*margin: 7px 31px 5px 10px;*/
-margin-right: 3%;
 padding: 7px 16px;
 }
+
 .top_nav a {
 font-size: 20px;
 color: #fff;
 }
 
+#main{
+    width:15%;
+}
+
+#services{
+    width:18%;
+}
+
+#usefull{
+    width:25%;
+}
+
+#contacts{
+    width:18%;
+}
 .top_nav li:hover {
 background: url(images/bg_grad.png) repeat-x;
 }
@@ -550,8 +564,15 @@ margin-top: 5px;
 color: #4a4a4a;
 }
 .contact_info p {
-margin-left: 30px;
-margin-top: -5px;
+    margin-left: 30px;
+    margin-top: -5px;
+}
+.office_info a {
+    margin-left: 10px;
+    margin-top: -5px;
+}
+.office_info {
+padding-bottom: 5px;
 }
 .contact_info {
 padding-bottom: 5px;
@@ -576,6 +597,26 @@ padding-left: 27px;
 .img_phone {
 margin-left: 3px;
 }
+.captcha{
+    float: left;
+    margin-left: 45px;
+    margin-top: -12px;
+    margin-bottom: 12px;
+}
+.leave_message_label{
+    float: left;
+}
+
+.error_leave_message_label{
+    color: #ff1111;
+    padding: 5px;
+    margin-right: 248px;
+    margin-left: 42px;
+}
+.notification_error{
+    color: #ff1111;
+    font-size: 15px;
+}
 .coord {
 padding-top: 45px;
 padding-bottom: 9px;
@@ -585,7 +626,7 @@ padding-top: 60px;
 padding-bottom: 10px;
 }
 #myForm {
-width: 670px;
+width: 90%;
 position: relative;
 background: #f2f2f2;
 padding: 21px;

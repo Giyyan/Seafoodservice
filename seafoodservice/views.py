@@ -18,4 +18,3 @@ def main(request):
                           context_instance=RequestContext(request))
 
 
-

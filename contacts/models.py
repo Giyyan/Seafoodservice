@@ -79,3 +79,10 @@ class FaxNumber(models.Model):
     class Meta:
         verbose_name = _(u"Fax")
         verbose_name_plural = _(u"Fax numbers")
+
+
+class Message(models.Model):
+    name = models.CharField(max_length=255, verbose_name=_(u"Your name"))
+    number = models.CharField(max_length=255, verbose_name=_(u"Contact number"), null=True, blank=True)
+    email = models.EmailField(verbose_name=_(u"Email"))
+    message = models.TextField(verbose_name=_(u"Your message"))

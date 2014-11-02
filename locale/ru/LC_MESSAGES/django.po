@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-31 13:33+0300\n"
+"POT-Creation-Date: 2014-11-02 16:54+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -67,11 +67,13 @@ msgid "Description"
 msgstr "Описание"
 
 #: .\certificates\templates\certificates.html.py:12
+#: .\contacts\templates\contacts.html.py:23
+#: .\gallery\templates\gallery.html.py:14
 #: .\information\templates\news.html.py:24
 #: .\information\templates\news_item.html.py:24
-#: .\information\templates\usefull_information.html.py:16
+#: .\information\templates\usefull_information.html.py:13
 #: .\information\templates\usefull_information_item.html.py:8
-#: .\services\templates\services.html.py:15 .\templates\base.html.py:49
+#: .\services\templates\services.html.py:12 .\templates\base.html.py:49
 #: .\templates\base.html.py:109 .\templates\admin\app_index.html.py:9
 #: .\templates\admin\base.html.py:47
 #: .\transporation\templates\change_form.html.py:19
@@ -81,59 +83,141 @@ msgstr "Описание"
 msgid "Home"
 msgstr "Главная"
 
-#: .\employees\__init__.py:2 .\employees\models.py:18
+#: .\contacts\__init__.py:2 .\contacts\models.py:32 .\employees\__init__.py:2
+#: .\employees\models.py:17 .\employees\models.py:32
 msgid "Employees"
 msgstr "Работники"
 
-#: .\employees\models.py:8
+#: .\contacts\forms.py:9
+msgid "Numbers from picture"
+msgstr "Цифры с картинки"
+
+#: .\contacts\models.py:10 .\employees\models.py:10
+#, fuzzy
+msgid "Address"
+msgstr "Добавить"
+
+#: .\contacts\models.py:16
+#, fuzzy
+msgid "Office Contact"
+msgstr "Контакты"
+
+#: .\contacts\models.py:17
+#, fuzzy
+msgid "Office Contacts"
+msgstr "Контакты"
+
+#: .\contacts\models.py:22 .\employees\models.py:22
 msgid "First name"
 msgstr "Имя"
 
-#: .\employees\models.py:9
+#: .\contacts\models.py:23 .\employees\models.py:23
 msgid "Last name"
 msgstr "Фамилия"
 
-#: .\employees\models.py:10
+#: .\contacts\models.py:24 .\employees\models.py:24
 msgid "Second name"
 msgstr "Отчество"
 
-#: .\employees\models.py:11
+#: .\contacts\models.py:25 .\employees\models.py:25
 msgid "Post"
 msgstr "Должность"
 
-#: .\employees\models.py:17
+#: .\contacts\models.py:31 .\employees\models.py:16 .\employees\models.py:31
 msgid "Employee"
 msgstr "Работник"
 
-#: .\employees\models.py:24
+#: .\contacts\models.py:38 .\employees\models.py:38
 msgid "Number"
 msgstr "Номер"
 
-#: .\employees\models.py:30
+#: .\contacts\models.py:44 .\employees\models.py:44
 msgid "TelephoneNumber"
 msgstr "Телефонный номер"
 
-#: .\employees\models.py:31
+#: .\contacts\models.py:45 .\employees\models.py:45
 msgid "TelephoneNumbers"
 msgstr "Телефонные номера"
 
-#: .\employees\models.py:36 .\employees\models.py:42
+#: .\contacts\models.py:50 .\contacts\models.py:56 .\contacts\models.py:87
+#: .\employees\models.py:50 .\employees\models.py:56
 msgid "Email"
 msgstr "Email"
 
-#: .\employees\models.py:43
+#: .\contacts\models.py:57 .\employees\models.py:57
 msgid "Emails"
 msgstr "Email адреса"
 
-#: .\employees\models.py:47 .\employees\models.py:53
+#: .\contacts\models.py:61 .\contacts\models.py:67 .\employees\models.py:61
+#: .\employees\models.py:67
 msgid "Skype"
 msgstr "Skype"
 
-#: .\employees\models.py:54
+#: .\contacts\models.py:68 .\employees\models.py:68
 msgid "Skype records"
 msgstr "Skype записи"
 
-#: .\gallery\__init__.py:2 .\templates\base.html.py:80
+#: .\contacts\models.py:74 .\contacts\models.py:80 .\employees\models.py:74
+#: .\employees\models.py:80 .\templates\base.html.py:104
+msgid "Fax"
+msgstr "Факс"
+
+#: .\contacts\models.py:81 .\employees\models.py:81
+msgid "Fax numbers"
+msgstr "Факс номера"
+
+#: .\contacts\models.py:85
+#, fuzzy
+msgid "Your name"
+msgstr "Имя"
+
+#: .\contacts\models.py:86
+#, fuzzy
+msgid "Contact number"
+msgstr "Контакты"
+
+#: .\contacts\models.py:88
+msgid "Your message"
+msgstr "Ваше сообщение"
+
+#: .\contacts\templates\contacts.html.py:24 .\templates\base.html.py:52
+#: .\templates\base.html.py:112
+msgid "Contacts"
+msgstr "Контакты"
+
+#: .\contacts\templates\contacts.html.py:28
+#, fuzzy
+msgid "Our employees"
+msgstr "Работники"
+
+#: .\contacts\templates\contacts.html.py:58
+#, fuzzy
+msgid "Office contacts"
+msgstr "Контакты"
+
+#: .\contacts\templates\contacts.html.py:100
+msgid "Our coordinates"
+msgstr "Наши координаты"
+
+#: .\contacts\templates\contacts.html.py:103
+msgid "Please, leave a message"
+msgstr "Оставьте сообщение"
+
+#: .\contacts\templates\contacts.html.py:112
+msgid "Fields marked as * are required"
+msgstr "Поля обозначенные * обязательны"
+
+#: .\contacts\templates\contacts.html.py:113
+msgid "Submit"
+msgstr "Отправить"
+
+#: .\contacts\templates\contacts.html.py:114
+#, fuzzy
+msgid "Cancel"
+msgstr "Отмена"
+
+#: .\gallery\__init__.py:2 .\gallery\templates\gallery.html.py:15
+#: .\templates\base.html.py:80
 msgid "Gallery"
 msgstr "Галерея"
 
@@ -157,7 +241,7 @@ msgstr "Фото"
 msgid "Photos"
 msgstr "Фотографии"
 
-#: .\gallery\models.py:26
+#: .\gallery\models.py:26 .\gallery\templates\gallery.html.py:20
 msgid "video"
 msgstr "Видео"
 
@@ -169,7 +253,12 @@ msgstr "Видео"
 msgid "Videos"
 msgstr "Видео файлы"
 
-#: .\information\__init__.py:2 .\information\templatetags\__init__.py:2
+#: .\gallery\templates\gallery.html.py:33
+#, fuzzy
+msgid "photos"
+msgstr "Фотографии"
+
+#: .\information\__init__.py:2
 #, fuzzy
 msgid "Information"
 msgstr "Информация"
@@ -215,8 +304,8 @@ msgstr "Главная  страница"
 #: .\information\views.py:11 .\information\views.py:21
 #: .\information\templates\news.html.py:10
 #: .\information\templates\news_item.html.py:10
-#: .\information\templates\usefull_information.html.py:17
-#: .\information\templates\usefull_information.html.py:21
+#: .\information\templates\usefull_information.html.py:14
+#: .\information\templates\usefull_information.html.py:18
 #: .\information\templates\usefull_information_item.html.py:9
 #, fuzzy
 msgid "Usefull information"
@@ -247,8 +336,8 @@ msgid "English"
 msgstr "Английский"
 
 #: .\services\__init__.py:2 .\services\models.py:17
-#: .\services\templates\services.html.py:16
-#: .\services\templates\services.html.py:19 .\templates\base.html.py:50
+#: .\services\templates\services.html.py:13
+#: .\services\templates\services.html.py:16 .\templates\base.html.py:50
 #: .\templates\base.html.py:110
 msgid "Services"
 msgstr "Услуги"
@@ -261,23 +350,21 @@ msgstr "Это ли основная услуга"
 msgid "Service"
 msgstr "Услуга"
 
-#: .\services\templates\services.html.py:20
+#: .\services\templates\services.html.py:17
 msgid "UE \"Seafood-Service\""
 msgstr "УП \"Сифуд-Сервис\""
 
-#: .\services\templates\services.html.py:20
+#: .\services\templates\services.html.py:17
 msgid ""
 " provides a range of freight forwarding delivery services by wagonloads and "
 "containers train shipment:"
-msgstr " оказывает комплекс транспортно-экспедиционных услуг по доставке грузов железнодорожным транспортом повагонными и контейнерными отправками:"
+msgstr ""
+" оказывает комплекс транспортно-экспедиционных услуг по доставке грузов "
+"железнодорожным транспортом повагонными и контейнерными отправками:"
 
 #: .\templates\base.html.py:23
 msgid "In partnership with success"
 msgstr "В партнёрстве с успехом!"
-
-#: .\templates\base.html.py:52 .\templates\base.html.py:112
-msgid "Contacts"
-msgstr "Контакты"
 
 #: .\templates\base.html.py:85
 #, fuzzy
@@ -296,10 +383,6 @@ msgstr "ул. Нововиленская, 8, 24"
 #, fuzzy
 msgid "Numb."
 msgstr "Ном."
-
-#: .\templates\base.html.py:104
-msgid "Fax"
-msgstr "Факс"
 
 #: .\templates\base.html.py:105
 msgid "Go to map"
@@ -421,10 +504,6 @@ msgstr[2] ""
 
 #~ msgid "Body in English"
 #~ msgstr "Основная часть на английском"
-
-#, fuzzy
-#~ msgid "employees"
-#~ msgstr "Работники"
 
 #~ msgid "Latest Django News"
 #~ msgstr "Последние Django новости"
