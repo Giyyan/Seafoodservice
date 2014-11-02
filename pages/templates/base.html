@@ -63,15 +63,24 @@
 		<aside>
 		{% if last_news %}
 			{% block last_news %}
-				   <div class="{% url 'news' %}>
-					   <a href={% url 'news' %}" class="title_link"><div class="aside_title">{% trans "News" %}</div></a>
-						{% for news_item in last_news %}
-						<div class="news">
-							<p class="date">{{ news_item.date|date:"d.m.Y" }}</p>
-							<a href="{% url 'news_item' news_item.id %}"><p class="text_news">{{ news_item.title }}</p></a>
-						</div>
-						{% endfor %}
-				   </div>
+               <a href="{% url 'news' %}" class="title_link"><div class="aside_title">{% trans "News" %}</div></a>
+                {% for news_item in last_news %}
+                <div class="news">
+                    <p class="date">{{ news_item.date|date:"d.m.Y" }}</p>
+                    <a href="{% url 'news_item' news_item.id %}"><p class="text_news">{{ news_item.title }}</p></a>
+                </div>
+                {% endfor %}
+			{% endblock %}
+        {% elif block_information %}
+			{% block block_information %}
+               <a href="{% url 'usefull_information' %}" class="title_link">
+               <div class="aside_title">{% trans "Usefull information" %}</div>
+               </a>
+                {% for news_item in block_information %}
+                <div class="news">
+                    <a href="{% url 'usefull_information_item' news_item.id %}"><p class="text_news">{{ news_item.title }}</p></a>
+                </div>
+                {% endfor %}
 			{% endblock %}
 		{% endif %}
 

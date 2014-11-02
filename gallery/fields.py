@@ -18,6 +18,7 @@ class ExtFileField(models.FileField):
     ...
     ValidationError: [u'Not allowed filetype!']
     """
+
     def __init__(self, *args, **kwargs):
         ext_whitelist = kwargs.pop("ext_whitelist")
         self.ext_whitelist = [i.lower() for i in ext_whitelist]
@@ -29,7 +30,7 @@ class ExtFileField(models.FileField):
         ext = os.path.splitext(filename)[1]
         ext = ext.lower()
         if ext not in self.ext_whitelist:
-            raise forms.ValidationError("Not allowed filetype!")
+            raise forms.ValidationError("File have to be with extension in %s"%(self.ext_whitelist))
         return data
 
     def south_field_triple(self):

@@ -24,7 +24,7 @@ class PhotoGallery(MPTTModel):
 class VideoGallery(MPTTModel):
     parent = models.ForeignKey('self', null=True, blank=True, related_name="related")
     video = ExtFileField(upload_to='videos', verbose_name=_("video"),
-                         ext_whitelist=(".mp4", ".ogg", ".webm", ".MP4", ".OGG", ".WEBM",))
+                         ext_whitelist=(".mp4", ".ogg", ".webm", ".MP4", ".OGG", ".WEBM",),)
     video_image = ExtFileField(upload_to='videos/images', verbose_name=_("Image"),
                              ext_whitelist=(".png", ".jpg", ".PNG", ".JPG", ".jpeg", ".JPEG"))
     description = models.CharField(max_length=255, blank=True, verbose_name=_("Description"))
