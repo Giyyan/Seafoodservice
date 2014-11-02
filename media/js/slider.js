@@ -1,65 +1,18 @@
 $(document).ready(function () {
 	var slides = [];
-	var preloadImages = [];
 	var controls = [];
 	var currentImage = 0;
-	$.ajax({
-		url: "/get_slide_images/",
-		dataType: 'json',
-		success: function(resp) {
-			if(resp.slides){
-				slides = resp.slides;
-				var parent = document.getElementById('slider');
-				var image = document.createElement("image");
-				image.src = slides[0];
-				image.id = "img";
-				image.style = "display: inline;";
-				parent.appendChild(image);
-				var div_arrows = document.createElement('div');
-				div_arrows.className = "arrows";
-				var div_left = document.createElement('div');
-				div_left.className = "left";
-				var div_right = document.createElement('div');
-				div_right.className = "right";
-				div_arrows.appendChild(div_right);
-				div_arrows.appendChild(div_left);
-				parent.appendChild(div_arrows);
-				
-				var div_controls = document.createElement('div');
-				div_controls.className = "controls";
-				for( var i=0; i<slides.length; i++ ){
-					var div = document.createElement('div');
-					div.id = i+"_controls";
-					div.click(function () {
-						changeControls(i);
-					}); 
-					controls.push("#"+i+"_controls");
-					if (i == 0){
-						div.className = "active_control";
-						currentImage = 0;
-					}
-					div_controls.appendChild(div);
-				}
-				parent.appendChild(div_controls);
-				preloadImages = slides;
-			} else {
-				alert("Error: "+resp.errors);
-				for (error in resp.errors){								
-					var id = document.getElementById('id_' + error).parentNode;
-					id.appendChild(create_label(error+" is "+resp.errors[error], "id_error_" + error));
-				}
-			}
-		},
-		error: function(resp) {
-			err_dict = {};
-			for(e in resp){
-				err_dict[e] = resp[e];
-				console.log(resp[e]);
-			}
-			alert("Error: "+err_dict);
-		},
-
-	});
+    var control;
+    var div_controls = $("#controls");
+    $("div .slide").each(function(index, element) {
+        slides.push($(element).find("img").attr('src'));
+        d=document.createElement('div');
+        if(index==0){
+            $(d).addClass("active_control");
+        }
+        $(div_controls).append($(d));
+        controls.push($(d));
+    });
   
 $(".right").click(listRight);
 $(".left").click(listLeft);
@@ -103,7 +56,7 @@ function changeImage(){
     $("#img").fadeToggle("fast");
     setTimeout(function() {
     $("#img").attr("src", slides[currentImage]);
-    }, 200);
+    }, 10);
     $("#img").fadeToggle("fast");
 }
 

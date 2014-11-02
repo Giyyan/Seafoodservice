@@ -14,7 +14,7 @@ class PhotoGallery(MPTTModel):
     add_this_photo_to_gallery = models.BooleanField(null=False, verbose_name=_(u"Add this photo to gallery"))
 
     def __unicode__(self):
-        return ("%s - %s")%(self.photo, self.description)
+        return self.photo.name
 
     class Meta:
         verbose_name = _(u"Photo")

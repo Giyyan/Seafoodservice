@@ -129,9 +129,9 @@ padding: 7px 16px;
 }
 
 .top_nav a {
-font-size: 20px;
+font-size: 19px;
 color: #fff;
-    padding-right: 2%;
+    padding-right: 1%;
 }
 
 #home{
@@ -143,7 +143,7 @@ color: #fff;
 }
 
 #usefull{
-    width:27%;
+    width:35%;
 }
 
 #contacts{
@@ -277,9 +277,18 @@ footer {
 	margin-bottom: 3%;
 	margin-left: -3px;
 }
+.slider_image{
+    display: inline-block;
+    height:400px;
+    max-height:400px;
+    max-width:800px;
+    width:800px;
+}
+
 .arrows {
 	position: absolute;
 	margin-top: -200px;
+    margin-bottom: 200px;
 }
 .slider .arrows div {
 	display: inline-block;
@@ -294,7 +303,7 @@ footer {
 }
 .controls {
 	position: absolute;
-	margin-left: 302px;
+	margin-left: 40%;
 	margin-top: -29px;
 }
 .controls div {
