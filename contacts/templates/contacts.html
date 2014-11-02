@@ -1,9 +1,6 @@
 {% extends 'base.html' %}
 {% load i18n admin_tools_menu_tags %}
-	{% block head %}
-		{{ block.super }}
-		<script src="{{MEDIA_URL}}js/popup.js"></script>
-	{% endblock %}
+
 
 	{% block content %}
 		{{ block.super }}
@@ -15,6 +12,7 @@
 		{% endblock %}
 		<div>
             <br>
+            {% if contacts %}
 			<h3 class="useful_information">{% trans "Our employees" %}</h3>
 				{% for contact in contacts %}
 				<div class="contacts_block">
@@ -44,8 +42,10 @@
 					</div>
 				</div>
 				{% endfor %}
+            {% endif %}
 		</div>
         <br>
+        {% if office_contacts %}
         <h3 class="useful_information">{% trans "Office contacts" %}</h3>
         <div class="ofices_contacts">
             {% for contact in office_contacts %}
@@ -88,6 +88,7 @@
                 </div>
             {% endfor %}
 		</div>
+        {% endif %}
         <br>
         <h3 class="coord">{% trans "Our coordinates" %}</h3>
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9396.550337768962!2d27.5420675!3d53.9292995!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbc57e5ec3ebf3%3A0x5abc3d60c090ea35!2z0J3QvtCy0L7QstC40LvQtdC90YHQutCw0Y8g0YPQuy4gOCwg0JzQuNC90YHQuiwg0JHQtdC70LDRgNGD0YHRjA!5e0!3m2!1sru!2s!4v1412673455688"
