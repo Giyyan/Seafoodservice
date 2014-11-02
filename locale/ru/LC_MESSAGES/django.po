@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-02 22:08+0300\n"
+"POT-Creation-Date: 2014-11-03 00:13+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -68,7 +68,7 @@ msgid "Description"
 msgstr "Описание"
 
 #: .\certificates\templates\certificates.html.py:12
-#: .\contacts\templates\contacts.html.py:12
+#: .\contacts\templates\contacts.html.py:9
 #: .\gallery\templates\gallery.html.py:14
 #: .\information\templates\news.html.py:24
 #: .\information\templates\news_item.html.py:24
@@ -191,12 +191,12 @@ msgid ""
 "Please correct your errors bellow."
 msgstr "Пожалуйста, исправьте ошибку ниже"
 
-#: .\contacts\templates\contacts.html.py:13 .\pages\templates\base.html.py:51
+#: .\contacts\templates\contacts.html.py:10 .\pages\templates\base.html.py:51
 #: .\pages\templates\base.html.py:115
 msgid "Contacts"
 msgstr "Контакты"
 
-#: .\contacts\templates\contacts.html.py:18
+#: .\contacts\templates\contacts.html.py:16
 #, fuzzy
 msgid "Our employees"
 msgstr "Работники"
@@ -206,23 +206,23 @@ msgstr "Работники"
 msgid "Office contacts"
 msgstr "Контакты"
 
-#: .\contacts\templates\contacts.html.py:92
+#: .\contacts\templates\contacts.html.py:93
 msgid "Our coordinates"
 msgstr "Наши координаты"
 
-#: .\contacts\templates\contacts.html.py:95
+#: .\contacts\templates\contacts.html.py:96
 msgid "Please, leave a message"
 msgstr "Оставьте сообщение"
 
-#: .\contacts\templates\contacts.html.py:126
+#: .\contacts\templates\contacts.html.py:127
 msgid "Fields marked as * are required"
 msgstr "Поля обозначенные * обязательны"
 
-#: .\contacts\templates\contacts.html.py:127
+#: .\contacts\templates\contacts.html.py:128
 msgid "Submit"
 msgstr "Отправить"
 
-#: .\contacts\templates\contacts.html.py:128
+#: .\contacts\templates\contacts.html.py:129
 #, fuzzy
 msgid "Cancel"
 msgstr "Отмена"
@@ -359,11 +359,11 @@ msgstr "Сайт разаработан "
 msgid "by studio Zod4ie"
 msgstr "студией Zod4ie"
 
-#: .\pages\templates\main.html.py:33
+#: .\pages\templates\main.html.py:27
 msgid "UE \"SEAFOOD SERVICE\""
 msgstr "УП \"Сифуд-Сервис\""
 
-#: .\pages\templates\main.html.py:36
+#: .\pages\templates\main.html.py:30
 #, fuzzy
 msgid "Our partners"
 msgstr "Наши партнёры"
@@ -452,6 +452,11 @@ msgid ""
 msgstr ""
 " оказывает комплекс транспортно-экспедиционных услуг по доставке грузов "
 "железнодорожным транспортом повагонными и контейнерными отправками:"
+
+#: .\services\templates\services.html.py:41
+#, fuzzy
+msgid "Transporation points"
+msgstr "География перевозок"
 
 #: .\transporation\models.py:9
 msgid "Enter longitude value from diapason [-90, 90]"

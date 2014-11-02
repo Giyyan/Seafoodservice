@@ -7,3 +7,5 @@ django_mptt-0.6.0
 psycopg2
 django-tinymce
 django-modeltranslation
+django-simple-captcha
+pillow-2.6.1

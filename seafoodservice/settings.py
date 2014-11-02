@@ -196,12 +196,6 @@ try:
 except ImportError:
     pass
 
-LOCALE_PATHS = (
-    'locale',
-    'certificates/locale',
-    'pages/locale',
-)
-
 SOUTH_MIGRATION_MODULES = {
     'captcha': 'captcha.south_migrations',
 }
