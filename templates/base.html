@@ -46,10 +46,10 @@
 			</div>
 	       <nav class="top_menu">
 				<ul class="top_nav">
-					<a href="/"><li class="active" id="main">{% trans "Home" %}</li></a>
-					<a href="/services"><li id="services">{% trans "Services" %}</li></a>
-					<a href="/usefull-information"><li id="usefull">{% trans "Usefull Information" %}</li></a>
-					<a href="/contacts"><li id="contacts">{% trans "Contacts" %}</li></a>
+					<a href="{% url 'home' %}"><li class="active" id="main">{% trans "Home" %}</li></a>
+					<a href="{% url 'home' %}"><li id="services">{% trans "Services" %}</li></a>
+					<a href="{% url 'usefull_information' %}><li id="usefull">{% trans "Usefull Information" %}</li></a>
+					<a href="{% url 'contacts' %}><li id="contacts">{% trans "Contacts" %}</li></a>
 				</ul>
 	       	</nav>
 		</div>
@@ -63,12 +63,12 @@
 		<aside>
 		{% if last_news %}
 			{% block last_news %}
-				   <div class="last_news">
-					   <a href="news" class="title_link"><div class="aside_title">{% trans "News" %}</div></a>
+				   <div class="{% url 'news' %}>
+					   <a href="/news" class="title_link"><div class="aside_title">{% trans "News" %}</div></a>
 						{% for news_item in last_news %}
 						<div class="news">
 							<p class="date">{{ news_item.date|date:"d.m.Y" }}</p>
-							<a href="news/{{ news_item.id }}"><p class="text_news">{{ news_item.title }}</p></a>
+							<a href="{% url 'news_item' news_item.id %}"><p class="text_news">{{ news_item.title }}</p></a>
 						</div>
 						{% endfor %}
 				   </div>
@@ -77,9 +77,9 @@
 
 		{% block gallery %}
 			   <div class="galery">
-				   <a href="/gallery" class="galery_link">{% trans "Gallery" %}</a>
-				   <a href="/gallery"><img src="{{ MEDIA_URL }}css/images/photo.png" alt="" class="photo"></a>
-				   <a href="/gallery"><img src="{{ MEDIA_URL }}css/images/video.png" alt="" class="video"></a>
+				   <a href="{% url 'gallery' %}" class="galery_link">{% trans "Gallery" %}</a>
+				   <a href="{% url 'gallery' %}><img src="{{ MEDIA_URL }}css/images/photo.png" alt="" class="photo"></a>
+				   <a href="{% url 'gallery' %}"><img src="{{ MEDIA_URL }}css/images/video.png" alt="" class="video"></a>
 			   </div>
 		{% endblock %}
 		<a href="/certificates" class="title_link"><div class="aside_title">{% trans "Certficates" %}</div></a>
@@ -107,9 +107,9 @@
            <nav>
                <ul class="footer_menu">
                    <a href="/"><li>{% trans "Home" %}</li></a>
-		    <a href="/services"><li>{% trans "Services" %}</li></a>
-		    <a href="/usefull-information"><li>{% trans "Usefull Information" %}</li></a>
-		    <a href="/contacts"><li>{% trans "Contacts" %}</li></a>
+		    <a href="{% url 'services' %}"><li>{% trans "Services" %}</li></a>
+		    <a href="{% url 'usefull_information' %}"><li>{% trans "Usefull Information" %}</li></a>
+		    <a href="{% url 'contacts' %}"><li>{% trans "Contacts" %}</li></a>
                </ul>
            </nav>
           

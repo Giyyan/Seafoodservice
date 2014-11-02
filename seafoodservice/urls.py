@@ -12,7 +12,7 @@ urlpatterns = patterns('',
     url(r'^i18n/', include('django.conf.urls.i18n')),
     url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
     url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
-    url(r'^$', 'seafoodservice.views.main', name='main'),
+    url(r'^$', 'seafoodservice.views.main', name='home'),
     url(r'^contacts$', 'contacts.views.contacts', name='contacts'),
     url(r'^summernote/', include('django_summernote.urls')),
 )
