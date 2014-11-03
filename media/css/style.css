@@ -148,23 +148,22 @@ header {
 
 .top_nav a {
     color: #fff;
-    bottom: 1%;
 }
 
 #home{
-    width:15%;
-    margin-right: 2%;
+    width:14%;
 }
 #services{
-    width:17%;
-    margin-right: 2%;
+    margin-left: 2%;
+    width:16%;
 }
 #usefull{
-    width:29%;
-    margin-right: 2%;
+    margin-left: 2%;
+    width:28%;
 }
 #contacts{
-    width: 17%;
+    margin-left: 2%;
+    width: 16%;
     float: right;
 }
 .top_nav li:hover {
