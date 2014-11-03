@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-03 14:28+0300\n"
+"POT-Creation-Date: 2014-11-03 14:47+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,7 +53,7 @@ msgstr "Доска"
 #: .\certificates\__init__.py:2
 #: .\certificates\templates\certificates.html.py:13
 #: .\certificates\templates\certificates.html.py:17
-#: .\pages\templates\base.html.py:110
+#: .\pages\templates\base.html.py:111
 #, fuzzy
 msgid "Certificates"
 msgstr "Сертификаты"
@@ -75,7 +75,7 @@ msgstr "Описание"
 #: .\information\templates\news_item.html.py:24
 #: .\information\templates\usefull_information.html.py:13
 #: .\information\templates\usefull_information_item.html.py:8
-#: .\pages\templates\base.html.py:53 .\pages\templates\base.html.py:145
+#: .\pages\templates\base.html.py:54 .\pages\templates\base.html.py:146
 #: .\pages\templates\admin\app_index.html.py:9
 #: .\pages\templates\admin\base.html.py:47
 #: .\services\templates\services.html.py:13
@@ -101,14 +101,12 @@ msgid "Address"
 msgstr "Добавить"
 
 #: .\contacts\models.py:16
-#, fuzzy
-msgid "Office Contact"
-msgstr "Контакты"
+msgid "Котакт"
+msgstr ""
 
-#: .\contacts\models.py:17 .\contacts\templates\contacts.html.py:49
-#, fuzzy
-msgid "Office Contacts"
-msgstr "Контакты"
+#: .\contacts\models.py:17
+msgid "Контакты офиса"
+msgstr ""
 
 #: .\contacts\models.py:22
 msgid "First name"
@@ -159,7 +157,7 @@ msgid "Skype records"
 msgstr "Skype записи"
 
 #: .\contacts\models.py:74 .\contacts\models.py:80
-#: .\pages\templates\base.html.py:138
+#: .\pages\templates\base.html.py:139
 msgid "Fax"
 msgstr "Факс"
 
@@ -182,14 +180,12 @@ msgid "Your message"
 msgstr "Ваше сообщение"
 
 #: .\contacts\models.py:92
-#, fuzzy
-msgid "User message"
-msgstr "Сообщение пользователя"
+msgid "Сообщение от пользователя"
+msgstr ""
 
 #: .\contacts\models.py:93
-#, fuzzy
-msgid "User messages"
-msgstr "Cообщения пользователей"
+msgid "Сообщения пользователей"
+msgstr ""
 
 #: .\contacts\views.py:21
 msgid "Thank you, we received your message."
@@ -205,8 +201,8 @@ msgstr ""
 "Пожалуйста, исправьте ошибку ниже"
 
 #: .\contacts\templates\contacts.html.py:10
-#: .\employees\templates\contacts.html.py:12 .\pages\templates\base.html.py:63
-#: .\pages\templates\base.html.py:154
+#: .\employees\templates\contacts.html.py:12 .\pages\templates\base.html.py:64
+#: .\pages\templates\base.html.py:155
 msgid "Contacts"
 msgstr "Контакты"
 
@@ -215,6 +211,11 @@ msgstr "Контакты"
 #, fuzzy
 msgid "Our employees"
 msgstr "Наши работники"
+
+#: .\contacts\templates\contacts.html.py:49
+#, fuzzy
+msgid "Office Contacts"
+msgstr "Контакты"
 
 #: .\contacts\templates\contacts.html.py:93
 msgid "Our coordinates"
@@ -238,7 +239,7 @@ msgid "Cancel"
 msgstr "Отмена"
 
 #: .\gallery\__init__.py:2 .\gallery\templates\gallery.html.py:15
-#: .\pages\templates\base.html.py:104
+#: .\pages\templates\base.html.py:105
 msgid "Gallery"
 msgstr "Галерея"
 
@@ -306,20 +307,17 @@ msgstr "Новость"
 #: .\information\views.py:43 .\information\templates\news.html.py:25
 #: .\information\templates\news.html.py:29
 #: .\information\templates\news_item.html.py:25
-#: .\pages\templates\base.html.py:79
+#: .\pages\templates\base.html.py:80
 msgid "News"
 msgstr "Новости"
 
 #: .\information\models.py:32
-#, fuzzy
-msgid "Useful information item"
-msgstr "Статья"
+msgid "Статья"
+msgstr ""
 
 #: .\information\models.py:33
-#: .\information\templates\usefull_information.html.py:18
-#, fuzzy
-msgid "Useful information"
-msgstr "Полезная информация"
+msgid "Полезная информация"
+msgstr ""
 
 #: .\information\models.py:44 .\information\models.py:45
 msgid "Main Page"
@@ -334,45 +332,56 @@ msgstr "Статья"
 
 #: .\information\templates\usefull_information.html.py:14
 #: .\information\templates\usefull_information_item.html.py:9
-#: .\pages\templates\base.html.py:60 .\pages\templates\base.html.py:91
-#: .\pages\templates\base.html.py:151
+#: .\pages\templates\base.html.py:61 .\pages\templates\base.html.py:92
+#: .\pages\templates\base.html.py:152
 #, fuzzy
 msgid "Useful Information"
 msgstr "Статья"
 
-#: .\pages\templates\base.html.py:23
-msgid "In partnership with success"
-msgstr "В партнёрстве с успехом!"
+#: .\information\templates\usefull_information.html.py:18
+#, fuzzy
+msgid "Useful information"
+msgstr "Полезная информация"
 
-#: .\pages\templates\base.html.py:56 .\pages\templates\base.html.py:148
+#: .\pages\templates\base.html.py:23
+#, fuzzy
+msgid "In partnership"
+msgstr "В партнёрстве"
+
+#: .\pages\templates\base.html.py:24
+#, fuzzy
+msgid "with success!"
+msgstr "с успехом!"
+
+#: .\pages\templates\base.html.py:57 .\pages\templates\base.html.py:149
 #: .\services\__init__.py:2 .\services\models.py:17
 #: .\services\templates\services.html.py:14
 #: .\services\templates\services.html.py:17
 msgid "Services"
 msgstr "Услуги"
 
-#: .\pages\templates\base.html.py:130
+#: .\pages\templates\base.html.py:131
 msgid "RB, Minsk, 220053"
 msgstr "РБ, Минск, 220053"
 
-#: .\pages\templates\base.html.py:132
+#: .\pages\templates\base.html.py:133
 msgid "str. Novovilenskaya, 8, 24"
 msgstr "ул. Нововиленская, 8, 24"
 
-#: .\pages\templates\base.html.py:134
+#: .\pages\templates\base.html.py:135
 #, fuzzy
 msgid "Numb"
 msgstr "Ном."
 
-#: .\pages\templates\base.html.py:140
+#: .\pages\templates\base.html.py:141
 msgid "Go to map"
 msgstr "Посмотреть на карте"
 
-#: .\pages\templates\base.html.py:163
+#: .\pages\templates\base.html.py:164
 msgid "Site is developed "
 msgstr "Сайт разаработан "
 
-#: .\pages\templates\base.html.py:164
+#: .\pages\templates\base.html.py:165
 msgid "by studio Zod4ie"
 msgstr "студией Zod4ie"
 
@@ -532,6 +541,22 @@ msgid_plural "Please correct the errors below."
 msgstr[0] "Пожалуйста, исправьте ошибку ниже"
 msgstr[1] "Пожалуйста, исправьте ошибки ниже."
 msgstr[2] ""
+
+#, fuzzy
+#~ msgid "Office Contact"
+#~ msgstr "Контакты"
+
+#, fuzzy
+#~ msgid "User message"
+#~ msgstr "Сообщение пользователя"
+
+#, fuzzy
+#~ msgid "User messages"
+#~ msgstr "Cообщения пользователей"
+
+#, fuzzy
+#~ msgid "Useful information item"
+#~ msgstr "Статья"
 
 #~ msgid "Information Item"
 #~ msgstr "Статья с полезной информацией"
