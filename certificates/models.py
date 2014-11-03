@@ -13,6 +13,6 @@ class Certificate(MPTTModel):
         return u'%s - %s' % (self.image, self.description)
 
     class Meta:
-        verbose_name = u"Certificate"
-        verbose_name_plural = u"Certificates"
+        verbose_name = u"Сертификат"
+        verbose_name_plural = u"Сертификаты"
 
