@@ -16,27 +16,46 @@
 		{% endblock %}
         <h3>{% trans "Services" %}</h3>
         <p> <b>{% trans 'UE "Seafood-Service"' %}</b>{% trans " provides a range of freight forwarding delivery services by wagonloads and containers train shipment:" %}</p>
+
         <div class="main_services">
-		{% for service in main_services %}
-			<div>
-				<img src="{{MEDIA_URL}}{{service.image}}" alt="">
-				{% if service.decription %}
-					<p>{{ service.decription }}</p>
-				{% endif %}
-			</div>
-		{% endfor %}
+            <div class="left_block">
+                <img src="{{ MEDIA_URL }}css/images/services/main1.png" alt="">
+                <p>- {% trans "transport of perishable goods in their own reefer containers" %}</p>
+            </div>
+            <div class="right_top_block">
+                <img src="{{ MEDIA_URL }}css/images/services/main2.png" alt="">
+                <p>- {% trans "the delivery organization of various cargoes, including hazardous and oversized" %}</p>
+            </div>
+            <div class="left_block">
+                <img src="{{ MEDIA_URL }}css/images/services/main3.png" alt="">
+                <p>- {% trans "transshipment and storage of goods in the common areas" %}</p>
+            </div>
+            <div>
+                <img src="{{ MEDIA_URL }}css/images/services/main4.png" alt="">
+                <p>- {% trans "providing information on the location of wagons / containers" %}</p>
+            </div>
         </div>
-		{% if extra_services %}
-			<h3>{% trans "Additional services" %}</h3>
-			<div class="extra_services">
-			{% for service in extra_services %}
-					<div class="extra_service">
-						<img src="{{MEDIA_URL}}{{service.image}}" alt="">
-						<p>{{ service.decrption }}</p>
-					</div>
-			{% endfor %}
-			</div>
-		{% endif %}
+        <h3>{% trans "extra services" %}</h3>
+        <div class="extra_services">
+            <img src="{{ MEDIA_URL }}css/images/services/dop1.png" alt="">
+            <p>- {% trans "transport organization by multimodal transport (road and rail)" %};</p>
+        </div>
+         <div class="extra_services">
+            <img src="{{ MEDIA_URL }}css/images/services/dop2.png" alt="">
+            <p>- {% trans "implementation shipments / receiving goods as the sender / receiver" %};</p>
+        </div>
+         <div class="extra_services">
+            <img src="{{ MEDIA_URL }}css/images/services/dop3.png" alt="">
+            <p>- {% trans "customs clearance" %};</p>
+        </div>
+         <div class="extra_services">
+            <img src="{{ MEDIA_URL }}css/images/services/dop4.png" alt="">
+            <p>- {% trans "organization of insurance" %};</p>
+        </div>
+         <div class="extra_services">
+            <img src="{{ MEDIA_URL }}css/images/services/dop5.png" alt="">
+            <p>- {% trans "free calculation of tariffs and consulting" %}.</p>
+        </div>
 	{% block geography_of_transport %}
 		{% if transporation_points %}
 			<h3 class="geography">{% if language == 'ru' %}География перевозок{% else %}{% trans "Transporation points" %}{% endif %}</h3>

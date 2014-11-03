@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-03 15:16+0300\n"
+"POT-Creation-Date: 2014-11-04 01:56+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,7 +53,7 @@ msgstr "Доска"
 #: .\certificates\__init__.py:2 .\certificates\models.py:17
 #: .\certificates\templates\certificates.html.py:13
 #: .\certificates\templates\certificates.html.py:17
-#: .\pages\templates\base.html.py:111
+#: .\pages\templates\base.html.py:113
 #, fuzzy
 msgid "Certificates"
 msgstr "Сертификаты"
@@ -63,7 +63,7 @@ msgid "Certificate image"
 msgstr "Изображение сертификата"
 
 #: .\certificates\models.py:10 .\gallery\models.py:12 .\gallery\models.py:30
-#: .\services\models.py:9 .\transporation\models.py:37
+#: .\services\models.py:9 .\transportation\models.py:37
 msgid "Description"
 msgstr "Описание"
 
@@ -80,14 +80,14 @@ msgstr "Сертификаты"
 #: .\information\templates\news_item.html.py:24
 #: .\information\templates\usefull_information.html.py:13
 #: .\information\templates\usefull_information_item.html.py:8
-#: .\pages\templates\base.html.py:54 .\pages\templates\base.html.py:146
+#: .\pages\templates\base.html.py:51 .\pages\templates\base.html.py:148
 #: .\pages\templates\admin\app_index.html.py:9
 #: .\pages\templates\admin\base.html.py:47
 #: .\services\templates\services.html.py:13
-#: .\transporation\templates\change_form.html.py:19
-#: .\transporation\templates\admin\change_form.html.py:19
-#: .\transporation\templates\admin\transporation\change_form.html.py:19
-#: .\transporation\templates\admin\transporation\transportationsgeography\change_form.html.py:23
+#: .\transportation\templates\change_form.html.py:19
+#: .\transportation\templates\admin\change_form.html.py:19
+#: .\transportation\templates\admin\transporation\change_form.html.py:19
+#: .\transportation\templates\admin\transporation\transportationsgeography\change_form.html.py:23
 msgid "Home"
 msgstr "Главная"
 
@@ -164,7 +164,7 @@ msgid "Skype records"
 msgstr "Skype записи"
 
 #: .\contacts\models.py:74 .\contacts\models.py:80
-#: .\pages\templates\base.html.py:139
+#: .\pages\templates\base.html.py:141
 msgid "Fax"
 msgstr "Факс"
 
@@ -205,8 +205,8 @@ msgstr ""
 "Пожалуйста, исправьте ошибку ниже."
 
 #: .\contacts\templates\contacts.html.py:10
-#: .\employees\templates\contacts.html.py:12 .\pages\templates\base.html.py:64
-#: .\pages\templates\base.html.py:155
+#: .\employees\templates\contacts.html.py:12 .\pages\templates\base.html.py:61
+#: .\pages\templates\base.html.py:157
 msgid "Contacts"
 msgstr "Контакты"
 
@@ -236,7 +236,7 @@ msgid "Cancel"
 msgstr "Отмена"
 
 #: .\gallery\__init__.py:2 .\gallery\templates\gallery.html.py:15
-#: .\pages\templates\base.html.py:105
+#: .\pages\templates\base.html.py:107
 msgid "Gallery"
 msgstr "Галерея"
 
@@ -281,7 +281,7 @@ msgid "Information"
 msgstr "Информация"
 
 #: .\information\models.py:10 .\information\models.py:24
-#: .\transporation\models.py:36
+#: .\transportation\models.py:36
 msgid "Title"
 msgstr "Заголовок"
 
@@ -302,7 +302,7 @@ msgstr "Новость"
 #: .\information\views.py:43 .\information\templates\news.html.py:25
 #: .\information\templates\news.html.py:29
 #: .\information\templates\news_item.html.py:25
-#: .\pages\templates\base.html.py:80
+#: .\pages\templates\base.html.py:82
 msgid "News"
 msgstr "Новости"
 
@@ -324,50 +324,50 @@ msgstr "Главная  страница"
 #: .\information\views.py:12 .\information\views.py:23
 #: .\information\templates\news.html.py:10
 #: .\information\templates\news_item.html.py:10
-#: .\pages\templates\base.html.py:92
+#: .\pages\templates\base.html.py:94
 msgid "Usefull information"
 msgstr "Статья"
 
-#: .\pages\templates\base.html.py:23
+#: .\pages\templates\base.html.py:20
 msgid "In partnership"
 msgstr "В партнёрстве"
 
-#: .\pages\templates\base.html.py:24
+#: .\pages\templates\base.html.py:21
 msgid "with success"
 msgstr "с успехом!"
 
-#: .\pages\templates\base.html.py:57 .\pages\templates\base.html.py:149
+#: .\pages\templates\base.html.py:54 .\pages\templates\base.html.py:151
 #: .\services\__init__.py:2 .\services\models.py:17
 #: .\services\templates\services.html.py:14
 #: .\services\templates\services.html.py:17
 msgid "Services"
 msgstr "Услуги"
 
-#: .\pages\templates\base.html.py:61 .\pages\templates\base.html.py:152
+#: .\pages\templates\base.html.py:58 .\pages\templates\base.html.py:154
 msgid "Useful Information"
 msgstr "Полезная информация"
 
-#: .\pages\templates\base.html.py:131
+#: .\pages\templates\base.html.py:133
 msgid "RB, Minsk, 220053"
 msgstr "РБ, Минск, 220053"
 
-#: .\pages\templates\base.html.py:133
+#: .\pages\templates\base.html.py:135
 msgid "str. Novovilenskaya, 8, 24"
 msgstr "ул. Нововиленская, 8, 24"
 
-#: .\pages\templates\base.html.py:135
+#: .\pages\templates\base.html.py:137
 msgid "Numb."
 msgstr "Ном."
 
-#: .\pages\templates\base.html.py:141
+#: .\pages\templates\base.html.py:143
 msgid "Go to map"
 msgstr "Посмотреть на карте"
 
-#: .\pages\templates\base.html.py:164
+#: .\pages\templates\base.html.py:166
 msgid "Site is developed "
 msgstr "Сайт разаработан "
 
-#: .\pages\templates\base.html.py:165
+#: .\pages\templates\base.html.py:167
 msgid "by studio Zod4ie"
 msgstr "студией Zod4ie"
 
@@ -401,10 +401,10 @@ msgstr "Модули"
 
 #: .\pages\templates\admin_tools\dashboard\modules\app_list.html.py:13
 #: .\pages\templates\admin_tools\dashboard\modules\model_list.html.py:11
-#: .\transporation\templates\change_form.html.py:22
-#: .\transporation\templates\admin\change_form.html.py:22
-#: .\transporation\templates\admin\transporation\change_form.html.py:22
-#: .\transporation\templates\admin\transporation\transportationsgeography\change_form.html.py:26
+#: .\transportation\templates\change_form.html.py:22
+#: .\transportation\templates\admin\change_form.html.py:22
+#: .\transportation\templates\admin\transporation\change_form.html.py:22
+#: .\transportation\templates\admin\transporation\transportationsgeography\change_form.html.py:26
 msgid "Add"
 msgstr "Добавить"
 
@@ -461,60 +461,99 @@ msgstr ""
 " оказывает комплекс транспортно-экспедиционных услуг по доставке грузов "
 "железнодорожным транспортом повагонными и контейнерными отправками:"
 
-#: .\services\templates\services.html.py:30
-msgid "Additional services"
+#: .\services\templates\services.html.py:23
+msgid "transport of perishable goods in their own reefer containers"
+msgstr "перевозка скоропортящихся грузов в собственных рефконтейнерах"
+
+#: .\services\templates\services.html.py:27
+msgid ""
+"the delivery organization of various cargoes, including hazardous and "
+"oversized"
+msgstr "организация доставки различных грузов, в том числе опасных и негабаритных"
+
+#: .\services\templates\services.html.py:31
+msgid "transshipment and storage of goods in the common areas"
+msgstr "организация перевалки и хранения грузов в местах общего пользования"
+
+#: .\services\templates\services.html.py:35
+msgid "providing information on the location of wagons / containers"
+msgstr "предоставление информации о дислокации вагонов/контейнеров"
+
+#: .\services\templates\services.html.py:38
+#, fuzzy
+msgid "extra services"
 msgstr "Дополнительные услуги"
 
-#: .\services\templates\services.html.py:42
+#: .\services\templates\services.html.py:41
+msgid "transport organization by multimodal transport (road and rail)"
+msgstr "организация перевозок смешанным (автомобильным и железнодорожным) транспортом"
+
+#: .\services\templates\services.html.py:45
+msgid "implementation shipments / receiving goods as the sender / receiver"
+msgstr "осуществление отправок/приемов грузов в качестве отправителя/получателя"
+
+#: .\services\templates\services.html.py:49
+msgid "customs clearance"
+msgstr "организация таможенного оформления"
+
+#: .\services\templates\services.html.py:53
+msgid "organization of insurance"
+msgstr "организация страхования"
+
+#: .\services\templates\services.html.py:57
+msgid "free calculation of tariffs and consulting"
+msgstr "бесплатный расчет тарифов и консультации"
+
+#: .\services\templates\services.html.py:61
 msgid "Transporation points"
 msgstr "География перевозок"
 
-#: .\transporation\__init__.py:2
+#: .\transportation\__init__.py:2
 msgid "Transportation"
 msgstr "География перевозок"
 
-#: .\transporation\models.py:9
+#: .\transportation\models.py:9
 msgid "Enter longitude value from diapason [-90, 90]"
 msgstr "Введите, пожалуйста, долготу в диапазоне [-90,90]"
 
-#: .\transporation\models.py:22
+#: .\transportation\models.py:22
 msgid "Enter latitude value from diapason [-180, 180]"
 msgstr "Введите, пожалуйста, долготу в диапазоне [-180,180]"
 
-#: .\transporation\models.py:38
+#: .\transportation\models.py:38
 msgid "Longitude"
 msgstr "Долгота"
 
-#: .\transporation\models.py:39
+#: .\transportation\models.py:39
 msgid "Latitude"
 msgstr "Широта"
 
-#: .\transporation\models.py:42
+#: .\transportation\models.py:42
 msgid "Transportation Point"
 msgstr "Координата точки"
 
-#: .\transporation\models.py:43
+#: .\transportation\models.py:43
 msgid "Points of transportation"
 msgstr "География перевозок"
 
-#: .\transporation\templates\change_form.html.py:32
-#: .\transporation\templates\admin\change_form.html.py:32
-#: .\transporation\templates\admin\transporation\change_form.html.py:32
-#: .\transporation\templates\admin\transporation\transportationsgeography\change_form.html.py:36
+#: .\transportation\templates\change_form.html.py:32
+#: .\transportation\templates\admin\change_form.html.py:32
+#: .\transportation\templates\admin\transporation\change_form.html.py:32
+#: .\transportation\templates\admin\transporation\transportationsgeography\change_form.html.py:36
 msgid "History"
 msgstr "История"
 
-#: .\transporation\templates\change_form.html.py:33
-#: .\transporation\templates\admin\change_form.html.py:33
-#: .\transporation\templates\admin\transporation\change_form.html.py:33
-#: .\transporation\templates\admin\transporation\transportationsgeography\change_form.html.py:37
+#: .\transportation\templates\change_form.html.py:33
+#: .\transportation\templates\admin\change_form.html.py:33
+#: .\transportation\templates\admin\transporation\change_form.html.py:33
+#: .\transportation\templates\admin\transporation\transportationsgeography\change_form.html.py:37
 msgid "View on site"
 msgstr "Посмотреть на сайте"
 
-#: .\transporation\templates\change_form.html.py:44
-#: .\transporation\templates\admin\change_form.html.py:44
-#: .\transporation\templates\admin\transporation\change_form.html.py:44
-#: .\transporation\templates\admin\transporation\transportationsgeography\change_form.html.py:49
+#: .\transportation\templates\change_form.html.py:44
+#: .\transportation\templates\admin\change_form.html.py:44
+#: .\transportation\templates\admin\transporation\change_form.html.py:44
+#: .\transportation\templates\admin\transporation\transportationsgeography\change_form.html.py:49
 msgid "Please correct the error below."
 msgid_plural "Please correct the errors below."
 msgstr[0] "Пожалуйста, исправьте ошибку ниже."
