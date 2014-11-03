@@ -232,7 +232,8 @@ aside {
 	margin-bottom: 3%;
 	background-size: cover;
 	display: inline-block;
-	background: url(images/gallery.png) no-repeat;
+	background-image: url(images/gallery.png);
+    background-size:cover;
 }
 .galery_img{
 	width:100%;
