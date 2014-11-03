@@ -13,8 +13,8 @@ class OfficeContact(Contact):
         return u'%s' % (self.address)
 
     class Meta:
-        verbose_name = _(u"Котакт")
-        verbose_name_plural = _(u"Контакты офиса")
+        verbose_name = _(u"Office Contact")
+        verbose_name_plural = _(u"Office Contacts")
 
 
 
@@ -89,5 +89,5 @@ class Message(models.Model):
 
 
     class Meta:
-        verbose_name = _(u"Сообщение от пользователя")
-        verbose_name_plural = _(u"Сообщения пользователей")
+        verbose_name = _(u"User message")
+        verbose_name_plural = _(u"User messages")

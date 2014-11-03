@@ -10,11 +10,11 @@
 		{% block breadcrumbs %}
 			<ul class="breadcrumbs">
 				<li><a href="../">{% trans "Home" %}</a></li>
-				<li>{% if language == 'ru' %}Сертификаты{% else %}{% trans "Certificates" %}{% endif %}</li>
+				<li>{% trans "Certificates" %}</li>
 			</ul>
 		{% endblock %}
 		<div>
-			<h3 class="useful_information">{% if language == 'ru' %}Сертификаты{% else %}{% trans "Certificates" %}{% endif %}</h3>
+			<h3 class="useful_information">{% trans "Certificates" %}</h3>
 			<ul class="sertif_portfolio">
 				{% for i, certificate in certificates %}
 					<li class="sertif" rel="{{ i|add:"1" }}" id="sertif_right">

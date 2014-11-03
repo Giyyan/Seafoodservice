@@ -39,5 +39,5 @@ class TransportationsGeography(MPTTModel):
     latitude = models.FloatField(verbose_name=_(u"Latitude"), validators=[LatitudeValidator], default=53.9000000)
 
     class Meta:
-        verbose_name = _(u"Transportation Geography")
-        verbose_name_plural = _(u"Transportations Geography")
+        verbose_name = _(u"Transportation Point")
+        verbose_name_plural = _(u"Points of transportation")

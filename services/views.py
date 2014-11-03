@@ -2,7 +2,7 @@ from django.shortcuts import render_to_response
 from django.template import RequestContext
 
 from models import *
-from transporation.models import TransportationsGeography
+from transportation.models import TransportationsGeography
 from seafoodservice import settings
 from  information.views import set_required_data
 
