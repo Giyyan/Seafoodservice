@@ -175,7 +175,7 @@ aside {
 	margin-top: 1%;
 }
 .main_content {
-	width: 80%;
+	width: 78%;
 	margin-left: 22%;
 	margin-top: 2%;
 }
@@ -353,7 +353,7 @@ b {
 	color: #000;
 }
 .content ul li {
-	list-style: url(media/css/images/list_style.png);
+	list-style: url(images/list_style.png);
 	margin-left: 14px;
 	line-height: 23px;
 }
@@ -411,10 +411,7 @@ b {
 	cursor: pointer;
 }
 footer {
-
-    margin-right: 15%;
-    width: 100%;
-	background: url(images/footer_bg.png) repeat-x;
+	background-image: url(images/footer_bg.png);
 	margin-top: 35px;
 	height: 188px;
 	color: #fff;
