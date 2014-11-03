@@ -87,7 +87,7 @@
 		{% block gallery %}
 			   <div class="galery">
 				   <a href="{% url 'gallery' %}" class="galery_link">{% trans "Gallery" %}</a>
-				   <a href="{% url 'gallery' %}><img src="{{ MEDIA_URL }}css/images/photo.png" alt="" class="photo"></a>
+				   <a href="{% url 'gallery' %}"><img src="{{ MEDIA_URL }}css/images/photo.png" alt="" class="photo"></a>
 				   <a href="{% url 'gallery' %}"><img src="{{ MEDIA_URL }}css/images/video.png" alt="" class="video"></a>
 			   </div>
 		{% endblock %}
@@ -108,7 +108,7 @@
 		{% endblock %}
     </div>
     <footer>
-	{% block footer %}   
+	{% block footer %}
            <div class="left_footer_block">
                <p>{% trans "RB, Minsk, 220053" %}</p>
                <p>{% trans "str. Novovilenskaya, 8, 24" %}</p>
