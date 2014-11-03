@@ -41,4 +41,4 @@ class TransportationsGeography(MPTTModel):
     class Meta:
         verbose_name = _(u"Transportation Point")
         verbose_name_plural = _(u"Points of transportation")
-        # db_table="transporation_transportationsgeography"
+        db_table="transporation_transportationsgeography"
