@@ -365,7 +365,7 @@ msgstr "Посмотреть на карте"
 
 #: .\pages\templates\base.html.py:166
 msgid "Site is developed "
-msgstr "Сайт разаработан "
+msgstr "Сайт разработан "
 
 #: .\pages\templates\base.html.py:167
 msgid "by studio Zod4ie"
