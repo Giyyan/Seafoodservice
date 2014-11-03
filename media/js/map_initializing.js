@@ -32,7 +32,7 @@ function initialize() {
             icon: image
         });
         marker.info = new google.maps.InfoWindow({
-            content: '<p style="color: red;">' + $('#title_' + i).text()+'</p><a style="margin:3px;">' + $('#description_' + i).text()+'</a>'
+            content: '<p style="color: red;">' + $('#title_' + i).text()+'</p><a style="margin:3%;">' + $('#description_' + i).text()+'</a>'
         });
         google.maps.event.addListener(marker, 'click', function () {
             this.info.open(map, this);
