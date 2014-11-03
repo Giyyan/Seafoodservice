@@ -6,7 +6,7 @@
 		{% block breadcrumbs %}
 			<ul class="breadcrumbs">
 				<li><a href="../../">{% trans "Home" %}</a></li>
-				<li><a href="../">{% trans "Usefull information" %}</a></li>
+				<li><a href="../">{% if language == 'ru' %}Полезная информация{% else %}{% trans "Useful Information" %}{% endif %}</a></li>
 				<li>{{ news.title }}</li>
 			</ul>
 		{% endblock %}

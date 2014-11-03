@@ -29,8 +29,8 @@ class UsefullInformation(MPTTModel):
         return self.title
 
     class Meta:
-        verbose_name = _(u"Usefull Information Item")
-        verbose_name_plural = _(u"Usefull Information")
+        verbose_name = _("Useful information item")
+        verbose_name_plural = _("Useful information")
 
 
 class MainPage(MPTTModel):

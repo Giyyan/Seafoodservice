@@ -13,7 +13,7 @@
 		<div>
             <br>
             {% if contacts %}
-			<h3 class="useful_information">{% trans "Our employees" %}</h3>
+			<h3 class="useful_information">{% if language == 'ru' %}Наши сотрудники{% else %}{% trans "Our employees" %}{% endif %}</h3>
 				{% for contact in contacts %}
 				<div class="contacts_block">
 					<p class="post">{{ contact.contact.post }}</p>
@@ -46,7 +46,7 @@
 		</div>
         <br>
         {% if office_contacts %}
-        <h3 class="useful_information">{% trans "Office contacts" %}</h3>
+        <h3 class="useful_information">{% if language == 'ru' %}Контакты офиса{% else %}{% trans "Office Contacts" %}{% endif %}</h3>
         <div class="ofices_contacts">
             {% for contact in office_contacts %}
                 <p>{{ contact.contact.address }}</p>

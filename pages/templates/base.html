@@ -57,7 +57,7 @@
                     </a>
                     <a href="{% url 'usefull_information' %}">
                         <li id="usefull"
-                            class="{% active request "^/usefull-information/" %}">{% trans "Usefull Information" %}</li>
+                            class="{% active request "^/usefull-information/" %}">{% if language == 'ru' %}Полезная информация{% else %}{% trans "Useful Information" %}{% endif %}</li>
                     </a>
                     <a href="{% url 'contacts' %}">
                         <li id="contacts" class="{% active request "^/contacts/" %}">{% trans "Contacts" %}</li>
@@ -88,7 +88,7 @@
         {% elif block_information %}
             {% block block_information %}
                 <a href="{% url 'usefull_information' %}" class="title_link">
-                    <div class="aside_title">{% trans "Usefull information" %}</div>
+                    <div class="aside_title">{% if language == 'ru' %}Полезная информация{% else %}{% trans "Useful Information" %}{% endif %}</div>
                 </a>
                 {% for news_item in block_information %}
                     <div class="news">
@@ -107,7 +107,7 @@
             </div>
         {% endblock %}
         <a href="{% url "certificates" %}" class="title_link">
-            <div class="aside_title">{% trans "Certificates" %}</div>
+            <div class="aside_title">{% if language == 'ru' %}Сертификаты{% else %}{% trans "Certificates" %}{% endif %}</div>
         </a>
         {% for banner in banners %}
             <div class="banner">
@@ -131,7 +131,7 @@
 
             <p>{% trans "str. Novovilenskaya, 8, 24" %}</p>
 
-            <p>{% trans "Numb." %}.: +375 17 <span>233-19-16</span></p>
+            <p>{% if language == 'ru' %}Ном{% else %}{% trans "Numb" %}{% endif %}.: +375 17 <span>233-19-16</span></p>
 
             <p>+375 17 <span>233-19-16</span></p>
 
@@ -148,7 +148,7 @@
                     <li>{% trans "Services" %}</li>
                 </a>
                 <a href="{% url 'usefull_information' %}">
-                    <li>{% trans "Usefull Information" %}</li>
+                    <li>{% if language == 'ru' %}Полезная информация{% else %}{% trans "Useful Information" %}{% endif %}</li>
                 </a>
                 <a href="{% url 'contacts' %}">
                     <li>{% trans "Contacts" %}</li>

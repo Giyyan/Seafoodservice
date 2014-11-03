@@ -39,7 +39,7 @@
 		{% endif %}
 	{% block geography_of_transport %}
 		{% if transporation_points %}
-			<h3 class="geography">{% trans "Transporation points" %}</h3>
+			<h3 class="geography">{% if language == 'ru' %}География перевозок{% else %}{% trans "Transporation points" %}{% endif %}</h3>
 			<div id="transporation_points" style="display:none">
 				{% for i, point in transporation_points %}
 				{{ point }}
