@@ -86,3 +86,8 @@ class Message(models.Model):
     number = models.CharField(max_length=255, verbose_name=_(u"Contact number"), null=True, blank=True)
     email = models.EmailField(verbose_name=_(u"Email"))
     message = models.TextField(verbose_name=_(u"Your message"))
+
+
+    class Meta:
+        verbose_name = _(u"User message")
+        verbose_name_plural = _(u"User messages")
