@@ -142,7 +142,7 @@ INSTALLED_APPS = (
     'captcha',
     'contacts',
     'services',
-    'transporation',
+    'transportation',
     'django_summernote',
     'south',
 )
@@ -200,3 +200,8 @@ SOUTH_MIGRATION_MODULES = {
     'captcha': 'captcha.south_migrations',
 }
 
+LOCALE_PATHS = (
+    'locale',
+    'pages/locale',
+    'certificates/locale',
+)
