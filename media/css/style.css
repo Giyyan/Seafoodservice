@@ -129,8 +129,8 @@ padding: 7px 16px;
 }
 
 .top_nav a {
-font-size: 19px;
-color: #fff;
+    font-size: 19px;
+    color: #fff;
     padding-right: 1%;
 }
 
@@ -143,7 +143,8 @@ color: #fff;
 }
 
 #usefull{
-    width:35%;
+    width:33%;
+    font-size: 17px;
 }
 
 #contacts{
@@ -820,17 +821,20 @@ background: url(images/bg_active.png);
 }
 
 .photo_img {
-list-style: none;
-display: inline-block;
-margin-right: 12px;
-margin-bottom: 8px;
+    list-style: none;
+    display: inline-block;
+    width:30%;
+    height: 167px;
+    margin-right: 8px;
+    margin-bottom: 8px;
 }
+
 #right_photo1, #right_photo2 {
 margin-right: 0;
 }
-.photo_img img {
-width: 225px;
-height: 167px;
+.img_in_gallery {
+    width: 225px;
+    height: 167px;
 }
 #overlay {
 background: #fff;

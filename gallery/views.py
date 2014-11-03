@@ -5,7 +5,7 @@ import json
 
 from models import PhotoGallery, VideoGallery
 from seafoodservice import settings
-
+from information.views import set_required_data
 
 def gallery(request):
     photos = PhotoGallery.objects.filter(add_this_photo_to_gallery=True)
@@ -13,6 +13,7 @@ def gallery(request):
         "photos": zip(range(1, len(photos)+1), photos),
         "videos": VideoGallery.objects.all(),
     }
+    context.update(set_required_data(request))
     return render_to_response('gallery.html',
                           context,
                           context_instance=RequestContext(request))
