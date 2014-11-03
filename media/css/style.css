@@ -38,17 +38,26 @@ header, .container, footer {
 header {
 	position: relative;
 }
-.logo {
+.logo{
+    margin-bottom: 2px;
+    width: 100%;
+}
+#logo {
 	float: left;
 	width: 20%;
-	height:110%;
+	height: 120%;
 }
-.padding_from_logo{
-    height:110%;
+.padding_from_logo {
+    height: 120%;
 	float: right;
 	width: 78%;
 }
 
+.header_layer_1{
+    width: 100%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
 
 .slogan {
 	width: 40%;
@@ -60,9 +69,8 @@ header {
 }
 
 .number {
-	width: 40%;
+	width: 60%;
 	float: right;
-	padding-top: 2%;
 	text-align: right;
 	font-size: 22px;
 	color: #26448c;
@@ -73,26 +81,24 @@ header {
 }
 
 .header_layer_2{
-	margin:10%;
+    position: relative;
+    width: 100%;
+	margin-top:12%;
 }
 
 .languages {
+    width: 40%;
 	float: left;
-	position: absolute;
-	margin-left: -8%; 
+    display: inline-block;
 }
 .active_language {
-	float: left;
 	padding: 3px;
     margin-right: 5px;
-	display: inline-block;
     background: #f2f2f2;
 	color:  #e1080e;
 }
 .language {
-	float: left;
 	padding: 3px;
-	display: inline-block;
     margin-right: 5px;
     background: #f2f2f2;
 	color: #003366;
@@ -100,17 +106,14 @@ header {
 
 
 .header_contacts {
-	width: 50%;
+	width: 60%;
 	float: right;
-	padding-top: 2%;
-	text-align: right;
-	font-size: 27px;
 	color: #26448c;
 }
-
-.header_contacts img {
-	margin-right: 2%;
-	float: right;
+.header_contacts a{
+	width: 10%;
+    float: right;
+    display: inline-block;
 }
 
 header nav {
@@ -122,16 +125,16 @@ header nav {
 	position: relative;
 }
 .top_nav li {
-display: inline-block;
-list-style: none;
-background: url(/media/css/images/bg_grad_main.png) repeat-x;
-text-align: center;
-padding: 7px 16px;
+    display: inline-block;
+    list-style: none;
+    background: url(/media/css/images/bg_grad_main.png) repeat-x;
+    text-align: center;
+    padding: 7px 16px;
 
 }
 
 .top_nav a {
-    font-size: 19px;
+    font-size: 100%;
     color: #fff;
     padding-right: 1%;
 }
@@ -146,7 +149,6 @@ padding: 7px 16px;
 
 #usefull{
     width:33%;
-    font-size: 17px;
 }
 
 #contacts{
@@ -167,6 +169,7 @@ background: url(images/bg_active.png) repeat-x;
 /*container*/
 
 .container {
+    margin-top: 2px;
 	clear:both;
 }
 aside {
@@ -177,7 +180,6 @@ aside {
 .main_content {
 	width: 78%;
 	margin-left: 22%;
-	margin-top: 2%;
 }
 .aside_title {
 	padding-top: 3px;
@@ -475,7 +477,7 @@ footer nav li {
 /*services*/
 
 .breadcrumbs {
-margin-bottom: 54px;
+    margin-bottom: 4%
 }
 .second_link {
 color: #003366;

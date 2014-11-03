@@ -14,8 +14,9 @@
 <body>
 <header>
     {% block header %}
+        <div class="logo">
         <a href="{% url "home" %}">
-            <img src="{{ MEDIA_URL }}css/images/logo.png" alt="" class="logo">
+            <img src="{{ MEDIA_URL }}css/images/logo.png" alt="" id="logo">
         </a>
 
         <div class="padding_from_logo">
@@ -66,7 +67,7 @@
                 </ul>
             </nav>
         </div>
-
+    </div>
     {% endblock %}
     {% block extrahead %}{% endblock %}
 </header>
