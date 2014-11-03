@@ -152,17 +152,17 @@ header {
 
 #home{
     width:14%;
+    margin-right: 3%;
 }
 #services{
-    margin-left: 3%;
+    margin-right: 3%;
     width:16%;
 }
 #usefull{
-    margin-left: 3;
+    margin-right: 3;
     width:28%;
 }
 #contacts{
-    margin-left: 3%;
     width: 16%;
     float: right;
 }
