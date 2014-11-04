@@ -151,7 +151,7 @@ header {
 }
 
 #home{
-    width:14%;
+    width:15%;
     margin-right: 3%;
 }
 #services{
@@ -504,6 +504,7 @@ footer nav li {
     display: inline-block;
     padding-top: 2%;
     padding-bottom: 2%;
+    margin-bottom: 2px;
 }
 
 .line_main_services{
@@ -535,6 +536,9 @@ footer nav li {
 .line_main_services div img {
     position: relative;
     float: left;
+}
+.extra_services_title{
+    margin-top: 15px;
 }
 .extra_services li{
     padding: 1%;
