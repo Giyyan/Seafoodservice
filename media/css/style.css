@@ -331,7 +331,7 @@ aside {
     height: 25px;
 }
 .right {
-    margin-left: 600px;
+    margin-left: 650px;
 }
 .left {
     margin-left: 30px;
@@ -571,7 +571,7 @@ footer a {
 }
 #map-canvas {
     position: relative;
-    width: 500px;
+    width: 520px;
     height: 350px;
     margin-top: 15px;
     float: right;

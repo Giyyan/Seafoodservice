@@ -11,7 +11,7 @@ ADMINS = (
 MANAGERS = ADMINS
 
 GOOGLE_MAPS_SETTINGS = {
-    'center_longitude': 0.0,
+    'center_longitude': 10.0,
     'center_latitude': 35.0,
 }
 
