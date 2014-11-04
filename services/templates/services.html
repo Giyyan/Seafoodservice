@@ -58,7 +58,9 @@
         </div>
 	{% block geography_of_transport %}
         <div id="center_latitude" style="display: none">{{ center_points.center_latitude }}</div>
+
         <div id="center_longitude" style="display: none">{{ center_points.center_longitude }}</div>
+
 		{% if transporation_points %}
 			<h3 class="geography">{% if language == 'ru' %}География перевозок{% else %}{% trans "Transporation points" %}{% endif %}</h3>
 			<div id="transporation_points" style="display:none">
