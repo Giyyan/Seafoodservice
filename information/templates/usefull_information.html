@@ -11,16 +11,19 @@
 		{% endblock %}
 
 		<h3 class="useful_information">{% trans "Useful information" %}</h3>
-		{% for news_item in news %}
+        {% for news_item in news %}
 			<div class="main_block_information">
-			{% if news.title_image  %}
+			{% if news_item.title  %}
 				<div class="information_title">{{ news_item.title }}</div>
 			{% endif %}
 				<a href="{{ news_item.id }}">
 					<p class="news_text_main">
-					{{ news_item.body|removetags:"img"|safe|truncatechars:30 }}
+					{{ news_item.body|removetags:"img"|striptags|truncatechars:30 }}
 					</p>
 				</a>
 			</div>
 		{% endfor %}
+
+
+
 	{% endblock %}
