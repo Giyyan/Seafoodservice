@@ -1,7 +1,7 @@
 function initialize() {
     var myLatlng = new google.maps.LatLng(parseFloat($('#center_latitude').text()), parseFloat($('#center_longitude').text()));
     var mapOptions = {
-        zoom: 2,
+        zoom: 1,
         center: myLatlng,
         scrollwheel: false,
         navigationControl: false,

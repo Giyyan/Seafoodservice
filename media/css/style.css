@@ -96,7 +96,7 @@ header {
 .header_layer_2{
     height: 20%;
     width: 100%;
-	margin-top:12%;
+	margin-top:13%;
 }
 
 .languages {
@@ -139,7 +139,7 @@ header {
 .top_nav li {
     background: url(/media/css/images/bg_grad_main.png) repeat-x;
     text-align: center;
-    margin-top: 7%;
+    margin-top: 2%;
     padding: 1% 2%;
     display: inline-block;
     botoom: 0;
@@ -538,8 +538,8 @@ margin-left: 86px;
 padding-top: 65px;
 }
 #map-canvas {
-width: 700px;
-height: 500px;
+width: 600px;
+height: 400px;
 outline: 1px solid #ccc;
 margin-top: 30px;
 }
@@ -1133,8 +1133,8 @@ line-height: 19.5px;
 }
 
 #map_canvas {
-    height: 800px;
-    width:800px;
+    height: 400px;
+    width:400px;
 }
 
 .radyx_logo{
