@@ -29,10 +29,15 @@ body {
     background: #fff;
     color: #4a4a4a;
     font-family: Ubuntu-R;
+
 }
 
 header, .container, footer {
     width: 100%;
+}
+
+.container{
+    display: inline-block;
 }
 
 header {
@@ -183,18 +188,19 @@ header {
 
 /*container*/
 
-.container {
+.left_container {
     margin-top: 3px;
+    width:20%;
     clear:both;
+    float: left;
 }
 aside {
-    float: left;
-    width: 20%;
+
 }
 .main_content {
     margin-top: 3px;
     width: 78%;
-    margin-left: 22%;
+    float: right;
 }
 .aside_title {
     padding-top: 3px;
@@ -587,21 +593,6 @@ footer nav li {
     margin-top: -25px;
     margin-bottom: 13px;
 }
-.main_block_information odd{
-    background: #F2F2F2;
-}
-.main_block_information {
-    padding: 1%;
-    margin-bottom: 1%;
-    text-align: justify;
-}
-.main_block_information a {
-    text-decoration: none;
-    color: #4a4a4a;
-}
-.main_block_information a:hover {
-    color: #5c9ef3;
-}
 
 /*contacts*/
 
@@ -847,17 +838,26 @@ video {
     height: 70px;
     float: left;
 }
-.news_text_main {
-}
 
-.main_block_information {
+.information_item {
     position: relative;
     height: 100%;
     width: 100%;
-    padding-left: 16px;
-    padding-right: 19px;
+    padding: 1%;
     margin-top: 10px;
 }
+.information_item odd{
+    background: #F2F2F2;
+}
+
+.information_item a {
+    text-decoration: none;
+    color: #4a4a4a;
+}
+.information_item a:hover {
+    color: #5c9ef3;
+}
+
 
 .active {
     background: url(images/bg_active.png);
