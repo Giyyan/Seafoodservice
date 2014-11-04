@@ -135,15 +135,18 @@ header {
 .header_layer_3{
     width: 100%;
 }
-
+.top_nav{
+    width: 100%;
+    botoom: 0;
+}
 .top_nav li {
     background: url(/media/css/images/bg_grad_main.png) repeat-x;
     text-align: center;
     margin-top: 2%;
-    padding: 1% 2%;
+    padding: 1%;
     display: inline-block;
-    botoom: 0;
     float: left;
+    botoom: 0;
 }
 
 .top_nav a {
@@ -151,19 +154,19 @@ header {
 }
 
 #home{
-    width:15%;
+    width:17%;
     margin-right: 3%;
 }
 #services{
     margin-right: 3%;
-    width:16%;
+    width:18%;
 }
 #usefull{
     margin-right: 3%;
-    width:28%;
+    width:30%;
 }
 #contacts{
-    width: 16%;
+    width: 18%;
     float: right;
 }
 .top_nav li:hover {
