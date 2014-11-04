@@ -40,7 +40,7 @@
 			{% endif %}
 				<a href="{{ news_item.id }}">
 					<p class="news_text_main">
-					{{ news_item.body|removetags:"img"|striptags|truncatechars:30 }}
+					{{ news_item.body|removetags:"img"|striptags|truncatechars:300 }}
 					</p>
 				</a>
 			</div>
