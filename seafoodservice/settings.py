@@ -201,6 +201,4 @@ SOUTH_MIGRATION_MODULES = {
 
 LOCALE_PATHS = (
     'locale',
-    'pages/locale',
-    'certificates/locale',
 )

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-04 01:56+0300\n"
+"POT-Creation-Date: 2014-11-04 14:49+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,7 +53,7 @@ msgstr "Доска"
 #: .\certificates\__init__.py:2 .\certificates\models.py:17
 #: .\certificates\templates\certificates.html.py:13
 #: .\certificates\templates\certificates.html.py:17
-#: .\pages\templates\base.html.py:113
+#: .\pages\templates\base.html.py:114
 msgid "Certificates"
 msgstr "Сертификаты"
 
@@ -76,9 +76,9 @@ msgstr "Сертификат"
 #: .\gallery\templates\gallery.html.py:14
 #: .\information\templates\news.html.py:24
 #: .\information\templates\news_item.html.py:24
-#: .\information\templates\usefull_information.html.py:13
+#: .\information\templates\usefull_information.html.py:8
 #: .\information\templates\usefull_information_item.html.py:8
-#: .\pages\templates\base.html.py:51 .\pages\templates\base.html.py:148
+#: .\pages\templates\base.html.py:51 .\pages\templates\base.html.py:150
 #: .\pages\templates\admin\app_index.html.py:9
 #: .\pages\templates\admin\base.html.py:47
 #: .\services\templates\services.html.py:13
@@ -158,7 +158,7 @@ msgid "Skype records"
 msgstr "Skype записи"
 
 #: .\contacts\models.py:74 .\contacts\models.py:80
-#: .\pages\templates\base.html.py:141
+#: .\pages\templates\base.html.py:143
 msgid "Fax"
 msgstr "Факс"
 
@@ -200,7 +200,7 @@ msgstr ""
 
 #: .\contacts\templates\contacts.html.py:10
 #: .\employees\templates\contacts.html.py:12 .\pages\templates\base.html.py:61
-#: .\pages\templates\base.html.py:157
+#: .\pages\templates\base.html.py:159
 msgid "Contacts"
 msgstr "Контакты"
 
@@ -230,7 +230,7 @@ msgid "Cancel"
 msgstr "Отмена"
 
 #: .\gallery\__init__.py:2 .\gallery\templates\gallery.html.py:15
-#: .\pages\templates\base.html.py:107
+#: .\pages\templates\base.html.py:108
 msgid "Gallery"
 msgstr "Галерея"
 
@@ -296,7 +296,7 @@ msgstr "Новость"
 #: .\information\views.py:43 .\information\templates\news.html.py:25
 #: .\information\templates\news.html.py:29
 #: .\information\templates\news_item.html.py:25
-#: .\pages\templates\base.html.py:82
+#: .\pages\templates\base.html.py:83
 msgid "News"
 msgstr "Новости"
 
@@ -305,8 +305,8 @@ msgid "Useful information item"
 msgstr "Статья"
 
 #: .\information\models.py:33
-#: .\information\templates\usefull_information.html.py:14
-#: .\information\templates\usefull_information.html.py:18
+#: .\information\templates\usefull_information.html.py:9
+#: .\information\templates\usefull_information.html.py:13
 #: .\information\templates\usefull_information_item.html.py:9
 msgid "Useful information"
 msgstr "Полезная информация"
@@ -318,9 +318,9 @@ msgstr "Главная  страница"
 #: .\information\views.py:12 .\information\views.py:23
 #: .\information\templates\news.html.py:10
 #: .\information\templates\news_item.html.py:10
-#: .\pages\templates\base.html.py:94
+#: .\pages\templates\base.html.py:95
 msgid "Usefull information"
-msgstr "Статья"
+msgstr "Полезная информация"
 
 #: .\pages\templates\base.html.py:20
 msgid "In partnership"
@@ -330,38 +330,38 @@ msgstr "В партнёрстве"
 msgid "with success"
 msgstr "с успехом!"
 
-#: .\pages\templates\base.html.py:54 .\pages\templates\base.html.py:151
+#: .\pages\templates\base.html.py:54 .\pages\templates\base.html.py:153
 #: .\services\__init__.py:2 .\services\models.py:17
 #: .\services\templates\services.html.py:14
 #: .\services\templates\services.html.py:17
 msgid "Services"
 msgstr "Услуги"
 
-#: .\pages\templates\base.html.py:58 .\pages\templates\base.html.py:154
+#: .\pages\templates\base.html.py:58 .\pages\templates\base.html.py:156
 msgid "Useful Information"
 msgstr "Полезная информация"
 
-#: .\pages\templates\base.html.py:133
+#: .\pages\templates\base.html.py:135
 msgid "RB, Minsk, 220053"
 msgstr "РБ, Минск, 220053"
 
-#: .\pages\templates\base.html.py:135
+#: .\pages\templates\base.html.py:137
 msgid "str. Novovilenskaya, 8, 24"
 msgstr "ул. Нововиленская, 8, 24"
 
-#: .\pages\templates\base.html.py:137
+#: .\pages\templates\base.html.py:139
 msgid "Numb."
 msgstr "Ном."
 
-#: .\pages\templates\base.html.py:143
+#: .\pages\templates\base.html.py:145
 msgid "Go to map"
 msgstr "Посмотреть на карте"
 
-#: .\pages\templates\base.html.py:166
+#: .\pages\templates\base.html.py:168
 msgid "Site is developed "
 msgstr "Сайт разработан "
 
-#: .\pages\templates\base.html.py:167
+#: .\pages\templates\base.html.py:169
 msgid "by studio Zod4ie"
 msgstr "студией Zod4ie"
 
@@ -427,11 +427,11 @@ msgstr "Логотип"
 msgid "Partner"
 msgstr "Партнёр"
 
-#: .\seafoodservice\settings.py:39
+#: .\seafoodservice\settings.py:38
 msgid "Russian"
 msgstr "Русский"
 
-#: .\seafoodservice\settings.py:40
+#: .\seafoodservice\settings.py:39
 msgid "English"
 msgstr "Английский"
 
@@ -455,49 +455,52 @@ msgstr ""
 " оказывает комплекс транспортно-экспедиционных услуг по доставке грузов "
 "железнодорожным транспортом повагонными и контейнерными отправками:"
 
-#: .\services\templates\services.html.py:23
+#: .\services\templates\services.html.py:24
 msgid "transport of perishable goods in their own reefer containers"
 msgstr "перевозка скоропортящихся грузов в собственных рефконтейнерах"
 
-#: .\services\templates\services.html.py:27
+#: .\services\templates\services.html.py:28
 msgid ""
 "the delivery organization of various cargoes, including hazardous and "
 "oversized"
-msgstr "организация доставки различных грузов, в том числе опасных и негабаритных"
+msgstr ""
+"организация доставки различных грузов, в том числе опасных и негабаритных"
 
-#: .\services\templates\services.html.py:31
+#: .\services\templates\services.html.py:34
 msgid "transshipment and storage of goods in the common areas"
 msgstr "организация перевалки и хранения грузов в местах общего пользования"
 
-#: .\services\templates\services.html.py:35
+#: .\services\templates\services.html.py:38
 msgid "providing information on the location of wagons / containers"
 msgstr "предоставление информации о дислокации вагонов/контейнеров"
 
-#: .\services\templates\services.html.py:38
+#: .\services\templates\services.html.py:42
 msgid "extra services"
 msgstr "Дополнительные услуги"
 
-#: .\services\templates\services.html.py:41
+#: .\services\templates\services.html.py:46
 msgid "transport organization by multimodal transport (road and rail)"
-msgstr "организация перевозок смешанным (автомобильным и железнодорожным) транспортом"
+msgstr ""
+"организация перевозок смешанным (автомобильным и железнодорожным) транспортом"
 
-#: .\services\templates\services.html.py:45
+#: .\services\templates\services.html.py:50
 msgid "implementation shipments / receiving goods as the sender / receiver"
-msgstr "осуществление отправок/приемов грузов в качестве отправителя/получателя"
+msgstr ""
+"осуществление отправок/приемов грузов в качестве отправителя/получателя"
 
-#: .\services\templates\services.html.py:49
+#: .\services\templates\services.html.py:54
 msgid "customs clearance"
 msgstr "организация таможенного оформления"
 
-#: .\services\templates\services.html.py:53
+#: .\services\templates\services.html.py:58
 msgid "organization of insurance"
 msgstr "организация страхования"
 
-#: .\services\templates\services.html.py:57
+#: .\services\templates\services.html.py:62
 msgid "free calculation of tariffs and consulting"
 msgstr "бесплатный расчет тарифов и консультации"
 
-#: .\services\templates\services.html.py:61
+#: .\services\templates\services.html.py:71
 msgid "Transporation points"
 msgstr "География перевозок"
 
