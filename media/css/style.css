@@ -461,25 +461,19 @@ footer nav li {
 	text-decoration: underline;
 }
 .copyright {
+    position: relative;
 	font-size: 12px;
-	margin-left: 530px;
-	margin-top: 117px;
-	width: 100px;
-}
-#copyright {
 	float: right;
-	margin-top: -30px;
-	margin-left: 50px;
-	font-size: 12px;
-	width: 275px;
+    width: 55%;
+    margin-top: 110px;
+    margin-bottom: 20px;
 }
-#copyright img {
-	float: left;
+.copyright img {
+    margin-left: 10%;
 	margin-right: 10px;
 }
-#copyright p {
-	margin-top: 15px;
-}
+
+
 .online {
 	position: fixed;
 	top: 22px;
@@ -1145,4 +1139,9 @@ line-height: 19.5px;
 #map_canvas {
     height: 800px;
     width:800px;
+}
+
+.radyx_logo{
+    position: relative;
+    margin-top: 20px;
 }

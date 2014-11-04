@@ -124,7 +124,6 @@
         {% for message in notifications_messages %}
             <p class="notification_error"> {{ message }}</p>
         {% endfor %}
-
     {% endblock %}
 </div>
 <footer>
@@ -159,12 +158,12 @@
             </ul>
         </nav>
 
-        <p class="copyright">© 2010-2014</p>
-        <div id="copyright">
+        <div class="copyright">
+            © 2010-2014
             <img src="{{ MEDIA_URL }}css/images/zod4ie.jpg" alt="">
 
-            <p>{% trans "Site is developed " %}<a href="http://zod4ie.com/"
-                                                  target="_blank">{% trans "by studio Zod4ie" %}</a></p>
+            <a>{% trans "Site is developed " %}<a href="http://zod4ie.com/"
+                                                  target="_blank">{% trans "by studio Zod4ie" %}</a></a>
         </div>
 
 
@@ -173,15 +172,6 @@
                 <div id="SITEHELP_CONTAINER_1974" class="SITEHELP_CONTAINER_1974"></div>
             </div>
         </a>
-        <br/> <br/>
-        <ml_code></ml_code>
-        <div>
-            <center><a href='http://www.radyx.ru/' target='_blank'
-                       title='&#x0411;&#x0435;&#x0441;&#x043F;&#x043B;&#x0430;&#x0442;&#x043D;&#x044B;&#x0439; &#x0445;&#x043E;&#x0441;&#x0442;&#x0438;&#x043D;&#x0433;'>
-                <img id='ayolaid' src='http://s.ayola.net/rh.gif' border='0'>
-            </a></center>
-        </div>
-
 
         <script language='javascript' type='text/javascript'>
             var s_loaded_1974 = false;
@@ -205,5 +195,12 @@
         </script>
     {% endblock %}
     </footer>
+        <div class="radyx_logo">
+            <center><a href='http://www.radyx.ru/' target='_blank'
+                       title='&#x0411;&#x0435;&#x0441;&#x043F;&#x043B;&#x0430;&#x0442;&#x043D;&#x044B;&#x0439; &#x0445;&#x043E;&#x0441;&#x0442;&#x0438;&#x043D;&#x0433;'>
+                <img id='ayolaid' src='http://s.ayola.net/rh.gif' border='0'>
+            </a></center>
+        </div>
+
 </body>
 </html>
