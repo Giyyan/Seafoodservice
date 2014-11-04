@@ -12,6 +12,7 @@ def services(request):
         "main_services": Service.objects.filter(is_fundamental_service=True),
         "extra_services": Service.objects.filter(is_fundamental_service=False),
         "transporation_points": zip(range(points.__len__()), points),
+        "center_points":settings.GOOGLE_MAPS_SETTINGS,
     }
     context.update(settings.GOOGLE_MAPS_SETTINGS)
     context.update(set_required_data(request))
