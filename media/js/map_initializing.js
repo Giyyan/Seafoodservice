@@ -5,9 +5,15 @@ function initialize() {
         center: myLatlng,
         scrollwheel: false,
         navigationControl: false,
-        mapTypeControl: false,
-        scaleControl: false,
-        draggable: false
+        draggable: false,
+        disableDefaultUI: true,
+        panControl:false,
+        zoomControl:false,
+        mapTypeControl:false,
+        scaleControl:false,
+        streetViewControl:false,
+        overviewMapControl:false,
+        rotateControl:false
     }
     var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
