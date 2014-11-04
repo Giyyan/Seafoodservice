@@ -159,7 +159,7 @@ header {
     width:16%;
 }
 #usefull{
-    margin-right: 3;
+    margin-right: 3%;
     width:28%;
 }
 #contacts{
@@ -538,8 +538,8 @@ margin-left: 86px;
 padding-top: 65px;
 }
 #map-canvas {
-width: 710px;
-height: 375px;
+width: 700px;
+height: 500px;
 outline: 1px solid #ccc;
 margin-top: 30px;
 }
@@ -556,6 +556,7 @@ font-weight: bold;
 margin-bottom: 12px;
 margin-top: 5px;
 }
+
 .main_content .useful_information {
 margin-top: -25px;
 margin-bottom: 13px;
@@ -564,14 +565,13 @@ margin-bottom: 13px;
 background: #F2F2F2;
 }
 .main_block_information {
-padding: 18px 21px;
-margin-bottom: 15px;
+padding: 1%;
+margin-bottom: 1%;
 text-align: justify;
 }
 .main_block_information a {
 text-decoration: none;
 color: #4a4a4a;
-font-size: 16px;
 }
 .main_block_information a:hover {
 color: #5c9ef3;
@@ -822,22 +822,17 @@ height: 70px;
 float: left;
 }
 .news_text_main {
-margin-top: 6px;
-margin-bottom: 6px;
 }
-#news_page {
-line-height: 18px;
+
+.main_block_information {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 19px;
+    margin-top: 10px;
 }
-#news_page .main_block_information {
-padding-left: 16px;
-padding-right: 19px;
-margin-top: 10px;
-}
-#news_page .useful_information {
-padding-bottom: 15px;
-text-align: left;
-padding-left: 55px;
-}
+
 .active {
 background: url(images/bg_active.png);
 }
@@ -1097,7 +1092,8 @@ line-height: 19.5px;
   color: #4a4a4a;
 }
 .information_title1{
-  margin: 40px 0 15px;
+  margin-top: 1%;
+  margin-bottom: 1%;
 }
 .main_block_info-table tr th{
     background: #bdddff;
