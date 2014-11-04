@@ -537,7 +537,7 @@ footer nav li {
     float: left;
 }
 .extra_services_title{
-    margin-top: 15px;
+    padding-top: 20px;
 }
 .extra_services li{
     padding: 1%;
@@ -552,7 +552,7 @@ footer nav li {
     margin-left: 86px;
 }
 .geography {
-    padding-top: 65px;
+    padding-top: 15px;
 }
 .google_map{
     position: relative;
@@ -563,7 +563,7 @@ footer nav li {
     position: relative;
     width: 600px;
     height: 400px;
-    margin-top: 30px;
+    margin-top: 15px;
     float: right;
 }
 /*useful information*/
