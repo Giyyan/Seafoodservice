@@ -12,7 +12,7 @@ MANAGERS = ADMINS
 
 GOOGLE_MAPS_SETTINGS = {
     'center_longitude': 0.0,
-    'center_latitude': 2.0,
+    'center_latitude': 35.0,
 }
 
 DATABASES = {
@@ -178,9 +178,7 @@ ADMIN_TOOLS_INDEX_DASHBOARD = 'dashboard.CustomIndexDashboard'
 ADMIN_TOOLS_APP_INDEX_DASHBOARD = 'dashboard.CustomAppIndexDashboard'
 
 TEMPLATE_CONTEXT_PROCESSORS = (
-
     "django.contrib.auth.context_processors.auth",
-
     "django.core.context_processors.debug",
     "django.core.context_processors.media",
     "django.core.context_processors.static",
