@@ -298,7 +298,6 @@ aside {
     position: relative;
     z-index: 9997;
     margin-bottom: 3%;
-    margin-left: -3px;
 }
 .slider_image{
     display: inline-block;
