@@ -13,14 +13,8 @@
 		<h3 class="useful_information">{% trans "Useful information" %}</h3>
 		{% for news_item in news %}
 			<div class="main_block_information">
-				<p class="news_date">{{ news_item.date }}</p>
 			{% if news.title_image  %}
 				<div class="information_title">{{ news_item.title }}</div>
-			{% endif %}
-			{% if news_item.title_image %}
-			<span style="width:10px;height:10px;">
-				<img src="{{ MEDIA_URL }}{{ news_item.title_image }}" alt="">
-			</span>
 			{% endif %}
 				<a href="{{ news_item.id }}">
 					<p class="news_text_main">
