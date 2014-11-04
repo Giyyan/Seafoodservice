@@ -54,7 +54,6 @@ msgstr "Доска"
 #: .\certificates\templates\certificates.html.py:13
 #: .\certificates\templates\certificates.html.py:17
 #: .\pages\templates\base.html.py:113
-#, fuzzy
 msgid "Certificates"
 msgstr "Сертификаты"
 
@@ -68,9 +67,8 @@ msgid "Description"
 msgstr "Описание"
 
 #: .\certificates\models.py:16
-#, fuzzy
 msgid "Certificate"
-msgstr "Сертификаты"
+msgstr "Сертификат"
 
 #: .\certificates\templates\certificates.html.py:12
 #: .\contacts\templates\contacts.html.py:9
@@ -96,22 +94,18 @@ msgid "Employees"
 msgstr "Работники"
 
 #: .\contacts\forms.py:9
-#, fuzzy
 msgid "Letters from picture"
 msgstr "Буквы с картинки"
 
 #: .\contacts\models.py:10
-#, fuzzy
 msgid "Address"
 msgstr "Адрес"
 
 #: .\contacts\models.py:16
-#, fuzzy
 msgid "Office Contact"
 msgstr "Контакт офиса"
 
 #: .\contacts\models.py:17 .\contacts\templates\contacts.html.py:49
-#, fuzzy
 msgid "Office Contacts"
 msgstr "Контакты офиса"
 
@@ -480,7 +474,6 @@ msgid "providing information on the location of wagons / containers"
 msgstr "предоставление информации о дислокации вагонов/контейнеров"
 
 #: .\services\templates\services.html.py:38
-#, fuzzy
 msgid "extra services"
 msgstr "Дополнительные услуги"
 
