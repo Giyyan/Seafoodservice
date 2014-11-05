@@ -12,7 +12,7 @@ MANAGERS = ADMINS
 
 GOOGLE_MAPS_SETTINGS = {
     'center_longitude': 10.0,
-    'center_latitude': 35.0,
+    'center_latitude': 41.0,
 }
 
 DATABASES = {

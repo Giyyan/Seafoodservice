@@ -1,7 +1,14 @@
 function initialize() {
+    var zoom = parseInt(document.getElementById('google_map').offsetWidth/510);
+    if (zoom<1){
+        zoom = 1;
+    }
+    document.getElementById('map-canvas').style.height = zoom*350+'px';
+    document.getElementById('map-canvas').style.width = zoom*510+'px';
+    document.getElementById('google_map').style.height = zoom*350+'px';
     var myLatlng = new google.maps.LatLng(parseFloat($('#center_latitude').text()), parseFloat($('#center_longitude').text()));
     var mapOptions = {
-        zoom: 1,
+        zoom: zoom,
         center: myLatlng,
         scrollwheel: false,
         navigationControl: false,
