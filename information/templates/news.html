@@ -38,11 +38,11 @@
 				<img src="{{ MEDIA_URL }}{{ news_item.title_image }}" alt="">
 			</span>
 			{% endif %}
-				<a href="{{ news_item.id }}">
-					<p class="news_text_main">
-					{{ news_item.body|removetags:"img"|striptags|truncatechars:300 }}
-					</p>
-				</a>
+                <span class="news_text_main">
+                    <a href="{% url "news_item" news_item.id %}">
+                        {{ news_item.body|removetags:"img"|striptags|truncatechars:300 }}
+                    </a>
+                </span>
 			</div>
 		{% endfor %}
 

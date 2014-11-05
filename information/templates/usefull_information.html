@@ -16,11 +16,11 @@
 			{% if news_item.title  %}
 				<div class="information_title">{{ news_item.title }}</div>
 			{% endif %}
-				<a href="{{ news_item.id }}">
-					<p class="news_text_main">
-					{{ news_item.body|removetags:"img"|striptags|truncatechars:300 }}
-					</p>
-				</a>
+                <p class="news_text_main">
+				    <a href="{% url "usefull_information_item" news_item.id %}">
+					    {{ news_item.body|removetags:"img"|striptags|truncatechars:300 }}
+				    </a>
+                </p>
 			</div>
 		{% endfor %}
 

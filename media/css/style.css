@@ -871,6 +871,15 @@ video {
     font-size: 16px;
     padding-bottom: 5px;
 }
+.main_block_information a{
+    text-decoration: inherit;
+    color: inherit;
+}
+
+.news_text_main a:hover {
+    color: #bdddff;
+}
+
 .main_block_information img {
     width: 90px;
     height: 90px;
