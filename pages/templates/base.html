@@ -47,19 +47,20 @@
             </div>
             <div class="header_layer_3">
                 <ul class="top_nav">
-                    <a href="{% url 'home' %}">
-                        <li id="home" class="{% active request "^/$" %}">{% trans "Home" %}</li>
-                    </a>
-                    <a href="{% url 'services' %}">
-                        <li id="services" class="{% active request "^/services/" %}">{% trans "Services" %}</li>
-                    </a>
-                    <a href="{% url 'usefull_information' %}">
-                        <li id="usefull"
-                            class="{% active request "^/usefull-information/" %}">{% trans "Useful Information" %}</li>
-                    </a>
-                    <a href="{% url 'contacts' %}">
-                        <li id="contacts" class="{% active request "^/contacts/" %}">{% trans "Contacts" %}</li>
-                    </a>
+                    <li id="home" class="{% active request "^/$" %}">
+                        <a href="{% url 'home' %}">{% trans "Home" %}</a>
+                    </li>
+                    <li id="services" class="{% active request "^/services/" %}">
+                        <a href="{% url 'services' %}">{% trans "Services" %}</a>
+                    </li>
+                    <li id="usefull"
+                            class="{% active request "^/usefull-information/" %}">
+                        <a href="{% url 'usefull_information' %}">{% trans "Useful Information" %}</a>
+                    </li>
+                    <li id="contacts" class="{% active request "^/contacts/" %}">
+                        <a href="{% url 'contacts' %}">{% trans "Contacts" %}</a>
+                    </li>
+
                 </ul>
             </div>
         </div>
