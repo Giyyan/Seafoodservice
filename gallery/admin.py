@@ -76,7 +76,7 @@ class VideoGalleryAdmin(MPTTModelAdmin, TranslationAdmin):
         """
         Given a model instance save it to the database.
         """
-        filename = obj.video.path
+        filename = u''+obj.video.path
         ext = os.path.splitext(filename)[1]
         obj.type = ext.lower()
         obj.save()
