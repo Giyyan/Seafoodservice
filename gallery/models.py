@@ -26,7 +26,8 @@ class VideoGallery(MPTTModel):
     video = ExtFileField(upload_to='videos', verbose_name=_("video"),
                          ext_whitelist=(".mp4", ".ogg", ".webm", ".MP4", ".OGG", ".WEBM",),)
     video_image = ExtFileField(upload_to='videos/images', verbose_name=_("Image"),
-                             ext_whitelist=(".png", ".jpg", ".PNG", ".JPG", ".jpeg", ".JPEG"))
+                             ext_whitelist=(".png", ".jpg", ".PNG", ".JPG", ".jpeg", ".JPEG"),
+                             default="css/images/slide3.png")
     description = models.CharField(max_length=255, blank=True, verbose_name=_("Description"))
     add_this_photo_to_gallery = models.BooleanField(null=False, verbose_name=_(u"Add this photo to gallery"))
 

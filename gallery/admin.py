@@ -46,7 +46,7 @@ class PhotoGalleryAdmin(MPTTModelAdmin, TranslationAdmin):
     ]
 
 class VideoGalleryAdmin(MPTTModelAdmin, TranslationAdmin):
-    list_display = ['video', 'description']
+    list_display = ['video', 'image', 'description']
     search_fields = ['description_ru', 'description_en' ]
 
     def image(self, obj):
@@ -67,6 +67,7 @@ class VideoGalleryAdmin(MPTTModelAdmin, TranslationAdmin):
         (None, {
             'fields': [
                 'video',
+                'video_image',
                 'description',
             ]
         }),
@@ -77,7 +78,7 @@ class VideoGalleryAdmin(MPTTModelAdmin, TranslationAdmin):
         Given a model instance save it to the database.
         """
         filename = u''+obj.video.path
-        ext = os.path.splitext(filename)[1]
+        ext = filename.split('.')[-1]
         obj.type = ext.lower()
         obj.save()
 
