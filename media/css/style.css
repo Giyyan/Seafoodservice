@@ -439,8 +439,8 @@ footer {
     color: #fff;
     font-size: 18px;
     display: inline-block;
-
 }
+
 .left_footer_block {
     float: left;
     width: 30%;
@@ -450,6 +450,13 @@ footer {
 .left_footer_block span {
     font-size: 22px;
 }
+
+.right_footer_block{
+    display: inline-block;
+    width:68%;
+    height: 100%;
+}
+
 footer a {
     color: #fff;
     text-align: right;
@@ -458,11 +465,11 @@ footer a {
     font-size: 16px;
 }
 .footer_block{
-    display: inline-block;
+    display: block;
     position: relative;
-    width: 65%;
-    padding-top: 20px;
-    height: 70%;
+    width: 100%;
+    height: 80%;
+    top:2%;
     text-align: end;
 }
 
@@ -491,20 +498,19 @@ footer a {
     position: relative;
     font-size: 12px;
     width: 100%;
-    height:30%;
-    margin-bottom: 5px;
-    bottom: 10px;
-    display: inline-block;
+    height: 20%;
+    display: block;
 }
 .date_of_copyright{
     text-align: right;
-    width:55%;
+    width: 40%;
     height: 100%;
     bottom: 5px;
     display: inline-block;
 }
 .copyright_developed{
-    width: 40%;
+    width: 60%;
+    height: 100%;
     text-align: right;
     float: right;
     display: inline-block;
