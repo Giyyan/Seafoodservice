@@ -15,7 +15,7 @@ class MPTTAdminForm(forms.ModelForm):
 
 
 class PhotoGalleryAdmin(MPTTModelAdmin, TranslationAdmin):
-    list_display = ['image', 'description']
+    list_display = ['image', 'title', 'description']
     search_fields = ['description_ru', 'description_en']
     list_filter = ['add_this_photo_to_slide', 'add_this_photo_to_gallery']
     form = MPTTAdminForm
@@ -38,6 +38,7 @@ class PhotoGalleryAdmin(MPTTModelAdmin, TranslationAdmin):
         (None, {
             'fields': [
                 'photo',
+                'title',
                 'description',
                 'add_this_photo_to_slide',
                 'add_this_photo_to_gallery',

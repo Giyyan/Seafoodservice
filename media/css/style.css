@@ -911,6 +911,15 @@ video {
     background: url(images/bg_active.png);
 }
 
+#certificate_img{
+    list-style: none;
+    display: inline-block;
+    width:30%;
+    height: 300px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
 .photo_img {
     list-style: none;
     display: inline-block;
@@ -924,9 +933,9 @@ video {
     margin-right: 0;
 }
 .img_in_gallery {
-    width: 225px;
-    margin-right: 1%;
-    height: 167px;
+    width: 100%;
+    height: 100%;
+    margin-right: 2%;
 }
 #overlay {
     background: #fff;

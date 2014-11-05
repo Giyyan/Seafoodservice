@@ -3,7 +3,11 @@ from models import PhotoGallery, VideoGallery
 
 
 class MediaTranslationOptions(TranslationOptions):
-    fields = ('description',)
+    fields = ('description', )
 
-translator.register(PhotoGallery, MediaTranslationOptions)
+
+class PhotoTranslationOptions(TranslationOptions):
+    fields = ('title', 'description', )
+
+translator.register(PhotoGallery, PhotoTranslationOptions)
 translator.register(VideoGallery, MediaTranslationOptions)

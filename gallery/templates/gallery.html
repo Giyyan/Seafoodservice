@@ -39,10 +39,12 @@
 				<li class="photo_img"  rel="{{ i }}">
 					<img src="{{ MEDIA_URL }}{{ photo.photo }}" class="img_in_gallery" alt="">
 					<div class="photo_descr"  style="display:none">
-					<p>{{ photo.description }}</p>
+                        <p>{{ photo.title }}</p>
+					    <p>{{ photo.description }}</p>
 					</div>
 				</li>
 				{% endfor %}
+               </ul>
 			</div>
 			{% endif %}
 		</div>
