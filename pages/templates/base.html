@@ -145,28 +145,21 @@
                class="map" target="_blank">{% trans "Go to map" %}</a>
         </div>
         <div class="footer_block">
-            <ul class="footer_menu">
-                <a href="{% url "home" %}">
-                    <li>{% trans "Home" %}</li>
-                </a>
-                <a href="{% url 'services' %}">
-                    <li>{% trans "Services" %}</li>
-                </a>
-                <a href="{% url 'usefull_information' %}">
-                    <li>{% trans "Useful Information" %}</li>
-                </a>
-                <a href="{% url 'contacts' %}">
-                    <li>{% trans "Contacts" %}</li>
-                </a>
-            </ul>
-            <div class="copyright">
-                © 2010-2014
-                <img src="{{ MEDIA_URL }}css/images/zod4ie.jpg" alt="">
-
-                <a>{% trans "Site is developed " %}<a href="http://zod4ie.com/"
-                                                      target="_blank">{% trans "by studio Zod4ie" %}</a></a>
-            </div>
+            <a class="home_title" href="{% url "home" %}">{% trans "Home" %}</a>
+            <a class="services_title" href="{% url 'services' %}">{% trans "Services" %}</a>
+            <a class="useful_title" href="{% url 'usefull_information' %}">{% trans "Useful Information" %}</a>
+            <a class="contacts_title" href="{% url 'contacts' %}">{% trans "Contacts" %}</a>
         </div>
+            <div class="copyright">
+                <a class="date_of_copyright">© 2010-2014</a>
+
+                <div class="copyright_developed">
+                    <img src="{{ MEDIA_URL }}css/images/zod4ie.jpg" alt="">
+                    {% trans "Site is developed " %}
+                    <a href="http://zod4ie.com/" target="_blank">{% trans "by studio Zod4ie" %}</a>
+                </div>
+            </div>
+
 
         <a href="">
             <div class="online">
@@ -196,5 +189,10 @@
         </script>
     {% endblock %}
     </footer>
+<!-- BEGIN JIVOSITE CODE {literal} -->
+<script type='text/javascript'>
+(function(){ var widget_id = '9oLG161lSM';
+var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);})();</script>
+<!-- {/literal} END JIVOSITE CODE -->
 </body>
 </html>
