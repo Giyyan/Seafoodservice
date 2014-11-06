@@ -156,6 +156,7 @@ header {
 
 .top_nav a {
     color: #fff;
+    text-decoration: inherit;
 }
 
 #home{
@@ -1225,3 +1226,6 @@ video {
     margin-top: 20px;
 }
 
+.slider_view_img{
+    margin-top: 5%;
+}
