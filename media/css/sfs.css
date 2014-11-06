@@ -333,3 +333,11 @@ footer .bottom_nav ul li a {
     position: absolute;
     margin-top: -200px;
 }
+
+#arrows_right {
+    margin-left: 650px;
+}
+
+#arrows_left {
+    margin-left: 30px;
+}
