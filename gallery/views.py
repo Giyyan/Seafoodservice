@@ -23,4 +23,6 @@ def get_slide_images(request):
     context = {
         "slides": [settings.MEDIA_URL+i.photo.name for i in PhotoGallery.objects.filter(add_this_photo_to_slide=True)],
     }
-    return HttpResponse(json.dumps(context), mimetype = 'application/json')
+    return render_to_response('slider_view.html',
+                          context,
+                          context_instance=RequestContext(request))

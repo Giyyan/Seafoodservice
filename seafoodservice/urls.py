@@ -46,6 +46,7 @@ urlpatterns += patterns('information.views',
 urlpatterns += patterns('gallery.views',
     url(r'^gallery/$', 'gallery', name='gallery'),
     url(r'^get_slide_images/$', 'get_slide_images', name='get_slide_images'),
+
     )
 
 #certificates
