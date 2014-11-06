@@ -1,0 +1,314 @@
+/*
+Theme Name: Zod4ie
+Theme URL:
+Description:  Zod4ie
+Version: 1.0
+Author: Zod4ie
+Author URL: Zod4ie.com
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Ubuntu-R;
+    src: local("Ubuntu-R");
+    src: url("fonts/Ubuntu-R.ttf");
+}
+
+@font-face {
+    font-family: Ubuntu-B;
+    src: local("Ubuntu-B");
+    src: url("fonts/Ubuntu-B.ttf");
+}
+
+body {
+    min-width: 1024px;
+    width: 1024px;
+    margin-left: 50%;
+    right: 512px;
+    padding: 0;
+    color: #4a4a4a;
+    font-family: Ubuntu-R;
+    position: relative;
+}
+
+header {
+    height: 196px;
+}
+
+header .top {
+    margin-top: 10px;
+}
+
+.cls {
+    clear: both;
+}
+
+.sb {
+    width: 210px;
+    float: left;
+}
+
+.cntr {
+    width: 794px;
+    float: left;
+    margin-left: 20px;
+    box-sizing: border-box;
+}
+
+.pull_left {
+    float: left;
+}
+
+.pull_right {
+    float: right;
+}
+
+.slogan {
+    text-transform: uppercase;
+    font-family: Ubuntu-B;
+    color: #e1080e;
+    font-size: 20px;
+}
+
+.number {
+    text-align: right;
+    font-size: 22px;
+    color: #26448c;
+}
+
+.number span{
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.social {
+    margin-top: 50px;
+    height: 30px;
+}
+
+.social .header_contacts a {
+    margin-right: 19px;
+}
+
+.social .languages a {
+    background-color: #ebebeb;
+    margin-right: 19px;
+    padding: 3px;
+    text-decoration: none;
+    color: #003366;
+}
+
+.active_language {
+    color: #cc0000;
+}
+
+header nav {
+    margin-top: 10px;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    background: url(/media/css/images/bg_grad_main.png) repeat-x;
+    margin-right: 19px;
+    padding: 5px;
+    text-align: center;
+}
+
+header nav ul li.main {
+    width: 128px;
+}
+
+header nav ul li.services {
+    width: 138px;
+}
+
+header nav ul li.uinfo {
+    width: 278px;
+}
+
+header nav ul li.contacts {
+    width: 141px;
+}
+
+header nav ul li:last-child {
+    margin-right: 0;
+}
+
+header nav ul li:hover, header nav ul li.active:hover {
+    background: url(images/bg_grad.png) repeat-x;
+}
+
+header nav ul li:hover a, header nav ul li.active:hover a {
+    color: #0354a3;
+}
+
+header nav ul li.active {
+    background: url(images/bg_active.png) repeat-x;
+
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+}
+
+
+.container {
+    margin-top: 20px;
+}
+
+
+.container .sb h3 {
+    background-color: #ea1e00;
+    display: block;
+    text-align: center;
+    color: #fff;
+    width: 210px;
+    font-weight: normal;
+    font-size: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.container .sb h3 a {
+    background-color: #ea1e00;
+    display: block;
+    text-align: center;
+    color: #fff;
+    width: 210px;
+    font-weight: normal;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.news {
+    margin: 0 0 10px;
+}
+
+.news .news1 {
+    background-color: #fff;
+}
+
+.news .news2 {
+    background-color: #f2f2f2;
+}
+
+.news .news-item {
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.news .news-item:hover .text_news {
+    color: #5c9ef3;
+}
+
+.news .news-item a {
+    text-decoration: none;
+}
+
+.news .news-item .date {
+    margin-bottom: 10px;
+    color: #26448c;
+    font-size: 16px;
+}
+
+.news .news-item .text_news {
+    color: #4a4a4a;
+    font-size: 14px;
+}
+
+.galery {
+    position: relative;
+    background-size: cover;
+    display: inline-block;
+    height: 98px;
+    width: 210px;
+    background-image: url(images/gallery.png);
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+.galery span, .galery img {
+    float: left;
+}
+
+.galery span {
+    color: #03386c;
+    font-size: 20px;
+}
+
+.galery img {
+    margin-left: 20px;
+}
+
+.galery img.video {
+    margin-top: -3px;
+}
+
+.certificates, .galery, .news {
+    margin-bottom: 19px;
+}
+
+footer {
+    height: 210px;
+    background-color: #284895;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+footer .contacts {
+    font-size: 18px;
+    color: #fff;
+}
+
+footer .contacts p {
+    padding-top: 10px;
+}
+
+footer .contacts p span {
+    font-size: 22px;
+}
+
+footer .contacts p a {
+    color: #fff;
+    font-size: 18px;
+}
+
+footer .bottom_nav ul {
+    list-style: none;
+
+}
+
+footer .bottom_nav ul li {
+    display: inline-block;
+}
+
+footer .bottom_nav ul li a {
+    color: #fff;
+    font-size: 18px;
+    margin-right: 30px;
+}
+
+.copyright, .zod4ie {
+    position: absolute;
+    bottom: 20px;
+    color: #fff;
+    font-size: 12px;
+}
+
+.zod4ie {
+    right: 20px;
+}
+
+.zod4ie a {
+    color: #fff;
+}

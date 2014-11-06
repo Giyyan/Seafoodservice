@@ -1,0 +1,45 @@
+{% load i18n %}
+<header>
+    <div class="sb">
+        <a href="{% url 'home' %}"><img src="{{ MEDIA_URL }}css/images/logo.png"></a>
+    </div>
+    <div class="cntr">
+        <div class="top">
+            <p class="pull_left slogan">{% trans "In partnership" %}<br />{% trans "with success" %}</p>
+            <p class="pull_right number">+375 17 <span class="phone">288-97-75</span></p>
+            <div class="cls"></div>
+        </div>
+        <div class="social">
+            <div class="languages pull_left">
+                <form name="setLangRussian" action="/i18n/setlang/" method="POST">{% csrf_token %}
+                    <input name="next" type="hidden" value="/"/>
+                    <input type="hidden" name="language" value="ru"/>
+                </form>
+                <form name="setLangEnglish" action="/i18n/setlang/" method="POST">{% csrf_token %}
+                    <input name="next" type="hidden" value="/"/>
+                    <input type="hidden" name="language" value="en"/>
+                </form>
+                <a href="#" class="{% if language == 'ru' %}active_language{% else %}language{% endif %}"
+                   onclick="document.setLangRussian.submit();return false;">Ru</a>
+                <a href="#" class="{% if language == 'en' %}active_language{% else %}language{% endif %}"
+                   onclick="document.setLangEnglish.submit();return false;">En</a>
+            </div>
+            <div class="header_contacts pull_right">
+                <a href=""><img src="{{ MEDIA_URL }}css/images/vk.png" alt=""></a>
+                <a href=""><img src="{{ MEDIA_URL }}css/images/facebook.png" alt=""></a>
+                <a href=""><img src="{{ MEDIA_URL }}css/images/twitter.png" alt=""></a>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li class="main active"><a href="{% url 'home' %}">{% trans "Home" %}</a></li>
+                <li class="services"><a href="{% url 'services' %}">{% trans "Services" %}</a>
+                </li>
+                <li class="uinfo"><a href="{% url 'usefull_information' %}">{% trans "Useful Information" %}</a></li>
+                <li class="contacts"><a href="{% url 'contacts' %}">{% trans "Contacts" %}</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="cls"></div>
+</header>

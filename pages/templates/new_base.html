@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+{% load i18n admin_tools_menu_tags %}
+{% load active_url %}
+<html>
+<head lang="{{ LANGUAGE_CODE|default:'en-us' }}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    {% block head %}
+        <title>Sea food</title>
+        <link rel="stylesheet" href="{{ MEDIA_URL }}css/sfs.css">
+        <script src="{{ MEDIA_URL }}js/jquery-2.1.0.min.js"></script>
+        <link rel="shortcut icon" type="image/x-icon" href="{{ MEDIA_URL }}css/images/logo.png"/>
+    {% endblock %}
+</head>
+<body>
+{% include 'header.html' %}
+<div class="container">
+    <div class="sb">
+        {% if last_news %}
+        <div class="news">
+            <h3>
+                <a href="{% url 'news' %}">{% trans "News" %}</a>
+            </h3>
+            {% for news_item in last_news %}
+
+                <div class="news-item {% cycle 'news1' 'news2' %}">
+                    <a href="{% url 'news_item' news_item.id %}">
+                        <p class="date">{{ news_item.date|date:"d.m.Y" }}</p>
+                        <p class="text_news">{{ news_item.title }}</p>
+                    </a>
+                </div>
+
+            {% endfor %}
+        </div>
+        {% elif block_information %}
+            {% block block_information %}
+                <a href="{% url 'usefull_information' %}" class="title_link">
+                    <div class="aside_title">{% trans "Usefull information" %}</div>
+                </a>
+                {% for news_item in block_information %}
+                    <div class="news">
+                        <a href="{% url 'usefull_information_item' news_item.id %}"><p
+                                class="text_news">{{ news_item.title }}</p></a>
+                    </div>
+                {% endfor %}
+            {% endblock %}
+        {% endif %}
+
+        {% block gallery %}
+            <a href="{% url 'gallery' %}">
+            <div class="galery">
+                <span>{% trans "Gallery" %}</span>
+                <img src="{{ MEDIA_URL }}css/images/photo.png" alt="" class="photo">
+                <img src="{{ MEDIA_URL }}css/images/video.png" alt="" class="video">
+                <div class="cls"></div>
+            </div>
+            </a>
+        {% endblock %}
+        <div class="certificates">
+            <h3>
+                <a href="{% url 'certificates' %}">{% trans "Certificates" %}</a>
+            </h3>
+        </div>
+
+        {% for banner in banners %}
+            <div class="banner">
+                <p>{{ banner.title }}</p>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="cntr">
+        {% block page %}
+            {% for message in notifications_messages %}
+                <p class="notification_error"> {{ message }}</p>
+            {% endfor %}
+        {% endblock %}
+    </div>
+</div>
+<div class="cls"></div>
+<footer>
+    <div class="contacts pull_left">
+        <p>{% trans "RB, Minsk, 220053" %}</p>
+        <p>{% trans "str. Novovilenskaya, 8, 24" %}</p>
+        <p>{% trans "Numb." %}: +375 17 <span>233-19-16</span></p>
+        <p>+375 17 <span>233-19-16</span></p>
+        <p>{% trans "Fax" %}: +375 17 <span>233-19-16</span></p>
+        <p><a href="https://www.google.com/maps/preview?ll=53.924397,27.542754&z=13&t=m&hl=ru-RU&gl=US&mapclient=embed&q=%D0%9D%D0%BE%D0%B2%D0%BE%D0%B2%D0%B8%D0%BB%D0%B5%D0%BD%D1%81%D0%BA%D0%B0%D1%8F+%D1%83%D0%BB.+8+%D0%9C%D0%B8%D0%BD%D1%81%D0%BA+%D0%91%D0%B5%D0%BB%D0%B0%D1%80%D1%83%D1%81%D1%8C&google_abuse=GOOGLE_ABUSE_EXEMPTION%3DID%3Dcc83db44fca3e98e:TM%3D1412677903:C%3Dc:IP%3D178.124.104.205-:S%3DAPGng0u00mgs3xJy0jZ1QDcae-tphVgjng%3B+path%3D/%3B+domain%3Dgoogle.com%3B+expires%3DTue,+07-Oct-2014+13:31:43+GMT"
+                   class="map" target="_blank">{% trans "Go to map" %}</a></p>
+    </div>
+    <div class="pull_right">
+        <div class="bottom_nav">
+            <ul>
+                <li><a href="{% url 'home' %}">{% trans "Home" %}</a></li>
+                <li><a href="{% url 'services' %}">{% trans "Services" %}</a></li>
+                <li><a href="{% url 'usefull_information' %}">{% trans "Useful Information" %}</a></li>
+                <li><a href="{% url 'contacts' %}">{% trans "Contacts" %}</a></li>
+            </ul>
+        </div>
+        <div>
+            <p class="copyright">© 2010-2014</p>
+
+            <p class="zod4ie">
+                <img src="{{ MEDIA_URL }}css/images/zod4ie.jpg" style="margin-right:5px; height:20px;" alt="">
+                {% trans "Site is developed " %}
+                <a href="http://zod4ie.com/" target="_blank">{% trans "by studio Zod4ie" %}</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="cls"></div>
+</footer>
+
+
+<!-- Online Help -->
+<a href="">
+            <div class="online">
+                <div id="SITEHELP_CONTAINER_1974" class="SITEHELP_CONTAINER_1974"></div>
+            </div>
+        </a>
+
+        <script language='javascript' type='text/javascript'>
+            var s_loaded_1974 = false;
+            var s_old_onload = window.onload;
+            window.onload = function () {
+                if (s_loaded_1974) return;
+                s_loaded_1974 = true;
+                if (typeof(s_old_onload) == 'function') {
+                    try {
+                        s_old_onload();
+                    } catch (e) {
+                    }
+                }
+                var sitehelp_s = document.createElement('script');
+                sitehelp_s.type = 'text/javascript';
+                sitehelp_s.src = top.location.protocol + '//c.sitehelp.im/code.cgi?c=1974' + (top.location.protocol == 'http:' ? '' : '&ssl=1') + '&rnd=' + Math.random();
+                document.body.appendChild(sitehelp_s);
+            };
+        </script>
+</body>
+</html>
