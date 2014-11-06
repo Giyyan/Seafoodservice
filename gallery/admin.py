@@ -15,7 +15,7 @@ class MPTTAdminForm(forms.ModelForm):
 
 
 class PhotoGalleryAdmin(MPTTModelAdmin, TranslationAdmin):
-    list_display = ['image', 'description']
+    list_display = ['image', 'title', 'description']
     search_fields = ['description_ru', 'description_en']
     list_filter = ['add_this_photo_to_slide', 'add_this_photo_to_gallery']
     form = MPTTAdminForm
@@ -38,6 +38,7 @@ class PhotoGalleryAdmin(MPTTModelAdmin, TranslationAdmin):
         (None, {
             'fields': [
                 'photo',
+                'title',
                 'description',
                 'add_this_photo_to_slide',
                 'add_this_photo_to_gallery',
@@ -46,7 +47,7 @@ class PhotoGalleryAdmin(MPTTModelAdmin, TranslationAdmin):
     ]
 
 class VideoGalleryAdmin(MPTTModelAdmin, TranslationAdmin):
-    list_display = ['video', 'description']
+    list_display = ['video', 'image', 'description']
     search_fields = ['description_ru', 'description_en' ]
 
     def image(self, obj):
@@ -67,6 +68,7 @@ class VideoGalleryAdmin(MPTTModelAdmin, TranslationAdmin):
         (None, {
             'fields': [
                 'video',
+                'video_image',
                 'description',
             ]
         }),
@@ -76,8 +78,8 @@ class VideoGalleryAdmin(MPTTModelAdmin, TranslationAdmin):
         """
         Given a model instance save it to the database.
         """
-        filename = obj.video.path
-        ext = os.path.splitext(filename)[1]
+        filename = u''+obj.video.path
+        ext = filename.split('.')[-1]
         obj.type = ext.lower()
         obj.save()
 

@@ -26,9 +26,9 @@
 						{% endfor %}
 						{% endif %}
 						
-						{% if contact.mails  %}
+						{% if contact.emails  %}
 						<img src="{{MEDIA_URL}}css/images/mail.png" alt="">
-						{% for mail in contact.mails %}
+						{% for mail in contact.emails %}
 							<a href="mailto:{{ mail }}"><p>{{ mail }}</p></a>
 						{% endfor %}
 						{% endif %}
@@ -60,11 +60,11 @@
                             {% endfor %}
                         </p>
                     {% endif %}
-                    {% if contact.mails  %}
+                    {% if contact.emails  %}
                         <br><p>
                         <img src="{{MEDIA_URL}}css/images/mail.png" alt="">
 
-                            {% for mail in contact.mails %}
+                            {% for mail in contact.emails %}
                                 <a href="mailto:{{ mail }}">{{ mail }}</a>
                             {% endfor %}
                         </p>

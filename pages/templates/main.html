@@ -9,7 +9,7 @@
 	{{ block.super }}
 		{% if slides %}
 		<div id="slider" class="slider">
-			<img src="{{ MEDIA_URL }}{{ slides|first }}" alt="" id="img" class="slider_image">
+			<img src="{{ MEDIA_URL }}{{ slides|first }}" alt="" id="img" onclick="window.location.href = {% url "get_slide_images" %}" class="slider_image">
 				<div class="arrows">
 				<div id="arrows_left" class="left"><img src="{{ MEDIA_URL }}css/images/arrow_left.png" alt=""></div>
 				<div id="arrows_right" class="right"><img src="{{ MEDIA_URL }}css/images/arrow_right.png" alt=""></div>

@@ -5,6 +5,7 @@
 		<script src="{{MEDIA_URL}}js/script.js"></script>
 		<script src="{{MEDIA_URL}}js/video.js"></script>
 		<script src="{{MEDIA_URL}}js/popup.js"></script>
+        <script src="{{MEDIA_URL}}js/gallery_size.js"></script>
 	{% endblock %}
 
 	{% block content %}
@@ -18,9 +19,9 @@
 		<div>
 			{% if videos %}
 			<h3 class="useful_information">{% trans "video" %}</h3>
-			<div class="video_gallery">
+			<div id="video_gallery" class="video_gallery">
 				{% for video in videos %}
-				   <video width="225" height="173" controls poster="{{ MEDIA_URL }}{{ video.video_image }}" id="myVideo{{ video.id }}" class="right_video">
+				   <video height="173" controls poster="{{ MEDIA_URL }}{{ video.video_image }}" id="myVideo{{ video.id }}" class="right_video">
 						<source src="{{ MEDIA_URL }}{{ video.video }}" type="{{ video.type }}">
 						Your browser does not support HTML5 video.
 						<br><a>{{ video.description }}</a>
@@ -38,13 +39,18 @@
 				<li class="photo_img"  rel="{{ i }}">
 					<img src="{{ MEDIA_URL }}{{ photo.photo }}" class="img_in_gallery" alt="">
 					<div class="photo_descr"  style="display:none">
-					<p>{{ photo.description }}</p>
+                        <p>{{ photo.title }}</p>
+					    <p>{{ photo.description }}</p>
 					</div>
 				</li>
 				{% endfor %}
+               </ul>
 			</div>
 			{% endif %}
 		</div>
+    <script>
+        set_width_to_media_files();
+    </script>
 	<div id="overlay"></div>
 		<div id="wrap_frame">
 		<div id="frame">

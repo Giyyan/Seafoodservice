@@ -7,10 +7,9 @@ Author: Zod4ie
 Author URL: Zod4ie.com
 */
 * {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
 }
-
 @font-face {
     font-family: Ubuntu-R;
     src: local("Ubuntu-R");
@@ -157,6 +156,7 @@ header {
 
 .top_nav a {
     color: #fff;
+    text-decoration: inherit;
 }
 
 #home{
@@ -631,7 +631,7 @@ footer a {
 /*contacts*/
 
 .contacts_block {
-    width: 350px;
+    width: 45%;
     display: inline-block;
     line-height: 33px;
     margin-bottom: 18px;
@@ -872,6 +872,15 @@ video {
     font-size: 16px;
     padding-bottom: 5px;
 }
+.main_block_information a{
+    text-decoration: inherit;
+    color: inherit;
+}
+
+.news_text_main a:hover {
+    color: #bdddff;
+}
+
 .main_block_information img {
     width: 90px;
     height: 90px;
@@ -903,6 +912,15 @@ video {
     background: url(images/bg_active.png);
 }
 
+#certificate_img{
+    list-style: none;
+    display: inline-block;
+    width:30%;
+    height: 300px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
 .photo_img {
     list-style: none;
     display: inline-block;
@@ -916,9 +934,9 @@ video {
     margin-right: 0;
 }
 .img_in_gallery {
-    width: 225px;
-    margin-right: 1%;
-    height: 167px;
+    width: 100%;
+    height: 100%;
+    margin-right: 2%;
 }
 #overlay {
     background: #fff;
@@ -1208,29 +1226,6 @@ video {
     margin-top: 20px;
 }
 
-
-header .row {
-    width: 100%;
-    height: 196px;
+.slider_view_img{
+    margin-top: 5%;
 }
-
-header .row * {
-    margin: 0;
-}
-
-header .row .logo_block {
-    width: 210px;
-    border-right: 1px #000000 solid;
-    float: left;
-}
-
-header .row .main_block {
-    width: 100%;
-    margin-left: 230px;
-    box-sizing: border-box;
-}
-
-header .row .cls {
-    clear: both;
-}
-
