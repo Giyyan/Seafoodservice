@@ -27,8 +27,8 @@ Author URL: Zod4ie.com
 body {
     min-width: 1024px;
     width: 1024px;
-    margin-left: 50%;
-    right: 512px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0;
     color: #4a4a4a;
     font-family: Ubuntu-R;
