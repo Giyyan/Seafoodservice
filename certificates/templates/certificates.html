@@ -14,27 +14,34 @@
 			</ul>
 		{% endblock %}
 		<div>
-			<h3 class="useful_information">{% trans "Certificates" %}</h3>
-			<ul class="sertif_portfolio">
+			<h3 class="photo_title">{% trans "Certificates" %}</h3>
+              <div id="photo_gallery">
+               <ul class="portfolio">
 				{% for i, certificate in certificates %}
-					<li class="sertif" rel="{{ i|add:"1" }}" id="sertif_right">
-						<img src="{{ MEDIA_URL }}{{ certificate.image }}" style="margin-right:3" alt="{{ certificate.description }}">
-						<div class="sertif_descr" style="display:none">
-							<p>{{ certificate.title }}</p>
-							<p>{{ certificate.description }}</p>
-						</div>
-					</li>
+				<li class="photo_img"  rel="{{ i|add:1 }}">
+					<img src="{{ MEDIA_URL }}{{ certificate.image }}" style="width: 90%; heigth:300px" alt="">
+					<div class="photo_descr"  style="display:none">
+                        <p>{{ certificate.title }}</p>
+					    <p>{{ certificate.description }}</p>
+					</div>
+				</li>
 				{% endfor %}
-			</ul>
+               </ul>
+			</div>
 		</div>
-     <div id="wrap_frame2">
-     <div id="frame2">
-     <img src="{{ MEDIA_URL }}css/images/arrow_left_photo.png" alt="" id="left_arrow_sertif">
-      <img src="{{ MEDIA_URL }}css/images/arrow_right_photo.png" alt="" id="right_arrow_sertif">
-          <img src="" id="big_photo_img">
-     </div>
-     <div class="description2">
-     </div>
-     <img src="{{ MEDIA_URL }}css/images/close.png" alt="" id="close">
-     </div>
+    <script>
+        set_width_to_media_files();
+    </script>
+    <div id="overlay"></div>
+		<div id="wrap_frame">
+		<div id="frame">
+		<img src="{{ MEDIA_URL }}css/images/arrow_left_photo.png" alt="" id="left_arrow">
+		<img src="{{ MEDIA_URL }}css/images/arrow_right_photo.png" alt="" id="right_arrow">
+
+		<img src="" id="big_photo_img">
+		</div>
+		<div class="description">
+		</div>
+		<img src="{{ MEDIA_URL }}css/images/close.png" alt="" id="close2">
+	</div>
 	{% endblock %}
