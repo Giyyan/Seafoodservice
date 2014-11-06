@@ -200,3 +200,16 @@ SOUTH_MIGRATION_MODULES = {
 LOCALE_PATHS = (
     'locale',
 )
+
+# mail.ru
+PASSWORD = "ServiceSeaFood"
+EMAIL = "seafoodservice@inbox.ru"
+
+#sitehelp
+SITEHELP_SETTINGS = {
+"Connect using": "any xmpp/jabber client",
+"Login": "seafoodservice@sitehelp.im",
+"Password": "seafoodservice",
+"Domain": "sitehelp.im",
+"Port": 5222,
+}
