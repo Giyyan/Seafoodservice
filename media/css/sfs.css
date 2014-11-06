@@ -338,3 +338,26 @@ footer .bottom_nav ul li a {
     position: absolute;
     left: 20px;
 }
+
+.controls {
+    position: absolute;
+    margin-left: 302px;
+    margin-top: -29px;
+}
+.controls div {
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    margin-right: 5px;
+    display: inline-block;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+.controls .active_control {
+    background: #ccc;
+}
+
+.cntr .article {
+    text-align: justify;
+}
