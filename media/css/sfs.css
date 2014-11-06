@@ -362,4 +362,12 @@ footer .bottom_nav ul li a {
 
 .cntr .article {
     text-align: justify;
+    color: #4a4a4a;
+    font-size: 16px;
+}
+
+.cntr .article h3 {
+    text-align: center;
+    color: #ea1e00;
+    font-size: 20px;
 }

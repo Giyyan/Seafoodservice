@@ -2,13 +2,10 @@
 {% load i18n admin_tools_menu_tags %}
 
 {% block head %}
-    {{ block.super }}
     <script src="{{ MEDIA_URL }}js/slider.js"></script>
 {% endblock %}
 
 {% block page %}
-    {{ block.super }}
-
     {% if slides %}
         <div id="slider" class="slider">
             <img src="{{ MEDIA_URL }}{{ slides|first }}" alt="" id="img"
@@ -34,6 +31,7 @@
 
         </div>
     {% endif %}
+
     <article>
         <h3>{% trans 'UE "SEAFOOD SERVICE"' %} </h3>
         {{ main_page.body | safe }}

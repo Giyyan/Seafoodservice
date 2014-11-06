@@ -4,12 +4,13 @@
 <html>
 <head lang="{{ LANGUAGE_CODE|default:'en-us' }}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
-    {% block head %}
-        <title>Sea food</title>
-        <link rel="stylesheet" href="{{ MEDIA_URL }}css/sfs.css">
-        <script src="{{ MEDIA_URL }}js/jquery-2.1.0.min.js"></script>
-        <link rel="shortcut icon" type="image/x-icon" href="{{ MEDIA_URL }}css/images/logo.png"/>
-    {% endblock %}
+
+    <title>Sea food</title>
+    <link rel="stylesheet" href="{{ MEDIA_URL }}css/sfs.css">
+    <script src="{{ MEDIA_URL }}js/jquery-2.1.0.min.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="{{ MEDIA_URL }}css/images/logo.png"/>
+
+    {% block head %}{% endblock %}
 </head>
 <body>
 {% include 'header.html' %}
@@ -68,11 +69,10 @@
         {% endfor %}
     </div>
     <div class="cntr">
-        {% block page %}
-            {% for message in notifications_messages %}
-                <p class="notification_error"> {{ message }}</p>
-            {% endfor %}
-        {% endblock %}
+        {% for message in notifications_messages %}
+            <p class="notification_error"> {{ message }}</p>
+        {% endfor %}
+        {% block page %}{% endblock %}
     </div>
 </div>
 <div class="cls"></div>
