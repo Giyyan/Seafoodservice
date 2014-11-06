@@ -328,13 +328,14 @@ footer .bottom_nav ul li a {
 .arrows {
     position: absolute;
     margin-top: -200px;
-    width:794px;
 }
 
 #arrows_right {
+    position: absolute;
     right: 20px;
 }
 
 #arrows_left {
+    position: absolute;
     left: 20px;
 }
