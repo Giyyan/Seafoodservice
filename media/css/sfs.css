@@ -326,7 +326,9 @@ footer .bottom_nav ul li a {
 }
 
 .arrows {
-    margin-top: -200px;
+    top: 200px;
+    width: 794px;
+    position: absolute;
 }
 
 #arrows_right {
