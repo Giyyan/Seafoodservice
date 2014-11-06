@@ -2,34 +2,17 @@
 {% load i18n admin_tools_menu_tags %}
 
 {% block head %}
-    <script src="{{ MEDIA_URL }}js/slider.js"></script>
+    <link rel="stylesheet" href="{{ MEDIA_URL }}css/jquery.bxslider.css">
+    <script src="{{ MEDIA_URL }}js/jquery.bxslider.min.js"></script>
 {% endblock %}
 
 {% block page %}
     {% if slides %}
-        <div id="slider" class="slider">
-            <img src="{{ MEDIA_URL }}{{ slides|first }}" alt="" id="img"
-                 class="slider_image">
-
-            <div class="arrows">
-                <div id="arrows_left" class="left">
-                    <img src="{{ MEDIA_URL }}css/images/arrow_left.png" alt="">
-                </div>
-                <div id="arrows_right" class="right">
-                    <img src="{{ MEDIA_URL }}css/images/arrow_right.png" alt="">
-                </div>
-            </div>
-            <div id="controls" class="controls">
-            </div>
-            {% for slide in slides %}
-                <div class="slide">
-                    <img id="slide_image_{{ i }}"
-                         src="{{ MEDIA_URL }}{{ slide.photo.name }}" alt=""
-                         style="display: none">
-                </div>
-            {% endfor %}
-
-        </div>
+        <ul class="slider">
+        {% for slide in slides %}
+            <li><img src="{{ MEDIA_URL }}{{ slide.photo.name }}"/></li>
+        {% endfor %}
+        </ul>
     {% endif %}
 
     <article>
@@ -57,4 +40,10 @@
                  class="logo_right">
         </div>
     </div>
+{% endblock %}
+
+{% block extrajs %}
+    $(document).ready(function(){
+        $('.bxslider').bxSlider();
+    });
 {% endblock %}
