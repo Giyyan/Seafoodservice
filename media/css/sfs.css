@@ -312,3 +312,24 @@ footer .bottom_nav ul li a {
 .zod4ie a {
     color: #fff;
 }
+
+.slider {
+    position: relative;
+    z-index: 9997;
+    margin-bottom: 19px;
+}
+
+.slider_image{
+    display: inline-block;
+    height:400px;
+    max-height:400px;
+    max-width:800px;
+    min-height:400px;
+    min-width:700px;
+    width:800px;
+}
+
+.arrows {
+    position: absolute;
+    margin-top: -200px;
+}
