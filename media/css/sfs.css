@@ -381,6 +381,8 @@ footer .bottom_nav ul li a {
 
 .slider li {
     overflow: hidden;
+    width: 794px;
+    height: 450px;
 }
 
 
