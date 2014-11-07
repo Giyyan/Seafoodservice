@@ -10,7 +10,7 @@
     {% if slides %}
         <ul class="slider">
         {% for slide in slides %}
-            <li><img src="{{ MEDIA_URL }}{{ slide.photo.name }}"/></li>
+            <li><img src="{{ slide.photo.url }}"/></li>
         {% endfor %}
         </ul>
     {% endif %}
@@ -27,7 +27,7 @@
             {% for partner in partners %}
                 <li>
                     <p>{{ partner.company_name }}</p>
-                    <a href="{{ partner. }}"><img src="{{ MEDIA_URL }}{{ partner.logotype }}"
+                    <a href="{{ partner.url }}"><img src="{{ partner.logotype.url }}"
                          alt="{{ partner.company_name }}"></a>
                 </li>
             {% endfor %}

@@ -412,3 +412,15 @@ footer .bottom_nav ul li a {
 .our_partners .bx-pager {
     display: none;
 }
+
+.our_partners li p {
+    color: #4a4a4a;
+}
+
+.our_partners li a {
+    text-decoration: none;
+}
+
+.our_partners li img {
+    border: 1px solid #989898;
+}
