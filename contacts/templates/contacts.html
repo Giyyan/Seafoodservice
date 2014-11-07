@@ -17,8 +17,9 @@
     {% if contacts %}
     <article>
         <h3 class="useful_information">{% trans "Our employees" %}</h3>
+    <div class="employers">
         {% for contact in contacts %}
-            <div class="contacts_block">
+            <div class="employer">
                 <p class="post">{{ contact.contact.post }}</p>
 
                 <p class="name">{{ contact.contact.full_name }}</p>
@@ -52,6 +53,8 @@
                 </div>
             </div>
         {% endfor %}
+    </div>
+
         <div class="cls"></div>
     </article>
     {% endif %}
@@ -60,7 +63,6 @@
     {% if office_contacts %}
     <article>
         <h3 class="useful_information">{% trans "Office Contacts" %}</h3>
-
         <div class="ofices_contacts">
             {% for contact in office_contacts %}
                 <p>{{ contact.contact.address }}</p>
