@@ -129,7 +129,7 @@
             {% endif %}
 
             {% for field in form %}
-                <div>
+                <div class="{{ field.name }}">
                     <label for="id_{{ field.name }}">{{ field.label }} {% if field.field.required %}*{% endif %}</label>
                     {% if field.name == 'number' %}
                         <input id="id_{{ field.name }}"  type="text" placeholder="+XXX XX XXX XX XX" name="{{ field.name }}"/>
