@@ -379,6 +379,12 @@ footer .bottom_nav ul li a {
     left: 0 !important;
 }
 
+.slider li {
+    overflow: hidden;
+}
+
+
+
 .our_partners {
     background-color: #f2f2f2;
     margin-top: 20px;
