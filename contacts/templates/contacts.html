@@ -134,7 +134,7 @@
                     {% if field.name == 'number' %}
                         <input id="id_{{ field.name }}"  type="text" placeholder="+XXX XX XXX XX XX" name="{{ field.name }}"/>
                     {% else %}
-                        {{ field }}
+                        <div>{{ field }}</div>
                     {% endif %}
                 </div>
             {% endfor %}
