@@ -1,18 +1,16 @@
-{% extends 'base.html' %}
+{% extends 'new_base.html' %}
 {% load i18n admin_tools_menu_tags %}
 	{% block head %}
-		{{ block.super }}
 		<script src="{{MEDIA_URL}}js/script.js"></script>
 		<script src="{{MEDIA_URL}}js/video.js"></script>
 		<script src="{{MEDIA_URL}}js/popup.js"></script>
         <script src="{{MEDIA_URL}}js/gallery_size.js"></script>
 	{% endblock %}
 
-	{% block content %}
-		{{ block.super }}
+	{% block page %}
 		{% block breadcrumbs %}
 			<ul class="breadcrumbs">
-				<li><a href="../">{% trans "Home" %}</a></li>
+				<li><a href="{% url 'home' %}">{% trans "Home" %}</a></li>
 				<li>{% trans "Gallery" %}</li>
 			</ul>
 		{% endblock %}
