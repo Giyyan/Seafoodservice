@@ -227,7 +227,7 @@ header nav ul li a {
     font-size: 16px;
 }
 
-.news .news-item .text_news {
+.news .news-item .text_news, .news .news-item .text_news a {
     color: #4a4a4a;
     font-size: 14px;
 }
