@@ -458,6 +458,22 @@ footer .bottom_nav ul li a {
     display: inline-block;
     margin-right: 21px;
     margin-top: 5px;
+    color: #26448c;
+    font-size: 19px;
+}
+
+.breadcrumbs li a {
+    color: #4a4a4a;
+
+}
+
+.services {
+    color: #494949;
+    font-size: 16px;
+}
+
+.services h3:first-child {
+    margin-bottom: 19px;
 }
 
 .main_services {
@@ -506,15 +522,17 @@ footer .bottom_nav ul li a {
 }
 .extra_services li{
     padding: 1%;
-    height:60px;
+    height: 60px;
     display: block;
 }
 .extra_services img {
     float: left;
 }
 .extra_services  p {
-    padding-top: 3%;
+    padding-top: 19px;
     margin-left: 86px;
+    color: #494949;
+    font-size: 18px;
 }
 .geography {
     padding-top: 15px;
