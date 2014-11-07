@@ -33,11 +33,11 @@
         </div>
         <nav>
             <ul>
-                <li class="main {% is_active_url request "home" %}"><a href="{% url 'home' %}">{% trans "Home" %}</a></li>
-                <li class="services {% is_active_url request "services" %}"><a href="{% url 'services' %}">{% trans "Services" %}</a>
+                <li class="main {% is_active_url "home" %}"><a href="{% url 'home' %}">{% trans "Home" %}</a></li>
+                <li class="services {% is_active_url "services" %}"><a href="{% url 'services' %}">{% trans "Services" %}</a>
                 </li>
-                <li class="uinfo {% is_active_url request "usefull_information" %}"><a href="{% url 'usefull_information' %}">{% trans "Useful Information" %}</a></li>
-                <li class="contacts {% is_active_url request "contacts" %}"><a href="{% url 'contacts' %}">{% trans "Contacts" %}</a>
+                <li class="uinfo {% is_active_url "usefull_information" %}"><a href="{% url 'usefull_information' %}">{% trans "Useful Information" %}</a></li>
+                <li class="contacts {% is_active_url "contacts" %}"><a href="{% url 'contacts' %}">{% trans "Contacts" %}</a>
                 </li>
             </ul>
         </nav>
