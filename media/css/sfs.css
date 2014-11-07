@@ -550,15 +550,3 @@ footer .bottom_nav ul li a {
     float: right;
 }
 
-.employers {
-    position: relative;
-}
-
-.employers .employer {
-    display: -moz-inline-box;
-    display: inline-block;
-    *zoom:1;
-    *display: inline;
-    width: 45%;
-    margin-bottom: 19px;
-}
