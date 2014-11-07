@@ -6,7 +6,8 @@ from models import Message
 
 
 class LeaveMessageForm(forms.ModelForm):
-    captcha = CaptchaField(label=_("Letters from picture"))
+    captcha = CaptchaField(label=_("Letters from picture"),
+                           output_format='%(text_field)s %(image)s %(hidden_field)s')
 
     class Meta:
         model = Message
