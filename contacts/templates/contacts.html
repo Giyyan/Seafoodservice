@@ -1,8 +1,11 @@
-{% extends 'base.html' %}
+{% extends 'new_base.html' %}
 {% load i18n admin_tools_menu_tags %}
 
+{% block head %}
+    <link rel="stylesheet" href="{{ MEDIA_URL }}css/jquery.contacts.css">
+{% endblock %}
 
-	{% block content %}
+	{% block page %}
 		{{ block.super }}
 		{% block breadcrumbs %}
 			<ul class="breadcrumbs">
@@ -94,7 +97,7 @@
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9396.550337768962!2d27.5420675!3d53.9292995!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbc57e5ec3ebf3%3A0x5abc3d60c090ea35!2z0J3QvtCy0L7QstC40LvQtdC90YHQutCw0Y8g0YPQuy4gOCwg0JzQuNC90YHQuiwg0JHQtdC70LDRgNGD0YHRjA!5e0!3m2!1sru!2s!4v1412673455688"
                 width="710" height="378" frameborder="0" style="margin-left:8px"></iframe>
         <h3 class="message">{% trans "Please, leave a message" %}</h3>
-		<form  action="" id="myForm" method='POST'>
+		<form  action="" id="sendMessageForm" method='POST'>
             {% if form.non_field_errors %}
             <p class="error_leave_message_label">
                   {% for error in form.non_field_errors %}
