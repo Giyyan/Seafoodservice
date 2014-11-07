@@ -10,7 +10,7 @@ class Migration(SchemaMigration):
     def forwards(self, orm):
         # Adding field 'Partner.url'
         db.add_column(u'partners_partner', 'url',
-                      self.gf('django.db.models.fields.URLField')(default=None, max_length=200),
+                      self.gf('django.db.models.fields.URLField')(default='', max_length=200),
                       keep_default=False)
 
 
