@@ -410,7 +410,11 @@ footer .bottom_nav ul li a {
 }
 
 .bx-prev {
-    background: url('/media/css/images/arrow_left.png');
+    background: url('/media/css/images/arrow_left.png') no-repeat !important;
+}
+
+.bx-next {
+    background: url('/media/css/images/arrow_right.png') no-repeat !important;
 }
 
 .our_partners .bx-prev {
