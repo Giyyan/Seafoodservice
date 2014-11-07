@@ -9,14 +9,14 @@
 		{{ block.super }}
 		{% block breadcrumbs %}
 			<ul class="breadcrumbs">
-				<li><a href="../">{% trans "Home" %}</a></li>
+				<li><a href="{% url 'home' %}">{% trans "Home" %}</a></li>
 				<li>{% trans "Contacts" %}</li>
 			</ul>
 		{% endblock %}
-		<div>
-            <br>
+		<article>
+
             {% if contacts %}
-			<h3 class="useful_information">{% if language == 'ru' %}Наши сотрудники{% else %}{% trans "Our employees" %}{% endif %}</h3>
+			<h3 class="useful_information">{% trans "Our employees" %}</h3>
 				{% for contact in contacts %}
 				<div class="contacts_block">
 					<p class="post">{{ contact.contact.post }}</p>
@@ -46,7 +46,7 @@
 				</div>
 				{% endfor %}
             {% endif %}
-		</div>
+		</article>
         <br>
         {% if office_contacts %}
         <h3 class="useful_information">{% if language == 'ru' %}Контакты офиса{% else %}{% trans "Office Contacts" %}{% endif %}</h3>
