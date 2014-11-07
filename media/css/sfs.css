@@ -409,12 +409,16 @@ footer .bottom_nav ul li a {
     background-color: transparent !important;
 }
 
+.bx-prev {
+    background: url('/media/css/images/arrow_left.png');
+}
+
 .our_partners .bx-prev {
-    left: -35px !important;
+    left: -40px !important;
 }
 
 .our_partners .bx-next {
-    right: -35px !important;
+    right: -40px !important;
 }
 
 .our_partners .bx-pager {
