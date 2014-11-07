@@ -140,8 +140,8 @@
                     {% else %}
                         {{ field }}
                     {% endif %}
-                    {% if field.help_text %}<p class="help">{{ field.help_text }}</p>{% endif %}
-                <div class="cls"></div>
+                    {% if field.help_text %}<span class="help">{{ field.help_text }}</span>{% endif %}
+                    <div class="cls"></div>
                 </p>
             {% endfor %}
             <p class="required">{% trans "Fields marked as * are required" %}</p>
