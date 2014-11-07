@@ -10,14 +10,16 @@
 			<li>{{ news.title }}</li>
 		</ul>
 	{% endblock %}
-	<article class="news-item">
+	<article class="news">
 		<h3 class="useful_information">{{ news.title }}</h3>
-			 <div class="main_block_information1">
+			 <div class="news-item">
 				<p class="date">{{ news.date }}</p>
 				{% if news.title_image  %}
 					<img class="main_block_information-img" src="{{ news.title_image.url }}" alt="">
 				{% endif %}
-				{{ news.body|safe }}
+             	<div class="news_text">
+                    {{ news.body|safe }}
+             	</div>
 			</div>
 	</article>
 {% endblock %}
