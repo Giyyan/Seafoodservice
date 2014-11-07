@@ -27,7 +27,7 @@
             {% for partner in partners %}
                 <li>
                     <p>{{ partner.company_name }}</p>
-                    <a href="{{ partner.url }}"><img src="{{ partner.logotype.url }}"
+                    <a href="{{ partner.url }}" target="_blank"><img src="{{ partner.logotype.url }}"
                          alt="{{ partner.company_name }}"></a>
                 </li>
             {% endfor %}
