@@ -9,8 +9,8 @@ register = template.Library()
 def is_active_url(context, url_name):
     request = context['request']
     print reverse(url_name)
-    print dir(request)
-    print request.get_full_path
+    print request.get_full_path()
+    print request.path
     print "=" * 80
     if (url_name.find('home')+1):
         return "active" if request.path is '/' else ""
