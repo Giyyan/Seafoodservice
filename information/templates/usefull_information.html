@@ -4,12 +4,12 @@
 	{% block page %}
 		{% block breadcrumbs %}
 			<ul class="breadcrumbs">
-				<li><a href="../">{% trans "Home" %}</a></li>
+				<li><a href="{% url 'home' %}">{% trans "Home" %}</a></li>
 				<li>{% trans "Useful information" %}</li>
 			</ul>
 		{% endblock %}
 		<article class="news">
-			<h3 class="useful_information">{% trans "Useful information" %}</h3>
+			<h3>{% trans "Useful information" %}</h3>
 			{% for news_item in news %}
 				<div class="news-item {% cycle 'news1' 'news2' %}">
 				{% if news_item.title  %}
