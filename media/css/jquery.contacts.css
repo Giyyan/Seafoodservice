@@ -66,8 +66,8 @@
 }
 .captcha{
     float: left;
-    margin-left: 45px;
-    margin-top: -12px;
+    margin-left: 245px;
+    margin-top: 0;
     margin-bottom: 12px;
 }
 .leave_message_label{
@@ -137,7 +137,6 @@ textarea {
     color: #999;
     text-align: center;
     padding-left: 70px;
-    margin-top: -12px;
     margin-bottom: 12px;
 }
 .input_button {
