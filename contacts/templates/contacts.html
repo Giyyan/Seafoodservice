@@ -134,30 +134,7 @@
                         {% endfor %}
                     </p>
                 {% endif %}
-                {% if field.name == "captcha" %}
-                    <label class="leave_message_label">
-                        {{ field.label_tag }}{% if field.field.required %}
-                            *{% endif %}</label>
-                    {{ field }}
-                    {% if field.help_text %}
-                        <p class="help">{{ field.help_text }}</p>{% endif %}
-                    <br>
-                {% elif field.name == "number" %}
-                    <label class="leave_message_label">
-                        {{ field.label_tag }}{% if field.field.required %}
-                            *{% endif %}</label>
-                    <input id="id_leave_message-number" type="text"
-                           placeholder="+XXX XX XXX XX XX" class="fphone"
-                           name="leave_message-number">
-                {% else %}
-                    <label class="leave_message_label">
-                        {{ field.label_tag }}{% if field.field.required %}
-                            *{% endif %}</label>
-                    {{ field }}
-                    {% if field.help_text %}
-                        <p class="help">{{ field.help_text }}</p>{% endif %}
-                    <br>
-                {% endif %}
+                <p>{{ field.label_tag }}{{ field }}</p>
             {% endfor %}
             <p class="required">{% trans "Fields marked as * are required" %}</p>
             <input type="submit" value="{% trans "Submit" %}"
