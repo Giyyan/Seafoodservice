@@ -52,6 +52,7 @@
                     </div>
                 </div>
             {% endfor %}
+            <div class="cls"></div>
         {% endif %}
     </article>
     <br>
@@ -124,6 +125,7 @@
                 </p>
             {% endif %}
             {% csrf_token %}
+            {{ form.as_p }}
             {% for field in form %}
                 {% if field.errors %}
                     <p class="error_leave_message_label">
