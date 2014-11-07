@@ -20,6 +20,7 @@
     display: inline-block;
     line-height: 33px;
     margin-bottom: 18px;
+    border: 1px solid red;
 }
 
 .contacts_block img {
