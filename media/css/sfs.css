@@ -415,6 +415,8 @@ footer .bottom_nav ul li a {
 
 .our_partners li p {
     color: #4a4a4a;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 .our_partners li a {
