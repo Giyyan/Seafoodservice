@@ -1,15 +1,11 @@
 function initialize() {
-    var zoom = parseInt(document.getElementById('google_map').offsetWidth/510);
-    if (zoom<1){
-        zoom = 1;
-    }
     document.getElementById('map-canvas').style.height = '350px';
     document.getElementById('map-canvas').style.width = '794px';
     document.getElementById('google_map').style.height = '350px';
     var myLatlng = new google.maps.LatLng(parseFloat($('#center_latitude').text()), parseFloat($('#center_longitude').text()));
     var mapOptions = {
         zoom: 5,
-        center: myLatlng,
+        center: {lat: 0, lng: 0},
         scrollwheel: false,
         navigationControl: false,
         draggable: false,
