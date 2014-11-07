@@ -488,3 +488,46 @@ footer .bottom_nav ul li a {
     display: inline-block;
     width:45%;
 }
+
+
+.left_block {
+    float: left;
+}
+.right_block {
+    float: right;
+}
+
+.line_main_services div img {
+    position: relative;
+    float: left;
+}
+.extra_services_title{
+    padding-top: 20px;
+}
+.extra_services li{
+    padding: 1%;
+    height:60px;
+    display: block;
+}
+.extra_services img {
+    float: left;
+}
+.extra_services  p {
+    padding-top: 3%;
+    margin-left: 86px;
+}
+.geography {
+    padding-top: 15px;
+}
+.google_map{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+#map-canvas {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: 15px;
+    float: right;
+}
