@@ -124,7 +124,7 @@ header nav ul li {
 
 header nav ul li a {
     background: url(/media/css/images/bg_grad_main.png) repeat-x;
-
+    display: block;
     padding: 5px;
     text-align: center;
 }
