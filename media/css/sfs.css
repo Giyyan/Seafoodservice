@@ -559,3 +559,42 @@ footer .bottom_nav ul li a {
     margin-top: 15px;
     float: right;
 }
+
+.photo_gallery {
+    padding-top: 38px;
+}
+.portfolio li {
+    margin-bottom: 18px;
+}
+video {
+    position: relative;
+    z-index: 9996;
+    margin-right: 12px;
+    margin-bottom: 8px;
+}
+.right_video {
+    margin-right: 0;
+}
+#gallery_aside {
+    margin-top: 38px;
+    margin-bottom: 35px;
+}
+.video_controls, .video_controls4 {
+    position: absolute;
+    margin-top: -120px;
+    margin-left: 95px;
+    z-index: 9997;
+}
+.video_controls2, .video_controls5 {
+    position: absolute;
+    margin-top: -120px;
+    margin-left: 335px;
+    z-index: 9997;
+}
+.video_controls3, .video_controls6 {
+    position: absolute;
+    margin-top: -120px;
+    margin-left: 565px;
+    z-index: 9997;
+}
+
