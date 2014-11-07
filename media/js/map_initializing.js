@@ -8,7 +8,7 @@ function initialize() {
     document.getElementById('google_map').style.height = zoom*350+'px';
     var myLatlng = new google.maps.LatLng(parseFloat($('#center_latitude').text()), parseFloat($('#center_longitude').text()));
     var mapOptions = {
-        zoom: zoom,
+        zoom: 10,
         center: myLatlng,
         scrollwheel: false,
         navigationControl: false,
@@ -21,7 +21,7 @@ function initialize() {
         streetViewControl:false,
         overviewMapControl:false,
         rotateControl:false
-    }
+    };
     var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
     var points = $('#transporation_points').children().toArray();
