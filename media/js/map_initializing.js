@@ -7,7 +7,7 @@ function initialize() {
         zoom: 3,
         center: myLatlng,
         scrollwheel: false,
-        navigationControl: false,
+        navigationControl: true,
         draggable: false,
         disableDefaultUI: true,
         disableDoubleClickZoom: true,
