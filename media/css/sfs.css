@@ -555,5 +555,9 @@ footer .bottom_nav ul li a {
 }
 
 .employers .employer {
-    float: left;
+    display: -moz-inline-box;
+    display: inline-block;
+    *zoom:1;
+    *display: inline;
+    width: 45%;
 }
