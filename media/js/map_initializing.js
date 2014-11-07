@@ -4,12 +4,13 @@ function initialize() {
     document.getElementById('google_map').style.height = '350px';
     var myLatlng = new google.maps.LatLng(parseFloat($('#center_latitude').text()), parseFloat($('#center_longitude').text()));
     var mapOptions = {
-        zoom: 2,
+        zoom: 1,
         center: {lat: 50, lng: 15},
         scrollwheel: false,
         navigationControl: false,
         draggable: false,
         disableDefaultUI: true,
+        disableDoubleClickZoom: true,
         panControl:false,
         zoomControl:false,
         mapTypeControl:false,
