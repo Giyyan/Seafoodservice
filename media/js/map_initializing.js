@@ -4,7 +4,7 @@ function initialize() {
     document.getElementById('google_map').style.height = '374px';
     var myLatlng = new google.maps.LatLng(parseFloat($('#center_latitude').text()), parseFloat($('#center_longitude').text()));
     var mapOptions = {
-        zoom: 1.5,
+        zoom: 1.9,
         center: myLatlng,
         scrollwheel: false,
         navigationControl: false,
