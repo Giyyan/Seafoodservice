@@ -125,7 +125,6 @@
                 </p>
             {% endif %}
             {% csrf_token %}
-            {{ form.as_p }}
             {% for field in form %}
                 {% if field.errors %}
                     <p class="error_leave_message_label">
@@ -135,8 +134,9 @@
                     </p>
                 {% endif %}
                 <p>
-                {{ field.label }} | {{ field.name }} | {{ field.id }}
-                    <label for="{{ field.id }}">{{ field.label }}</label>{{ field }}</p>
+                    <label for="{{ field.id }}">{{ field.label }}</label>
+                    {{ field }}
+                </p>
             {% endfor %}
             <p class="required">{% trans "Fields marked as * are required" %}</p>
             <input type="submit" value="{% trans "Submit" %}"
