@@ -134,7 +134,7 @@
                     </p>
                 {% endif %}
                 <p>
-                    <label for="{{ field.id }}">{{ field.label }}</label>
+                    <label for="id_{{ field.id }}">{{ field.label }} {% if field.field.required %}*{% endif %}</label>
                     {{ field }}
                 </p>
             {% endfor %}
