@@ -372,9 +372,9 @@ footer .bottom_nav ul li a {
 }
 
 .bx-wrapper .bx-viewport {
-    -moz-box-shadow: 0 !important;
-    -webkit-box-shadow: 0 !important;
-    box-shadow: 0 !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
     border: none !important;
     left: 0 !important;
 }
@@ -393,10 +393,22 @@ footer .bottom_nav ul li a {
 }
 
 .our_partners .bx-wrapper .bx-viewport {
-    -moz-box-shadow: 0 !important;
-    -webkit-box-shadow: 0 !important;
-    box-shadow: 0 !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
     border: none !important;
     left: 0 !important;
     background-color: transparent !important;
+}
+
+.our_partners .bx-prev {
+    left: -35px;
+}
+
+.our_partners .bx-next {
+    right: -35px;
+}
+
+.bx-pager {
+    display: none;
 }
