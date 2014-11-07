@@ -119,25 +119,29 @@ header nav ul {
 
 header nav ul li {
     display: inline-block;
-    background: url(/media/css/images/bg_grad_main.png) repeat-x;
     margin-right: 19px;
+}
+
+header nav ul li a {
+    background: url(/media/css/images/bg_grad_main.png) repeat-x;
+
     padding: 5px;
     text-align: center;
 }
 
-header nav ul li.main {
+header nav ul li.main a{
     width: 128px;
 }
 
-header nav ul li.services {
+header nav ul li.services a{
     width: 138px;
 }
 
-header nav ul li.uinfo {
+header nav ul li.uinfo a{
     width: 278px;
 }
 
-header nav ul li.contacts {
+header nav ul li.contacts a{
     width: 141px;
 }
 
