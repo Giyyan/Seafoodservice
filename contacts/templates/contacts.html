@@ -116,23 +116,16 @@
                 style="margin-left:8px"></iframe>
         <h3 class="message">{% trans "Please, leave a message" %}</h3>
 
-        <form action="" id="sendMessageForm" method='POST'>
-            {% if form.non_field_errors %}
+        <form action="" id="sendMessageForm" method='POST'>{% csrf_token %}
+            {% if form.errors %}
                 <p class="error_leave_message_label">
-                    {% for error in form.non_field_errors %}
+                    {% for error in form.errors %}
                         {{ error }}
                     {% endfor %}
                 </p>
             {% endif %}
-            {% csrf_token %}
+
             {% for field in form %}
-                {% if field.errors %}
-                    <p class="error_leave_message_label">
-                        {% for error in field.errors %}
-                            {{ error }}
-                        {% endfor %}
-                    </p>
-                {% endif %}
                 <p>
                     <label for="id_{{ field.name }}">{{ field.label }} {% if field.field.required %}*{% endif %}</label>
                     {% if field.name == 'number' %}
@@ -140,7 +133,6 @@
                     {% else %}
                         {{ field }}
                     {% endif %}
-                    {% if field.help_text %}<span class="help">{{ field.help_text }}</span>{% endif %}
                     <div class="cls"></div>
                 </p>
             {% endfor %}
