@@ -22,30 +22,31 @@
 
     <div class="our_partners">
         <h3>{% trans "Our partners" %}</h3>
-        <div id="carousel_logo">
-            <ul id="carousel_slides">
-                {% for partner in partners %}
-                    <div class="carousel_slides">
-                        <p>{{ partner.company_name }}</p>
-                        <img src="{{ MEDIA_URL }}{{ partner.logotype }}"
-                             alt="{{ partner.company_name }}">
-                    </div>
-                {% endfor %}
-            </ul>
-        </div>
-        <div class="our_partners_arrows">
-            <img src="{{ MEDIA_URL }}css/images/arrow_left.png" alt=""
-                 class="logo_left">
-            <img src="{{ MEDIA_URL }}css/images/arrow_right.png" alt=""
-                 class="logo_right">
-        </div>
+
+        <ul class="partner_slide">
+            {% for partner in partners %}
+                <li>
+                    <p>{{ partner.company_name }}</p>
+                    <img src="{{ MEDIA_URL }}{{ partner.logotype }}"
+                         alt="{{ partner.company_name }}">
+                </li>
+            {% endfor %}
+        </ul>
     </div>
 {% endblock %}
 
 {% block extrajs %}
     <script>
     $(document).ready(function(){
-        $('.slider').bxSlider();
+        $('.slider').bxSlider({
+          adaptiveHeight: true,
+          mode: 'fade'
+        });
+
+        $('.partner_slide').bxSlider({
+          adaptiveHeight: true,
+          mode: 'fade'
+        });
     });
     </script>
 
