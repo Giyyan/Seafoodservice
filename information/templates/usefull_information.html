@@ -8,18 +8,20 @@
 				<li>{% trans "Useful information" %}</li>
 			</ul>
 		{% endblock %}
+		<article class="news">
+			<h3 class="useful_information">{% trans "Useful information" %}</h3>
+			{% for news_item in news %}
+				<div class="news-item {% cycle 'news1' 'news2' %}">
+				{% if news_item.title  %}
+					<div class="news_title">{{ news_item.title|upper }}</div>
+				{% endif %}
+					<p class="text_news">
+						<a href="{% url "usefull_information_item" news_item.id %}">
+							{{ news_item.body|removetags:"img"|striptags|truncatechars:300 }}
+						</a>
+					</p>
+				</div>
+			{% endfor %}
+		</article>
 
-		<h3 class="useful_information">{% trans "Useful information" %}</h3>
-        {% for news_item in news %}
-			<div class="main_block_information">
-			{% if news_item.title  %}
-				<div class="information_title">{{ news_item.title }}</div>
-			{% endif %}
-                <p class="news_text_main">
-				    <a href="{% url "usefull_information_item" news_item.id %}">
-					    {{ news_item.body|removetags:"img"|striptags|truncatechars:300 }}
-				    </a>
-                </p>
-			</div>
-		{% endfor %}
 	{% endblock %}
