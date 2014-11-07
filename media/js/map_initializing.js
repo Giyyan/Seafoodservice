@@ -1,7 +1,7 @@
 function initialize() {
-    document.getElementById('map-canvas').style.height = '250px';
+    document.getElementById('map-canvas').style.height = '450px';
     document.getElementById('map-canvas').style.width = '794px';
-    document.getElementById('google_map').style.height = '250px';
+    document.getElementById('google_map').style.height = '450px';
     var myLatlng = new google.maps.LatLng(parseFloat($('#center_latitude').text()), parseFloat($('#center_longitude').text()));
     var mapOptions = {
         zoom: 2,
