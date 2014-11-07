@@ -235,6 +235,7 @@ header nav ul li a {
 .news .news-item .news_title {
     color: #26448c;
     font-size: 16px;
+    margin-bottom: 10px;
 }
 
 .galery {
