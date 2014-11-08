@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 {% load i18n admin_tools_menu_tags %}
 {% load active_url %}
+{% load helper_show %}
 <html>
 <head lang="{{ LANGUAGE_CODE|default:'en-us' }}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
@@ -16,36 +17,7 @@
 {% include 'header.html' %}
 <div class="container">
     <div class="sb">
-        {% if last_news %}
-        <div class="news">
-            <h3>
-                <a href="{% url 'news' %}">{% trans "News" %}</a>
-            </h3>
-            {% for news_item in last_news %}
-
-                <div class="news-item {% cycle 'news1' 'news2' %}">
-                    <a href="{% url 'news_item' news_item.id %}">
-                        <p class="date">{{ news_item.date|date:"d.m.Y" }}</p>
-                        <p class="text_news">{{ news_item.title }}</p>
-                    </a>
-                </div>
-
-            {% endfor %}
-        </div>
-        {% elif block_information %}
-            {% block block_information %}
-                <a href="{% url 'usefull_information' %}" class="title_link">
-                    <div class="aside_title">{% trans "Usefull information" %}</div>
-                </a>
-                {% for news_item in block_information %}
-                    <div class="news">
-                        <a href="{% url 'usefull_information_item' news_item.id %}"><p
-                                class="text_news">{{ news_item.title }}</p></a>
-                    </div>
-                {% endfor %}
-            {% endblock %}
-        {% endif %}
-
+        {% show 'news' 5 %}
         {% block gallery %}
             <a href="{% url 'gallery' %}">
             <div class="galery">

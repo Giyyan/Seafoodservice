@@ -1,0 +1,12 @@
+{% load i18n %}
+{% block info_news %}
+    <a href="{{ url }}" class="title_link">
+        <div class="aside_title">{{ title }}</div>
+    </a>
+    {% for obj in objs %}
+        <div class="news">
+            <p class="date">{{ obj.date|date:"d.m.Y" }}</p>
+            <a href="{% url obj news_item.id %}"><p class="text_news">{{ obj.title }}</p></a>
+        </div>
+    {% endfor %}
+{% endblock %}
