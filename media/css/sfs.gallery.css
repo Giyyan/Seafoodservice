@@ -1,0 +1,133 @@
+
+.photo_img {
+    list-style: none;
+    display: inline-block;
+    width:30%;
+    height: 167px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+.img_in_gallery {
+    width: 100%;
+    height: 100%;
+    margin-right: 2%;
+}
+#overlay {
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    z-index: 9997;
+    display: none;
+}
+#wrap_frame{
+    position: fixed;
+    top: 7%;
+    left: 45%;
+    z-index: 9998;
+    display: none;
+}
+#frame {
+    width: 800px;
+    margin: 50px auto 0;
+    position: relative;
+}
+#right_arrow, #left_arrow {
+    cursor: pointer;
+    z-index: 9998;
+    position: absolute;
+    margin-top: 35%;
+}
+#right_arrow {
+    margin-left: 94%;
+    /*margin-top: -50px;*/
+}
+#big_photo_img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.photo_img {
+    cursor: pointer;
+}
+.description {
+    background: #f2f2f2;
+    width: 770px;
+    height: auto;
+    padding: 10px 15px;
+    position: relative;
+    margin: 30px auto 0;
+    z-index: 9999;
+    display: none;
+}
+.description p {
+    padding-bottom: 5px;
+    font-size: 18px;
+    color: #494949;
+}
+#close2 {
+    position: absolute;
+    cursor: pointer;
+}
+.close2 {
+    position: absolute;
+    top: 20px;
+    right: 3%;
+    cursor: pointer;
+}
+.close {
+    position: absolute;
+    top: 8%;
+    right: 50%;
+    cursor: pointer;
+}
+@media screen and (max-height: 900px){
+    #frame{
+        width: 560px;
+    }
+    .description{
+        width: 542px;
+    }
+}
+@media screen and (max-height: 800px){
+    #frame{
+        width: 460px;
+    }
+    .description{
+        width: 437px;
+        margin: 10px auto 0;
+    }
+}
+@media screen and (max-height: 768px){
+    #frame{
+        width: 370px;
+        margin: 15px auto 0;
+    }
+    .description{
+        width: 345px;
+        margin: 10px auto 0;
+    }
+    .description p{
+        font-size: 12px;
+    }
+}
+@media screen and (max-height: 600px){
+    #frame{
+        width: 320px;
+    }
+    .description{
+        width: 300px;
+        margin: 10px auto 0;
+    }
+    .description h3{
+        font-size: 15px;
+        padding-bottom: 4px;
+    }
+
+    .description a{
+        font-size: 15px;
+    }
+}

@@ -2,6 +2,8 @@
 {% load i18n admin_tools_menu_tags %}
 	{% block head %}
 		<script src="{{MEDIA_URL}}js/popup.js"></script>
+        <script src="{{MEDIA_URL}}js/gallery_size.js"></script>
+        <link rel="stylesheet" href="{{ MEDIA_URL }}css/sfs.gallery.css">
 	{% endblock %}
 
 	{% block page %}
@@ -28,7 +30,7 @@
 			</div>
 		</div>
     <script>
-        set_width_to_media_files();
+        set_width_to_images();
     </script>
     <div id="overlay"></div>
 		<div id="wrap_frame">
@@ -40,6 +42,6 @@
 		</div>
 		<div class="description">
 		</div>
-		<img src="{{ MEDIA_URL }}css/images/close.png" alt="" id="close2">
+		<img class="close2" src="{{ MEDIA_URL }}css/images/close.png" alt="" id="close2">
 	</div>
 	{% endblock %}
