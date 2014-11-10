@@ -616,3 +616,10 @@ video {
     margin-right: 0;
 }
 
+.title_information_img {
+    width: 90px;
+    height: 90px;
+    float: left;
+    margin-right: 10px;
+}
+
