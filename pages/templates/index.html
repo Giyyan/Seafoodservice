@@ -50,6 +50,10 @@
             width: 700,
             autoControls: false
         })
+
+        $('.slider li img').click(function(){
+            window.location.href = {% url "get_slide_images" %};
+        })
     });
     </script>
 
