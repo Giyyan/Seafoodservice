@@ -1,9 +1,11 @@
 {% extends 'new_base.html' %}
 {% load i18n admin_tools_menu_tags %}
 	{% block head %}
+		<script src="{{MEDIA_URL}}js/script.js"></script>
 		<script src="{{MEDIA_URL}}js/popup.js"></script>
         <script src="{{MEDIA_URL}}js/gallery_size.js"></script>
         <link rel="stylesheet" href="{{ MEDIA_URL }}css/sfs.gallery.css">
+        <script src="{{MEDIA_URL}}js/video.js"></script>
 	{% endblock %}
 
 	{% block page %}
@@ -18,7 +20,7 @@
 			<h3 class="useful_information">{% trans "video" %}</h3>
 			<div id="video_gallery" class="video_gallery">
 				{% for video in videos %}
-				   <video height="173" controls poster="{{ MEDIA_URL }}{{ video.video_image }}" id="myVideo{{ video.id }}" class="right_video">
+				   <video height="173" controls poster="{{ MEDIA_URL }}{{ video.video_image }}" id="{% cycle 'myVideo1' 'myVideo2' %}" class="right_video">
 						<source src="{{ MEDIA_URL }}{{ video.video }}" type="{{ video.type }}">
 						Your browser does not support HTML5 video.
 						<br><a>{{ video.description }}</a>
