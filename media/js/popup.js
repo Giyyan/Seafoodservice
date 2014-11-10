@@ -1,9 +1,9 @@
 $(document).ready(function () {
     $(".photo_img img").click(function () {
-    //$("#wrap_frame, #overlay").fadeIn(300);
+        $("#wrap_frame, #overlay").fadeIn();
     });
     $("#overlay, #close2").click(function () {
-    //  $("#wrap_frame, #overlay").fadeOut(300);
+        $("#wrap_frame, #overlay").fadeOut();
     });
       positionCenter($("#wrap_frame"));
     
@@ -30,13 +30,10 @@ $("#wrapper .photo_img").each(function() {
 	    var cur_src = $("li[rel="+current_li+"]").find("img").attr("src");
 	    var next_src = $("li[rel="+next_li+"]").find("img").attr("src");
 	    var cur_desc = $("li[rel="+next_li+"]").find(".photo_descr").html();
-	    //$(".description").fadeToggle("300");
 	    $(".description").html(cur_desc);
-	    //$("#frame").fadeToggle("300");
 	    $("#frame #big_photo_img").attr("src", next_src);
-	    //$("#frame").fadeToggle("300");
-	    //$(".description").fadeToggle("300");
 	    current_li = next_li;
+        $("#overlay, #wrap_frame, .description").fadeIn();
 	}
  });
     $("#left_arrow").click(function() {
@@ -46,18 +43,15 @@ $("#wrapper .photo_img").each(function() {
 	    var cur_src = $("li[rel="+current_li+"]").find("img").attr("src");
 	    var prev_src = $("li[rel="+prev_li+"]").find("img").attr("src");
 	    var cur_desc = $("li[rel="+prev_li+"]").find(".photo_descr").html();
-	    //$(".description").fadeToggle("300");
 	    $(".description").html(cur_desc);
-	    //$("#frame").fadeToggle("300");
 	    $("#frame #big_photo_img").attr("src", prev_src);
-	    //$("#frame").fadeToggle("300");
-	    //$(".description").fadeToggle("300");
 	    current_li = prev_li;
+        $("#overlay, #wrap_frame, .description").fadeIn();
 	}
     });
     
 $("#overlay, #close2").click(function () {
-//$("#overlay, #wrap_frame, .description").fadeOut(300);
+    $("#overlay, #wrap_frame, .description").fadeOut();
 });   
     
     function positionCenter(elem) {
