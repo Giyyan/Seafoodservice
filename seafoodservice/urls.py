@@ -38,8 +38,8 @@ urlpatterns += patterns('contacts.views',
 urlpatterns += patterns('information.views',
     url(r'^news/$', 'news', name='news'),
     url(r'^news/(?P<news_id>\d+)/$', 'news_item', name='news_item'),
-    url(r'^useful-information/$', 'useful_information', name='useful_information'),
-    url(r'^useful-information/(?P<information_id>\d+)/$', 'useful_information_item', name='useful_information_item'),
+    url(r'^useful-information/$', 'useful_information', name='usefull_information'),
+    url(r'^useful-information/(?P<information_id>\d+)/$', 'usefull_information_item', name='useful_information_item'),
                         )
 
 #gallery
