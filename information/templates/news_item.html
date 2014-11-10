@@ -1,6 +1,10 @@
 {% extends 'new_base.html' %}
-{% load i18n admin_tools_menu_tags %}
+{% load i18n admin_tools_menu_tags helper_show %}
 
+
+{% block news %}
+    {% show 'userful_information' 5 %}
+{% endblock %}
 		
 {% block page %}
 	{% block breadcrumbs %}
