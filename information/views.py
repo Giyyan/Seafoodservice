@@ -27,7 +27,7 @@ def news_item(request, news_id):
                           context,
                           context_instance=RequestContext(request))
 
-def usefull_information(request):
+def useful_information(request):
     context = {
         "news": UsefullInformation.objects.all().order_by("-date"),
         "title_of_infoblock": _(u"News"),
@@ -37,7 +37,7 @@ def usefull_information(request):
                           context,
                           context_instance=RequestContext(request))
 
-def usefull_information_item(request, information_id):
+def useful_information_item(request, information_id):
     context = {
         "news": UsefullInformation.objects.get(id=information_id),
         "title_of_infoblock": _(u"News"),
