@@ -6,7 +6,7 @@
     </h3>
     {% for obj in objs %}
          <div class="news-item {% cycle 'news1' 'news2' %}">
-             {% if obj.date %}
+             {% if type == 'news' %}
                 <p class="date">{{ obj.date|date:"d.m.Y" }}</p>
              {% endif %}
             <a href="{% url url_item obj.id %}"><p class="text_news">{{ obj.title }}</p></a>
