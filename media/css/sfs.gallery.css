@@ -2,8 +2,7 @@
 .photo_img {
     list-style: none;
     display: inline-block;
-    width:30%;
-    height: 167px;
+    width: 30%;
     margin-right: 8px;
     margin-bottom: 8px;
 }
