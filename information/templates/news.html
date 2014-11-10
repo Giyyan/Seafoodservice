@@ -1,6 +1,9 @@
 {% extends 'new_base.html' %}
 {% load i18n admin_tools_menu_tags %}
 
+{% block head %}
+    <link rel="stylesheet" href="{{ MEDIA_URL }}css/sfs.news.css">
+{% endblock %}
 
 {% block page %}
 	{% block breadcrumbs %}
@@ -19,9 +22,7 @@
 				<div class="news_title">{{ news_item.title }}</div>
 			{% endif %}
 			{% if news_item.title_image %}
-			<span style="width:10px;height:10px;">
-				<img src="{{ MEDIA_URL }}{{ news_item.title_image }}" alt="">
-			</span>
+				<img class="title_information_img" src="{{ MEDIA_URL }}{{ news_item.title_image }}" alt="">
 			{% endif %}
 				<span class="text_news">
 					<a href="{% url "news_item" news_item.id %}">
