@@ -8,7 +8,7 @@ from information.models import News, UsefullInformation
 register = template.Library()
 
 
-@register.simple_tag()
+
 def show(name, count_of_latest_news):
     objs = []
     title = ''
