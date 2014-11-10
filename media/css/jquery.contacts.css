@@ -172,6 +172,7 @@ textarea {
 form#sendMessageForm label {
     display: inline-block;
     width: 204px;
-    text-align: right;
+    text-align: left;
+    float: left;
 }
 
