@@ -104,6 +104,7 @@ label {
     font-size: 16px;
     line-height: 18px;
     color: #4a4a4a;
+    vertical-align: top;
 }
 input, textarea {
     width: 212px;
