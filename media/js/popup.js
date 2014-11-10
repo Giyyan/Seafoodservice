@@ -1,9 +1,9 @@
 $(document).ready(function () {
     $(".photo_img img").click(function () {
-    $("#wrap_frame, #overlay").fadeIn(300);
+    //$("#wrap_frame, #overlay").fadeIn(300);
     });
     $("#overlay, #close2").click(function () {
-      $("#wrap_frame, #overlay").fadeOut(300);
+    //  $("#wrap_frame, #overlay").fadeOut(300);
     });
       positionCenter($("#wrap_frame"));
     
@@ -30,12 +30,12 @@ $("#wrapper .photo_img").each(function() {
 	    var cur_src = $("li[rel="+current_li+"]").find("img").attr("src");
 	    var next_src = $("li[rel="+next_li+"]").find("img").attr("src");
 	    var cur_desc = $("li[rel="+next_li+"]").find(".photo_descr").html();
-	    $(".description").fadeToggle("300");
+	    //$(".description").fadeToggle("300");
 	    $(".description").html(cur_desc);
-	    $("#frame").fadeToggle("300");
+	    //$("#frame").fadeToggle("300");
 	    $("#frame #big_photo_img").attr("src", next_src);
-	    $("#frame").fadeToggle("300");
-	    $(".description").fadeToggle("300");
+	    //$("#frame").fadeToggle("300");
+	    //$(".description").fadeToggle("300");
 	    current_li = next_li;
 	}
  });
@@ -46,18 +46,18 @@ $("#wrapper .photo_img").each(function() {
 	    var cur_src = $("li[rel="+current_li+"]").find("img").attr("src");
 	    var prev_src = $("li[rel="+prev_li+"]").find("img").attr("src");
 	    var cur_desc = $("li[rel="+prev_li+"]").find(".photo_descr").html();
-	    $(".description").fadeToggle("300");
+	    //$(".description").fadeToggle("300");
 	    $(".description").html(cur_desc);
-	    $("#frame").fadeToggle("300");
+	    //$("#frame").fadeToggle("300");
 	    $("#frame #big_photo_img").attr("src", prev_src);
-	    $("#frame").fadeToggle("300");
-	    $(".description").fadeToggle("300");
+	    //$("#frame").fadeToggle("300");
+	    //$(".description").fadeToggle("300");
 	    current_li = prev_li;
 	}
     });
     
 $("#overlay, #close2").click(function () {
-$("#overlay, #wrap_frame, .description").fadeOut(300);
+//$("#overlay, #wrap_frame, .description").fadeOut(300);
 });   
     
     function positionCenter(elem) {
@@ -70,10 +70,10 @@ $("#overlay, #wrap_frame, .description").fadeOut(300);
     
     
     $(".sertif img").click(function () {
-    $("#wrap_frame2, #overlay").fadeIn(300);
+    //$("#wrap_frame2, #overlay").fadeIn(300);
     });
     $("#overlay, #close").click(function () {
-      $("#wrap_frame2, #overlay").fadeOut(300);
+      //$("#wrap_frame2, #overlay").fadeOut(300);
     });
       positionCenter($("#wrap_frame2"));
     
@@ -90,7 +90,7 @@ $("#wrapper .sertif").each(function() {
     var cur_desc = $("li[rel="+current_li2+"]").find(".sertif_descr").html();
     $(".description2").html(cur_desc);
     $("#big_photo_img").attr("src", src);
-    $("#wrap_frame2, #overlay, .description2").fadeIn();
+    //$("#wrap_frame2, #overlay, .description2").fadeIn();
      
 });
     $("#right_arrow_sertif").click(function() {
@@ -100,12 +100,12 @@ $("#wrapper .sertif").each(function() {
 	    var cur_src2 = $("li[rel="+current_li2+"]").find("img").attr("src");
 	    var next_src2 = $("li[rel="+next_li2+"]").find("img").attr("src");
 	    var cur_desc2 = $("li[rel="+next_li2+"]").find(".sertif_descr").html();
-	    $(".description2").fadeToggle("300");
+	    //$(".description2").fadeToggle("300");
 	    $(".description2").html(cur_desc2);
-	    $("#frame2").fadeToggle("300");
+	    //$("#frame2").fadeToggle("300");
 	    $("#frame2 #big_photo_img").attr("src", next_src2);
-	    $("#frame2").fadeToggle("300");
-	    $(".description2").fadeToggle("300");
+	    //$("#frame2").fadeToggle("300");
+	    //$(".description2").fadeToggle("300");
 	    current_li2 = next_li2;
 	}
  });
@@ -116,12 +116,12 @@ $("#wrapper .sertif").each(function() {
 	    var cur_src2 = $("li[rel="+current_li2+"]").find("img").attr("src");
 	    var prev_src2 = $("li[rel="+prev_li2+"]").find("img").attr("src");
 	    var cur_desc2 = $("li[rel="+prev_li2+"]").find(".sertif_descr").html();
-	    $(".description2").fadeToggle("300");
+	    //$(".description2").fadeToggle("300");
 	    $(".description2").html(cur_desc2);
-	    $("#frame2").fadeToggle("300");
+	    //$("#frame2").fadeToggle("300");
 	    $("#frame2 #big_photo_img").attr("src", prev_src2);
-	    $("#frame2").fadeToggle("300");
-	    $(".description2").fadeToggle("300");
+	    //$("#frame2").fadeToggle("300");
+	    //$(".description2").fadeToggle("300");
 	    current_li2 = prev_li2;
 	}
     });
