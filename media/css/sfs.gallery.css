@@ -2,16 +2,15 @@
 .photo_img {
     list-style: none;
     display: inline-block;
-    width: 30%;
+    width: 31%;
     height: 200px;
-    margin-right: 8px;
-    margin-bottom: 8px;
+    align-self: flex-start;
+    padding: 1%;
 }
 
 .img_in_gallery {
     width: 100%;
     height: 100%;
-    margin-right: 2%;
 }
 #overlay {
     background: #fff;

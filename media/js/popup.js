@@ -14,7 +14,7 @@ $("#wrapper .photo_img").each(function() {
 });
 
   var current_li=0;
- $(".portfolio li img").click(function () {
+$(".portfolio li img").click(function () {
     var src = $(this).attr("src");
     current_li = parseInt($(this).parent().attr('rel'));
     var cur_desc = $("li[rel="+current_li+"]").find(".photo_descr").html();
@@ -67,7 +67,7 @@ $("#overlay, #close2").click(function () {
     //$("#wrap_frame2, #overlay").fadeIn(300);
     });
     $("#overlay, #close").click(function () {
-      //$("#wrap_frame2, #overlay").fadeOut(300);
+      $("#wrap_frame2, #overlay").fadeOut();
     });
       positionCenter($("#wrap_frame2"));
     
@@ -121,7 +121,7 @@ $("#wrapper .sertif").each(function() {
     });
     
 $("#overlay, #close").click(function () {
-$("#overlay, #wrap_frame2, .description2").fadeOut(300);
+$("#overlay, #wrap_frame2, .description2").fadeOut();
 });   
     
     function positionCenter(elem) {
