@@ -48,12 +48,13 @@
             slideWidth: 200,
             slideMargin: 30,
             width: 700,
-            autoControls: false
-        })
+            autoControls: false,
+            infiniteLoop: false
+        });
 
         $('.slider li img').click(function(){
             window.location.href = {% url "get_slide_images" %};
-        })
+        });
     });
     </script>
 
