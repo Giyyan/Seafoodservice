@@ -8,6 +8,7 @@ register = template.Library()
 
 @register.inclusion_tag('show_latest_news.html')
 def show(name='news', count_of_latest_news=10):
+    print name
     url = reverse(name)
     url_item = '{}_item'.format(name,)
     if name == 'usefull_information':
@@ -16,5 +17,6 @@ def show(name='news', count_of_latest_news=10):
     else:
         title = _(u"News")
         model = News
+    print title
     objs = model.objects.order_by('-date')[:count_of_latest_news]
     return {'objs': objs, 'title': title, 'url': url, 'url_item': url_item}
