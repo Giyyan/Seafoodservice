@@ -157,7 +157,7 @@ header nav ul li:hover a, header nav ul li.active:hover a {
     color: #0354a3;
 }
 
-header nav ul li.active {
+header nav ul li.active a {
     background: url(images/bg_active.png) repeat-x;
 
 }
