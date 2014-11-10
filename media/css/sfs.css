@@ -149,11 +149,8 @@ header nav ul li:last-child {
     margin-right: 0;
 }
 
-header nav ul li:hover, header nav ul li.active:hover {
-    background: url(images/bg_grad.png) repeat-x;
-}
-
 header nav ul li:hover a, header nav ul li.active:hover a {
+    background: url(images/bg_grad.png) repeat-x;
     color: #0354a3;
 }
 
