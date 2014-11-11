@@ -24,7 +24,7 @@ Author URL: Zod4ie.com
     src: url("fonts/Ubuntu-B.ttf");
 }
 
-body {
+.body {
     min-width: 1024px;
     width: 1024px;
     margin-left: auto;

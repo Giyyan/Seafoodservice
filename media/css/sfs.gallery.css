@@ -9,7 +9,7 @@
 
 .img_in_gallery {
     width: 100%;
-    height: 100%;
+    height: 200px;
 }
 #overlay {
     background: #fff;
@@ -38,15 +38,28 @@
     cursor: pointer;
     z-index: 9998;
     position: absolute;
-    margin-top: 35%;
+    top: 35%;
 }
 #right_arrow {
-    margin-left: 94%;
-    /*margin-top: -50px;*/
+    right: 2%;
 }
+#left_arrow {
+    left: 2%;
+}
+
 #big_photo_img {
     max-width: 100%;
     max-height: 100%;
+}
+#fancybox-title-float-wrap{
+    background: #f2f2f2;
+    width: 770px;
+    height: auto;
+    padding: 10px 15px;
+    position: relative;
+    margin: 30px auto 0;
+    z-index: 9999;
+    display: none;
 }
 .photo_img {
     cursor: pointer;
@@ -78,7 +91,8 @@
 }
 .close {
     position: absolute;
-    top: 8%;
+    top: 20px;
+    height: 15px;
     right: 50%;
     cursor: pointer;
 }
