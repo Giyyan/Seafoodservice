@@ -91,24 +91,18 @@
             </div>
         </a>
 
-        <script language='javascript' type='text/javascript'>
-            var s_loaded_1974 = false;
-            var s_old_onload = window.onload;
-            window.onload = function () {
-                if (s_loaded_1974) return;
-                s_loaded_1974 = true;
-                if (typeof(s_old_onload) == 'function') {
-                    try {
-                        s_old_onload();
-                    } catch (e) {
-                    }
-                }
-                var sitehelp_s = document.createElement('script');
-                sitehelp_s.type = 'text/javascript';
-                sitehelp_s.src = top.location.protocol + '//c.sitehelp.im/code.cgi?c=1974' + (top.location.protocol == 'http:' ? '' : '&ssl=1') + '&rnd=' + Math.random();
-                document.body.appendChild(sitehelp_s);
-            };
-        </script>
+<script type="text/javascript" language="javascript">
+	var s_loaded_1997 = false;
+	var s_old_onload = window.onload;
+	window.onload = function () {
+	  if (s_loaded_1997) return; s_loaded_1997 = true;
+		if (typeof(s_old_onload) == 'function') { try { s_old_onload(); } catch(e) {}; };
+		var sitehelp_s = document.createElement('script');
+		sitehelp_s.type = 'text/javascript';
+		sitehelp_s.src = top.location.protocol + '//c.sitehelp.im/code.cgi?c=1997' + (top.location.protocol=='http:' ? '' : '&ssl=1') + '&rnd=' + Math.random();
+		document.body.appendChild(sitehelp_s);
+	};
+</script>
 
 {% block extrajs %}{% endblock %}
 </body>
