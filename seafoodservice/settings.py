@@ -207,11 +207,11 @@ LOCALE_PATHS = (
 PASSWORD = "ServiceSeaFood"
 EMAIL = "seafoodservice@inbox.ru"
 
-#sitehelp
+#jivosite
 SITEHELP_SETTINGS = {
 "Connect using": "any xmpp/jabber client",
 "Login": "seafoodservice@sitehelp.im",
-"Password": "seafoodservice",
+"Password": "Seafoodservice4",
 "Domain": "sitehelp.im",
 "Port": 5222,
 }
