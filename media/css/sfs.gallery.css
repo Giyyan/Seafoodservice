@@ -39,12 +39,14 @@
     z-index: 9998;
     position: absolute;
     top: 35%;
+    max-height: 40px;
+    width: 7%;
 }
 #right_arrow {
-    right: 2%;
+    right: 5px;
 }
 #left_arrow {
-    left: 2%;
+    left: 5px;
 }
 
 .photo_img {
