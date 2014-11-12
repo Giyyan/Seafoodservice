@@ -49,7 +49,8 @@ class PhotoGalleryAdmin(MPTTModelAdmin, TranslationAdmin):
 class VideoGalleryAdmin(MPTTModelAdmin, TranslationAdmin):
     list_display = ['video', 'image', 'description', 'type']
     search_fields = ['description_ru', 'description_en' ]
-
+    form = MPTTAdminForm
+    
     def image(self, obj):
         return '<span style="width:200px;height:120px;"><img src="%s" /></span>'%(settings.MEDIA_URL+obj.photo.name)
     image.allow_tags = True
@@ -70,6 +71,7 @@ class VideoGalleryAdmin(MPTTModelAdmin, TranslationAdmin):
                 'video',
                 'video_image',
                 'description',
+                'type',
             ]
         }),
     ]
@@ -78,10 +80,24 @@ class VideoGalleryAdmin(MPTTModelAdmin, TranslationAdmin):
         """
         Given a model instance save it to the database.
         """
+        # c = Converter()
+
         filename = u''+obj.video.path
-        ext = u'video/'+filename.split('.')[-1]
-        obj.type = ext.lower()
+
+        ext = filename.split('.')[-1]
+        # new_filename = filename[:-len(ext)]+'mp4'
+        # c.convert(filename, new_filename,{
+        #     'format': 'mp4',
+        #     'audio': { 'codec': 'aac' },
+        #     'video': { 'codec': 'h264' }
+        # })
+        obj.type = u'video/'+ext
+        # obj.video.path = new_filename
         obj.save()
+        return super(VideoGalleryAdmin, self).save_model(request, obj, form, change)
+
+# from converter import Converter
+
 
 admin.site.register(PhotoGallery, PhotoGalleryAdmin)
 admin.site.register(VideoGallery, VideoGalleryAdmin)
