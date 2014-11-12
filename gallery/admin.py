@@ -50,7 +50,7 @@ class VideoGalleryAdmin(MPTTModelAdmin, TranslationAdmin):
     list_display = ['video', 'image', 'description', 'type']
     search_fields = ['description_ru', 'description_en' ]
     form = MPTTAdminForm
-    
+
     def image(self, obj):
         return '<span style="width:200px;height:120px;"><img src="%s" /></span>'%(settings.MEDIA_URL+obj.photo.name)
     image.allow_tags = True
@@ -71,7 +71,6 @@ class VideoGalleryAdmin(MPTTModelAdmin, TranslationAdmin):
                 'video',
                 'video_image',
                 'description',
-                'type',
             ]
         }),
     ]

@@ -566,11 +566,10 @@ footer .bottom_nav ul li a {
 video {
     position: relative;
     z-index: 9996;
-    margin-right: 12px;
-    margin-bottom: 8px;
+    width: 31%;
 }
 .right_video {
-    margin-right: 0;
+    padding: 1%;
 }
 #gallery_aside {
     margin-top: 38px;

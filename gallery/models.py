@@ -22,9 +22,18 @@ class PhotoGallery(MPTTModel):
         verbose_name_plural = _(u"Photos")
 
 
+import random
+
+
+def get_path_and_name(instance, filename):
+    print instance, filename
+    letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    instance.filename =  u'videos/'+u''.join(random.choice(letters) for x in xrange(31))+u'_c.'+filename.split('.')[-1]
+    return instance.filename
+
 class VideoGallery(MPTTModel):
     parent = models.ForeignKey('self', null=True, blank=True, related_name="related")
-    video = ExtFileField(upload_to='videos', verbose_name=_("video"),
+    video = ExtFileField(upload_to=get_path_and_name, verbose_name=_("video"),
                          ext_whitelist=(".mp4", ".ogg", ".webm", ".MP4", ".OGG", ".WEBM",),)
     video_image = ExtFileField(upload_to='videos/images', verbose_name=_("Image"),
                              ext_whitelist=(".png", ".jpg", ".PNG", ".JPG", ".jpeg", ".JPEG"),
@@ -36,6 +45,7 @@ class VideoGallery(MPTTModel):
 
     def __unicode__(self):
         return ("%s - %s")%(self.video, self.type)
+
 
     class Meta:
         verbose_name = _(u"Video")
