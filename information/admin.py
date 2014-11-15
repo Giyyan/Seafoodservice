@@ -26,7 +26,9 @@ class NewsAdmin(SummernoteModelAdmin):
     body_as_html.allow_tags = True
 
     def image(self, obj):
-        return '<span style="width:20px;height:20px;"><img style="width:80px;height:80px;" src="%s" /></span>' % (settings.MEDIA_URL+obj.title_image.name)
+        if(obj.title_image):
+            return '<span style="width:20px;height:20px;"><img style="width:80px;height:80px;" src="%s" /></span>' % (settings.MEDIA_URL+obj.title_image.name)
+        return ''
     image.allow_tags = True
 
     def save_model(self, request, obj, form, change):
