@@ -57,7 +57,7 @@
     background: #f2f2f2;
     width: 96%;
     height: auto;
-    padding: 10px 100px;
+    padding: 2%;
     position: relative;
     z-index: 9999;
     display: none;
@@ -76,7 +76,6 @@
     position: absolute;
     top: 20px;
     right: 3%;
-    margin-right: 100px;
     cursor: pointer;
 }
 
