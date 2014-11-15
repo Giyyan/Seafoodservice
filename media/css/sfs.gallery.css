@@ -28,7 +28,7 @@
     top: 7%;
     z-index: 9998;
     position: fixed;
-    display: block;
+    display: none;
 }
 #frame {
     display: inline-block;
