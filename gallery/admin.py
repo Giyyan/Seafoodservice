@@ -13,12 +13,23 @@ class MPTTAdminForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super(MPTTAdminForm, self).__init__(*args, **kwargs)
 
+def add_to_gallery(modeladmin, request, queryset):
+    queryset.update(add_this_photo_to_gallery=True)
+add_to_gallery.short_description = "Add marked photos to gallery"
+
+
+def add_to_slider(modeladmin, request, queryset):
+    queryset.update(add_this_photo_to_slide=True)
+add_to_slider.short_description = "Add marked photos to slider"
+
 
 class PhotoGalleryAdmin(MPTTModelAdmin, TranslationAdmin):
     list_display = ['image', 'title', 'description']
     search_fields = ['description_ru', 'description_en']
     list_filter = ['add_this_photo_to_slide', 'add_this_photo_to_gallery']
     form = MPTTAdminForm
+
+    actions = [add_to_gallery, add_to_slider]
 
     def image(self, obj):
         return '<span style="width:20px;height:20px;"><img style="width:80px;height:80px;" src="%s" /></span>' % (settings.MEDIA_URL+obj.photo.name)
