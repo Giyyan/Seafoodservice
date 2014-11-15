@@ -23,13 +23,13 @@
     display: none;
 }
 #wrap_frame{
-    margin-top: -29px;
-    margin-left: -30px;
     top: 7%;
     z-index: 9998;
     position: fixed;
     display: none;
+    padding-right: 10%;
 }
+
 #frame {
     display: inline-block;
     margin: 20px auto 0;
@@ -75,7 +75,7 @@
 .close2 {
     position: absolute;
     top: 20px;
-    right: 3%;
+    right: 13%;
     cursor: pointer;
 }
 
@@ -87,7 +87,7 @@
     position: absolute;
     top: 20px;
     height: 15px;
-    right: 50%;
+    right: 60%;
     cursor: pointer;
 }
 @media screen and (max-height: 900px){
