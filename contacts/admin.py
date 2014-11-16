@@ -40,7 +40,7 @@ class OfficeContactForm(forms.ModelForm):
         model = OfficeContact
 
 class EmployeeAdmin(admin.ModelAdmin):
-    list_display = ['first_name', 'second_name', 'last_name', 'post','skypes', 'numbers', 'emails', ]
+    list_display = ['id', 'first_name', 'second_name', 'last_name', 'post','skypes', 'numbers', 'emails', ]
     search_fields = ['first_name_ru','first_name_en', 'second_name_ru', 'second_name_en', 'last_name_ru', 'last_name_en',]
     inlines = [TelephoneNumberInline, EmailInline, SkypeInline, ]
     form = EmployeeForm

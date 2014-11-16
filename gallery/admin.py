@@ -15,12 +15,12 @@ class MPTTAdminForm(forms.ModelForm):
 
 def add_to_gallery(modeladmin, request, queryset):
     queryset.update(add_this_photo_to_gallery=True)
-add_to_gallery.short_description = "Add marked photos to gallery"
+add_to_gallery.short_description = u"Добавить выбранные фотографии в галерею"
 
 
 def add_to_slider(modeladmin, request, queryset):
     queryset.update(add_this_photo_to_slide=True)
-add_to_slider.short_description = "Add marked photos to slider"
+add_to_slider.short_description = u"Добавить выбранные фотографии в слайдер"
 
 
 class PhotoGalleryAdmin(MPTTModelAdmin, TranslationAdmin):
