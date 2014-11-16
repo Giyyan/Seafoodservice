@@ -17,6 +17,7 @@
 
 .contacts_block {
     width: 45%;
+    text-align: left;
     display: inline-block;
     line-height: 33px;
     margin-bottom: 18px;
