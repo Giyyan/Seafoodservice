@@ -21,12 +21,12 @@ class FaxNumberInline(admin.StackedInline):
     extra = 1
 
 class EmployeeForm(forms.ModelForm):
-    first_name_ru = forms.CharField(required=True, )
-    first_name_en = forms.CharField(required=False, )
-    second_name_ru = forms.CharField(required=True, )
-    second_name_en = forms.CharField(required=False, )
-    last_name_ru = forms.CharField(required=True, )
-    last_name_en = forms.CharField(required=False, )
+    first_name_ru = forms.CharField(required=True, label=u'Имя')
+    first_name_en = forms.CharField(required=False, label=u'Имя (en)')
+    second_name_ru = forms.CharField(required=True, label=u'Отчество')
+    second_name_en = forms.CharField(required=False, label=u'Отчество (en)')
+    last_name_ru = forms.CharField(required=True, label=u'Фамилия')
+    last_name_en = forms.CharField(required=False, label=u'Фамлия (en)')
 
     class Meta:
         model = Employee
