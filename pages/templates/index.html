@@ -8,7 +8,7 @@
 
 {% block page %}
     {% if slides %}
-        <ul class="slider">
+        <ul id="slider" class="slider">
         {% for slide in slides %}
             <li><img src="{{ slide.photo.url }}"/></li>
         {% endfor %}
@@ -41,7 +41,11 @@
         $('.slider').bxSlider({
             mode: 'fade'
         });
-
+            $('#slider').css("max-height",450);
+            $('#slider').parent().css("max-height",450);
+            $('#slider').css("height",$('#slider li img:visible').height());
+            $('#slider').parent().css("height",$('#slider li img:visible').height());
+            $('#slider').parent().parent().find('.bx-pager.bx-default-pager').css({bottom:"30px"});
         $('.partner_slide').bxSlider({
             minSlides: 3,
             maxSlides: 3,
