@@ -18,12 +18,14 @@
 			<h3 class="useful_information">{% trans "video" %}</h3>
 			<div id="video_gallery" class="video_gallery">
 				{% for video in videos %}
+
 				   <video height="173" controls poster="{{ MEDIA_URL }}{{ video.video_image }}" id="{% cycle 'myVideo1' 'myVideo2' %}" class="right_video">
-						<source src="{{ MEDIA_URL }}{{ video.video }}" type="{{ video.type }}">
+                        {% for video_file in video.videos %}
+						<source src="{{ MEDIA_URL }}{{ video_file.file }}" type="{{ video_file.type }}">
+                        {% endfor %}
 						Your browser does not support HTML5 video.
 						<br><a>{{ video.description }}</a>
 				   </video>
-				   
 				{% endfor %}
 				<br>
 			</div>

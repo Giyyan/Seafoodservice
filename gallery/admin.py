@@ -5,7 +5,7 @@ from modeltranslation.admin import TranslationAdmin
 from mptt.forms import forms
 import os
 
-from models import PhotoGallery, VideoGallery
+from models import PhotoGallery, VideoGallery, VideoFile
 from seafoodservice import settings
 
 class MPTTAdminForm(forms.ModelForm):
@@ -57,13 +57,26 @@ class PhotoGalleryAdmin(MPTTModelAdmin, TranslationAdmin):
         }),
     ]
 
+class VideoFileAdmin(admin.StackedInline):
+    model = VideoFile
+    extra = 1
+
+    fieldsets = (None, {
+            'fields': [
+                'file',
+            ]
+        }),
+
+
+
 class VideoGalleryAdmin(MPTTModelAdmin, TranslationAdmin):
-    list_display = ['video', 'image', 'description', 'type']
+    list_display = ['image', 'description']
     search_fields = ['description_ru', 'description_en' ]
+    inlines = [VideoFileAdmin, ]
     form = MPTTAdminForm
 
     def image(self, obj):
-        return '<span style="width:200px;height:120px;"><img src="%s" /></span>'%(settings.MEDIA_URL+obj.photo.name)
+        return '<span><img style="max-width:100px;height:60px;" src="%s" /></span>'%(settings.MEDIA_URL+obj.video_image.name)
     image.allow_tags = True
 
     class Media:
@@ -79,34 +92,11 @@ class VideoGalleryAdmin(MPTTModelAdmin, TranslationAdmin):
     fieldsets = [
         (None, {
             'fields': [
-                'video',
                 'video_image',
                 'description',
             ]
         }),
     ]
-
-    def save_model(self, request, obj, form, change):
-        """
-        Given a model instance save it to the database.
-        """
-        # c = Converter()
-
-        filename = u''+obj.video.path
-
-        ext = filename.split('.')[-1]
-        # new_filename = filename[:-len(ext)]+'mp4'
-        # c.convert(filename, new_filename,{
-        #     'format': 'mp4',
-        #     'audio': { 'codec': 'aac' },
-        #     'video': { 'codec': 'h264' }
-        # })
-        obj.type = u'video/'+ext
-        # obj.video.path = new_filename
-        obj.save()
-        return super(VideoGalleryAdmin, self).save_model(request, obj, form, change)
-
-# from converter import Converter
 
 
 admin.site.register(PhotoGallery, PhotoGalleryAdmin)
