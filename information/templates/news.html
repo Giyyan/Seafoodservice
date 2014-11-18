@@ -28,7 +28,7 @@
 			{% endif %}
 				<span class="text_news">
 					<a href="{% url "news_item" news_item.id %}">
-						{{ news_item.body|removetags:"img"|striptags|truncatechars:300 }}
+						{{ news_item.body|safe|striptags |truncatechars:300 }}
 					</a>
 				</span>
 			</div>
