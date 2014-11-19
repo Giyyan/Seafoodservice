@@ -1,9 +1,12 @@
 {% extends 'new_base.html' %}
 {% load i18n admin_tools_menu_tags %}
 	{% block head %}
-		<script src="{{MEDIA_URL}}js/popup.js"></script>
         <script src="{{MEDIA_URL}}js/gallery_size.js"></script>
+        <script src="{{MEDIA_URL}}js/jquery.min.js"></script>
+        <script src="{{MEDIA_URL}}js/visuallightbox.js"></script>
         <link rel="stylesheet" href="{{ MEDIA_URL }}css/sfs.gallery.css">
+        <link rel="stylesheet" href="{{ MEDIA_URL }}css/visuallightbox.css">
+        <link rel="stylesheet" href="{{ MEDIA_URL }}css/vlightbox1.css">
 	{% endblock %}
 
 	{% block page %}
@@ -33,23 +36,16 @@
 			<h3 class="photo_title">{% trans "photos" %}</h3>
 			{% if photos %}
               <div id="photo_gallery">
-               <ul class="portfolio">
 				{% for i, photo in photos %}
-				<li class="photo_img"  rel="{{ i }}">
-					<img src="{{ MEDIA_URL }}{{ photo.photo }}" class="img_in_gallery" alt="">
-					<div class="photo_descr"  style="display:none">
-                        <p>{{ photo.title }}</p>
-					    <p>{{ photo.description }}</p>
-					</div>
-				</li>
+                    <a href="{{ MEDIA_URL }}{{ photo.photo }}" class="photo_img" title="{{ photo.title }}/n{{ photo.description }}">
+					    <img src="{{ MEDIA_URL }}{{ photo.photo }}" class="img_in_gallery" alt="" >
+                    </a>
 				{% endfor %}
-               </ul>
 			</div>
 			{% endif %}
 		</article>
-    <script>
-        set_width_to_media_files();
-    </script>
+    <script>set_width_to_media_files();</script>
+    <script src="{{MEDIA_URL}}js/vlbdata1.js"></script>
 	<div id="overlay"></div>
 		<div id="wrap_frame">
 		<div id="frame">

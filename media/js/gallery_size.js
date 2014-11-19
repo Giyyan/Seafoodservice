@@ -12,6 +12,14 @@ function set_width_to_images() {
     }
 }
 
+function set_width_to_certificates() {
+
+    var width_of_media = parseInt(document.getElementById('photo_gallery').offsetWidth*(0.90) / 3);
+    var photos = document.getElementsByClassName('certificate_in_gallery');
+    for(var i=0; i<photos.length; i++){
+        photos[i].width = width_of_media;
+    }
+}
 function set_width_to_video_files() {
 
     var width_of_media = parseInt(document.getElementById('video_gallery').offsetWidth*(0.90) / 3);
