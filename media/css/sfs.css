@@ -208,6 +208,7 @@ header nav ul li a {
 .news .news-item {
     box-sizing: border-box;
     padding: 10px;
+    padding-bottom: 20px;
 }
 
 .news-item:after {
