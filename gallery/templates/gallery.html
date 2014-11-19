@@ -37,7 +37,7 @@
 			{% if photos %}
               <div id="photo_gallery">
 				{% for i, photo in photos %}
-                    <a href="{{ MEDIA_URL }}{{ photo.photo }}" class="photo_img" title="{{ photo.title }}/n{{ photo.description }}">
+                    <a href="{{ MEDIA_URL }}{{ photo.photo }}" class="photo_img" title="{{ photo.title }}{% if photo.title and photo.description %}||{% endif %}{{ photo.description }}">
 					    <img src="{{ MEDIA_URL }}{{ photo.photo }}" class="img_in_gallery" alt="" >
                     </a>
 				{% endfor %}

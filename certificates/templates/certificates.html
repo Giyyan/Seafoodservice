@@ -20,7 +20,7 @@
 			<h3 class="photo_title">{% trans "Certificates" %}</h3>
               <div id="photo_gallery">
 				{% for i, certificate in certificates %}
-                <a class="photo_img" href="{{ MEDIA_URL }}{{ certificate.image }}" title="{{ certificate.description }}">
+                <a class="photo_img" href="{{ MEDIA_URL }}{{ certificate.image }}" title="{{ certificate.title }}{% if certificate.title and certificate.description %}||{% endif %}{{ certificate.description }}">
 					<img  src="{{ MEDIA_URL }}{{ certificate.image }}" class="certificate_in_gallery" alt="">
                 </a>
 				{% endfor %}

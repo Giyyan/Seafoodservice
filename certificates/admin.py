@@ -13,8 +13,8 @@ class MPTTAdminForm(forms.ModelForm):
         super(MPTTAdminForm, self).__init__(*args, **kwargs)
 
 class CertificateAdmin(MPTTModelAdmin, TranslationAdmin):
-    list_display = ['certificate', 'description_ru', 'description_en']
-    search_fields = ['description_ru', 'description_en' ]
+    list_display = ['certificate', 'title_ru', 'title_en', 'description_ru', 'description_en']
+    search_fields = ['title_ru', 'title_en', 'description_ru', 'description_en' ]
     form = MPTTAdminForm
 
     def certificate(self, obj):

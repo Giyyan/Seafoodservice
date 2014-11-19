@@ -458,7 +458,7 @@
         }
 
         function x() {
-            aX("caption").html(((e[Y].title || "").replace('/n', "<br>")));
+            aX("caption").html(((e[Y].title || "").replace('||', "<br>")));
             if (e[Y].title) {
                 aX("caption").show()
             } else {

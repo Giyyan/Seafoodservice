@@ -3,6 +3,6 @@ from models import Certificate
 
 
 class CertificateTranslationOptions(TranslationOptions):
-    fields = ('description',)
+    fields = ('title', 'description',)
 
 translator.register(Certificate, CertificateTranslationOptions)
