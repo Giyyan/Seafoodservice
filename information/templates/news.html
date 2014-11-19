@@ -19,7 +19,7 @@
 			<div class="news-item {% cycle 'news1' 'news2' %}">
 				<p class="date">{{ news_item.date }}</p>
 			{% if news_item.title  %}
-				<div class="news_title">{{ news_item.title }}</div>
+				<div class="news_title">{{ news_item.title|upper}}</div>
 			{% endif %}
 			{% if news_item.title_image %}
 			<span >
