@@ -35,6 +35,7 @@ class CertificateAdmin(MPTTModelAdmin, TranslationAdmin):
         (None, {
             'fields': [
                 'image',
+                'title',
                 'description',
             ]
         }),
