@@ -18,20 +18,19 @@
 		{% for news_item in news %}
 			<div class="news-item {% cycle 'news1' 'news2' %}">
 				<p class="date">{{ news_item.date }}</p>
-			{% if news_item.title  %}
-				<div class="news_title">{{ news_item.title|upper}}</div>
-			{% endif %}
-			{% if news_item.title_image %}
-			<span >
-				<img style="width:50px;height:50px; padding: 2px;" src="{{ MEDIA_URL }}{{ news_item.title_image }}" alt="">
-			</span>
-			{% endif %}
-				<span class="text_news">
-					<a href="{% url "news_item" news_item.id %}">
-						{{ news_item.body|safe|striptags|truncatechars:300 }}
-					</a>
-				</span>
-			</div>
+                {% if news_item.title  %}
+                    <div class="news_title">{{ news_item.title|upper}}</div>
+                {% endif %}
+                {% if news_item.title_image %}
+                <img class="title_information_img" style="width:70px; height:70px; margin: 6px;" src="{{ MEDIA_URL }}{{ news_item.title_image }}" alt="">
+
+                {% endif %}
+                    <div class="text_news">
+                        <a href="{% url "news_item" news_item.id %}">
+                            {{ news_item.body|safe|striptags|truncatechars:300 }}
+                        </a>
+                    </div>
+            </div>
 		{% endfor %}
 	</article>
 {% endblock %}

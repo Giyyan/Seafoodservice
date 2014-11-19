@@ -210,6 +210,14 @@ header nav ul li a {
     padding: 10px;
 }
 
+.news-item:after {
+   content: "Foo";
+   visibility: hidden;
+   display: block;
+   height: 0px;
+   clear: both;
+}
+
 .news .news-item:hover .text_news {
     color: #5c9ef3;
 }
@@ -617,5 +625,6 @@ video {
     height: 90px;
     float: left;
     margin-right: 10px;
+    display: inline;
 }
 
