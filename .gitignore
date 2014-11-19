@@ -57,3 +57,4 @@ local_settings.py
 
 media/photos/
 media/videos/
+media/images/
