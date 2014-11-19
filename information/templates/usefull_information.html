@@ -17,7 +17,7 @@
 				{% endif %}
 					<p class="text_news">
 						<a href="{% url "usefull_information_item" news_item.id %}">
-							{{ news_item.body|safe|striptags|truncatechars:300 }}
+							{{ news_item.body|safe|striptags|truncatechars:400 }}
 						</a>
 					</p>
 				</div>
