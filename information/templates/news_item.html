@@ -19,7 +19,7 @@
 			 <div class="news-item">
 				<p class="date">{{ news.date }}</p>
 				{% if news.title_image  %}
-					<img class="main_block_information-img" src="{{ news.title_image.url }}" alt="">
+					<img class="title_information_img" src="{{ news.title_image.url }}" alt="">
 				{% endif %}
              	<div class="news_text">
                     {{ news.body|safe }}
