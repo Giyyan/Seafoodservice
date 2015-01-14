@@ -277,19 +277,19 @@ header nav ul li a {
 }
 
 footer {
-    height: 210px;
+    /*height: 210px;*/
     background-color: #284895;
     margin-top: 20px;
     padding: 20px;
 }
 
 footer .contacts {
-    font-size: 18px;
+    font-size: 16px;
     color: #fff;
 }
 
 footer .contacts p {
-    padding-top: 10px;
+    padding-top: 5px;
 }
 
 footer .contacts p span {
