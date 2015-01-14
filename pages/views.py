@@ -16,8 +16,7 @@ def main(request):
         "main_page": MainPage.objects.all()[0]
     }
     context.update(set_required_data(request))
-    return render_to_response('index.html',
-                          context,
-                          context_instance=RequestContext(request))
-
-
+    return render_to_response(
+        'index.html',
+        context,
+        context_instance=RequestContext(request))
